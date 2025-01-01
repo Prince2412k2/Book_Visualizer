@@ -1,6 +1,6 @@
 import typing
 from fitz import message
-from pymu import ebook, printl, printd
+from reader import ebook, printl, printd
 import requests
 from huggingface_hub import InferenceClient
 from typing import Optional
