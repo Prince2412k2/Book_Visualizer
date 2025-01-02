@@ -5,6 +5,7 @@ import os
 from dataclasses import dataclass, field
 import sys
 from loguru import logger
+from pymupdf.extra import page_count
 
 
 def printl(ls, space=1):
@@ -43,7 +44,7 @@ class ebook:
 
         if filext in {".azw3", ".epub", ".mobi", ".pdf"}:
             if filext == ".azw3":
-                self.path = to_epub(self.path)
+                self.path = self.to_epub(self.path)
             try:
                 self.file = fitz.open(self.path)
             except Exception as e:
@@ -64,15 +65,14 @@ class ebook:
                     if idx + 1 < len(self.toc)
                     else self.page_count - 1
                 )
-
                 # Collect text for the range of pages
                 chapter_text = []
                 for page_num in range(start_index, end_index + 1):  # Inclusive range
                     page = self.file.load_page(page_num)
                     chapter_text.append(page.get_text())  # Append text from each page
 
-                # Join collected text and store it in the dictionary
-                self.chapters.append((chp, "".join(chapter_text)))
+                # Join collected text and store it in Tuple
+                self.chapters.append((chp, " ".join(chapter_text)))
         else:
             raise Exception("Table of contents are empty")
 
@@ -95,9 +95,18 @@ class ebook:
 
 
 def main():
-    book = ebook("./LP.azw3")
-    ch = book.get_chapters()
-    printt(ch)
+    #    book1 = ebook("./books/LP.epub")
+    #    ch = book1.get_chapters()
+    #    print("EPUB FILE")
+    #    print(ch[0], end="\n\n\n")
+    #
+    #    book2 = ebook("./books/LP.azw3")
+    #    ch2 = book2.get_chapters()
+    #    print("AWZ3 TO EPUB FILE")
+    #    print(ch2[0])
+    book = ebook("./books/LP.azw3")
+    a = book.get_metadata()
+    print(a)
 
 
 if __name__ == "__main__":

@@ -11,8 +11,8 @@ from functools import lru_cache
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
 
+load_dotenv()
 API = os.getenv("HF_API")
 
 ##stabilityai
@@ -21,7 +21,7 @@ client = InferenceClient(
     token=API,
 )
 
-##mistralai
+##QWEN:2.5
 headers = {"Authorization": f"Bearer {API}"}
 url = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-32B-Instruct/v1/chat/completions"
 
@@ -40,7 +40,7 @@ def msg(text: str) -> list:
     messages_2 = [
         {
             "role": "system",
-            "content": """ Follow 3 steps. 1-separate text when the scene changes in given text. 2-summerize the scene,start by saying imagine... . 3-Output a single Python List of summerized scenes in the format ["scene1","scene2","scene3"....],without additional text.""",
+            "content": """ NOTE-"Only Output a python list and nothing else" Do 3 things. 1-Seprate the given text by scenes and describe these scenes vividly and in detail then Output them in a single Python List. in the format ["scene","scene","scene"....]""",
         },
         {
             "role": "user",
@@ -74,7 +74,7 @@ def get_images(key, value):
     image = client.text_to_image(
         value + ", Style: colorfull, bright, cinamatic ", height=528, width=720
     )
-    image.save(f"./images/{key}.png")
+    image.save(f"./output/{key}.png")
 
 
 def get_scene(text: str) -> Optional[str]:
@@ -98,22 +98,30 @@ def get_scene(text: str) -> Optional[str]:
         return None
 
 
-book = ebook("./books/LP.epub")
-chapter = book.get_chapters()[0][1]
-pmpt = get_scene(chapter)
-# scenes = read_json(pmpt)
-scene_list = read_list(pmpt)
+def main() -> None:
+    book = ebook("./books/LP.epub")
+    chapter = book.get_chapters()[5][1]
+    pmpt = get_scene(chapter)
+    # scenes = read_json(pmpt)
+    scene_list = read_list(pmpt)
 
-if scene_list is not None:
     try:
         for idx, i in enumerate(scene_list):
-            #            get_images(idx, i)
+            get_images(idx, i)
             print(idx, " : downloaded")
-
             print(i, end="\n\n\n")
             time.sleep(30)
-    #        print(key + "\n" + value + "\n\n\n")
-    except:
-        print(scene_list)
-        raise Exception("NOT A List")
-print("\n\n\n INPUT---------------" + chapter)
+    except Exception as e:
+        print(f"LOOP ERROR : {e}")
+        # print("\n\n\n INPUT---------------" + chapter)
+
+
+def text() -> None:
+    book = ebook("./books/LP.epub")
+    chapter = book.get_chapters()[5][1]
+    pmpt = get_scene(chapter)
+    print(pmpt)
+
+
+if __name__ == "__main__":
+    main()
