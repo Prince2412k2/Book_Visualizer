@@ -1,5 +1,4 @@
 import typing
-from fitz import message
 from reader import ebook, printl, printd
 import requests
 from huggingface_hub import InferenceClient
@@ -22,8 +21,11 @@ client = InferenceClient(
 )
 
 ##QWEN:2.5
-headers = {"Authorization": f"Bearer {API}"}
-url = "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-32B-Instruct/v1/chat/completions"
+headers = {
+    "Authorization": f"Bearer {API}",
+    "Content-Type": "application/json",
+}
+url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3/v1/chat/completions"
 
 
 def msg(text: str) -> list:
@@ -40,7 +42,7 @@ def msg(text: str) -> list:
     messages_2 = [
         {
             "role": "system",
-            "content": """ NOTE-"Only Output a python list and nothing else" Do 3 things. 1-Seprate the given text by scenes and describe these scenes vividly and in detail then Output them in a single Python List. in the format ["scene","scene","scene"....]""",
+            "content": """ NOTE-"Only Output a python list and nothing else". Seprate the given text whenever the setting changes and write image-generation prompt for each separated scene in Details, put these Prompts in single Python List. in the format ["Prompt","Prompt","Prompt"....]""",
         },
         {
             "role": "user",
@@ -72,9 +74,11 @@ def read_list(raw_text):
 @lru_cache(maxsize=1024)
 def get_images(key, value):
     image = client.text_to_image(
-        value + ", Style: colorfull, bright, cinamatic ", height=528, width=720
+        value + ", Style: hand-painted, vintage, novel,book,classic ",
+        height=528,
+        width=720,
     )
-    image.save(f"./output/{key}.png")
+    image.save(f"./output/ST_{key}.png")
 
 
 def get_scene(text: str) -> Optional[str]:
@@ -82,7 +86,7 @@ def get_scene(text: str) -> Optional[str]:
     data = {
         "messages": messages,
         "max_tokens": 1000,  # Specify the maximum length of the response
-        "temperature": 0.1,  # Control the randomness of the response
+        "temperature": 0.5,  # Control the randomness of the response
         "stream": False,
     }
     response = requests.post(url, headers=headers, json=data)
@@ -99,7 +103,7 @@ def get_scene(text: str) -> Optional[str]:
 
 
 def main() -> None:
-    book = ebook("./books/LP.epub")
+    book = ebook("./books/stranger.pdf")
     chapter = book.get_chapters()[5][1]
     pmpt = get_scene(chapter)
     # scenes = read_json(pmpt)
@@ -117,8 +121,8 @@ def main() -> None:
 
 
 def text() -> None:
-    book = ebook("./books/LP.epub")
-    chapter = book.get_chapters()[5][1]
+    book = ebook("./books/stranger.pdf")
+    chapter = book.get_chapters()[1][1]
     pmpt = get_scene(chapter)
     print(pmpt)
 

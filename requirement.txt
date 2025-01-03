@@ -1,0 +1,6 @@
+PyMuPDF==1.22.3
+requests==2.32.2
+huggingface_hub==0.16.4
+python-dotenv==0.21.0
+mobi==0.1.0 
+pillow

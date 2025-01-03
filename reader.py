@@ -4,8 +4,6 @@ import mobi
 import os
 from dataclasses import dataclass, field
 import sys
-from loguru import logger
-from pymupdf.extra import page_count
 
 
 def printl(ls, space=1):
