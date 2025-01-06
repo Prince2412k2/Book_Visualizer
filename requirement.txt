@@ -4,3 +4,6 @@ huggingface_hub==0.16.4
 python-dotenv==0.21.0
 mobi==0.1.0 
 pillow
+jupyter
+python-dotenv
+oogle-cloud-texttospeech
