@@ -29,27 +29,22 @@ url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct
 
 
 def msg(text: str) -> list:
-    messages_1 = [
+    message = [
         {
             "role": "system",
-            "content": 'You are a prompt generator for text-to-image models. Output a single JSON array of prompts in the format {"number": "prompt"}, where "number" is sequential. Use this format: {"1": "prompt1", "2": "prompt2", "3": "prompt3", ...} without additional text.',
+            "content": """ NOTE-"Only Output a python list and nothing else".
+                Seprate the given TEXT whenever the setting changes and write image-generation prompt for each separated scene in Details,
+                put these Prompts in single Python List. use character names whenever posible. 
+                input->TEXT,
+                Output format->["","","",....]
+            """,
         },
         {
             "role": "user",
-            "content": text,  # This should be your input text that describes the scenes
+            "content": f"""TEXT: {text}""",  # This should be your input text that describes the scenes
         },
     ]
-    messages_2 = [
-        {
-            "role": "system",
-            "content": """ NOTE-"Only Output a python list and nothing else". Seprate the given text whenever the setting changes and write image-generation prompt for each separated scene in Details, put these Prompts in single Python List. in the format ["Prompt","Prompt","Prompt"....]""",
-        },
-        {
-            "role": "user",
-            "content": text,  # This should be your input text that describes the scenes
-        },
-    ]
-    return messages_2
+    return message
 
 
 def read_json(raw_json: str) -> Optional[dict]:

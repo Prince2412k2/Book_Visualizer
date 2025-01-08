@@ -590,7 +590,7 @@ class HTMLtoLines(HTMLParser):
         return text, self.imgs, sect, formatting
 
 
-def det_ebook_cls(file):
+def get_ebook_cls(file):
     filext = os.path.splitext(file)[1]
     if filext == ".epub":
         return Epub(file)
