@@ -108,16 +108,14 @@ class ebook:
 
 
 def main():
-    book = ebook("./books/HP.epub")
+    book = ebook("./books/gen_LP.epub")
     a = {
         "meta": book.get_metadata(),
         "toc": book.get_toc_list(),
         #        "book": book.get_book(),
         "chapters": book.get_chapters(),
     }
-    for key, val in a:
-        print("\n" + key + ":")
-        print(val, end="\n\n")
+    print(a["toc"])
 
 
 def extract_images_from_epub(file_path):

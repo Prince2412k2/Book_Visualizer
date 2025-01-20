@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="uid">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<dc:title>The Little Prince</dc:title>
+<dc:language>en</dc:language>
+<dc:identifier id="uid">3569604312</dc:identifier>
+<dc:creator>Antoine de Saint-Exupéry</dc:creator>
+<dc:contributor>toepub.com</dc:contributor>
+<dc:publisher>The Virtual Library</dc:publisher>
+<dc:source>calibre:d3d34825-12d5-4616-96c3-791cbc86ea70</dc:source>
+<dc:date opf:event="publication">2017-12-06T22:49:35.255574+00:00</dc:date>
+<meta name="output encoding" content="utf-8" />
+<!-- BEGIN INFORMATION ONLY 
+<meta name="ASIN" content="d3d34825-12d5-4616-96c3-791cbc86ea70" />
+<meta name="Updated_Title" content="The Little Prince" />
+<meta name="Content-Language-Tag" content="en" />
+<meta name="cdeType" content="EBOK" />
+<meta name="Creator-Software" content="201" />
+<meta name="Creator-Major-Version" content="2" />
+<meta name="Creator-Minor-Version" content="9" />
+<meta name="Creator-Build-Number" content="0" />
+<meta name="Creator-Build-Tag" content="0730-890adc2" />
+<meta name="Embedded-Record-Count" content="44" />
+<meta name="Metadata-Record-Offset" content="0" />
+END INFORMATION ONLY -->
+</metadata>
+<manifest>
+<item id="item0" media-type="application/xhtml+xml" href="Text/part0000.xhtml" />
+<item id="item1" media-type="application/xhtml+xml" href="Text/part0001.xhtml" />
+<item id="item2" media-type="application/xhtml+xml" href="Text/part0002.xhtml" />
+<item id="item3" media-type="text/css" href="Styles/style0001.css" />
+<item id="item4" media-type="text/css" href="Styles/style0002.css" />
+<item id="item5" media-type="text/css" href="Styles/style0003.css" />
+<item id="item6" media-type="image/png" href="Images/image00045.png" />
+<item id="item7" media-type="image/jpeg" href="Images/image00046.jpeg" />
+<item id="item8" media-type="image/jpeg" href="Images/image00047.jpeg" />
+<item id="item9" media-type="image/png" href="Images/image00048.png" />
+<item id="item10" media-type="image/jpeg" href="Images/image00049.jpeg" />
+<item id="item11" media-type="image/jpeg" href="Images/image00050.jpeg" />
+<item id="item12" media-type="image/jpeg" href="Images/image00051.jpeg" />
+<item id="item13" media-type="image/jpeg" href="Images/image00052.jpeg" />
+<item id="item14" media-type="image/jpeg" href="Images/image00053.jpeg" />
+<item id="item15" media-type="image/jpeg" href="Images/image00054.jpeg" />
+<item id="item16" media-type="image/jpeg" href="Images/image00055.jpeg" />
+<item id="item17" media-type="image/jpeg" href="Images/image00056.jpeg" />
+<item id="item18" media-type="image/jpeg" href="Images/image00057.jpeg" />
+<item id="item19" media-type="image/jpeg" href="Images/image00058.jpeg" />
+<item id="item20" media-type="image/jpeg" href="Images/image00059.jpeg" />
+<item id="item21" media-type="image/gif" href="Images/image00060.gif" />
+<item id="item22" media-type="image/jpeg" href="Images/image00061.jpeg" />
+<item id="item23" media-type="image/jpeg" href="Images/image00062.jpeg" />
+<item id="item24" media-type="image/png" href="Images/image00063.png" />
+<item id="item25" media-type="image/jpeg" href="Images/image00064.jpeg" />
+<item id="item26" media-type="image/jpeg" href="Images/image00065.jpeg" />
+<item id="item27" media-type="image/jpeg" href="Images/image00066.jpeg" />
+<item id="item28" media-type="image/jpeg" href="Images/image00067.jpeg" />
+<item id="item29" media-type="image/jpeg" href="Images/image00068.jpeg" />
+<item id="item30" media-type="image/jpeg" href="Images/image00069.jpeg" />
+<item id="item31" media-type="image/jpeg" href="Images/image00070.jpeg" />
+<item id="item32" media-type="image/jpeg" href="Images/image00071.jpeg" />
+<item id="item33" media-type="image/gif" href="Images/image00072.gif" />
+<item id="item34" media-type="image/jpeg" href="Images/image00073.jpeg" />
+<item id="item35" media-type="image/jpeg" href="Images/image00074.jpeg" />
+<item id="item36" media-type="image/png" href="Images/image00075.png" />
+<item id="item37" media-type="image/jpeg" href="Images/image00076.jpeg" />
+<item id="item38" media-type="image/jpeg" href="Images/image00077.jpeg" />
+<item id="item39" media-type="image/jpeg" href="Images/image00078.jpeg" />
+<item id="item40" media-type="image/jpeg" href="Images/image00079.jpeg" />
+<item id="item41" media-type="image/jpeg" href="Images/image00080.jpeg" />
+<item id="item42" media-type="image/jpeg" href="Images/image00081.jpeg" />
+<item id="item43" media-type="image/jpeg" href="Images/image00082.jpeg" />
+<item id="item44" media-type="image/jpeg" href="Images/image00083.jpeg" />
+<item id="item45" media-type="image/jpeg" href="Images/image00084.jpeg" />
+<item id="item46" media-type="image/jpeg" href="Images/image00085.jpeg" />
+<item id="item47" media-type="image/jpeg" href="Images/image00086.jpeg" />
+<item id="item48" media-type="image/jpeg" href="Images/image00087.jpeg" />
+<item id="item49" media-type="image/jpeg" href="Images/image00088.jpeg" />
+<item id="ncx" media-type="application/x-dtbncx+xml" href="toc.ncx" />
+</manifest>
+<spine toc="ncx">
+<itemref idref="item0"/>
+<itemref idref="item1"/>
+<itemref idref="item2"/>
+</spine>
+<tours>
+</tours>
+<guide>
+<reference type="toc" title="Table of Contents" href="Text/part0002.xhtml#aid-1T141" />
+</guide>
+</package>
