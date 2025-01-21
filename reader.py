@@ -51,7 +51,7 @@ class ebook:
         if filext in {".azw3", ".epub", ".mobi", ".pdf"}:
             if filext == ".azw3":
                 self.path = self.to_epub(self.path)
-                filext == ".epub"
+                filext = ".epub"
             try:
                 self._file = fitz.open(self.path)
             except Exception as e:
@@ -65,7 +65,7 @@ class ebook:
         self._page_count = self._file.page_count
 
         #   separates chapters by pages outputs a list->[(chapter-name,content),]
-        if (self._toc != 0) and self._toc is not None:
+        if self._toc:
             for idx, (lvl, chp, start_page) in enumerate(self._toc):
                 # Determine start and end pages for the current chapter
                 start_index = start_page - 1  # Convert to 0-based indexing
@@ -83,7 +83,8 @@ class ebook:
                 # Join collected text and store it in Tuple
                 self._chapters.append((chp, "".join(chapter_text)))
         else:
-            raise Exception("Table of contents are empty")
+            self._chapters=[(i,self._file.load_page(i).get_text()) for i in range(self._page_count)]
+            # chapters=[(i,obj.load_page(i).get_text()) for i in range(obj.page_count)]
 
     # Handle getters
     def get_toc_list(self) -> list:
