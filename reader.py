@@ -4,9 +4,11 @@ import mobi
 import os
 from dataclasses import dataclass, field
 import sys
-
+import json
 from ebooklib import epub
 import ebooklib
+
+## utils
 
 
 def printl(ls, space=1):
@@ -30,6 +32,25 @@ def printt(tou: list):
     for i in tou:
         print("---------------------------" + i[0] + "---------------------------")
         print(i[1])
+
+
+def read_json(raw_json: str) -> Optional[dict]:
+    try:
+        data = json.loads(raw_json)
+        return data
+    except json.JSONDecodeError as e:
+        print(f"Error: {e}")
+        print("\n\n\n" + raw_json)
+
+
+def read_list(raw_text):
+    try:
+        lst = ast.literal_eval(raw_text)
+        return lst
+    except ValueError as e:
+        print(f"Error: {e}")
+        print("\n\n\n" + raw_text)
+        return None
 
 
 @dataclass
@@ -83,7 +104,9 @@ class ebook:
                 # Join collected text and store it in Tuple
                 self._chapters.append((chp, "".join(chapter_text)))
         else:
-            self._chapters=[(i,self._file.load_page(i).get_text()) for i in range(self._page_count)]
+            self._chapters = [
+                (i, self._file.load_page(i).get_text()) for i in range(self._page_count)
+            ]
             # chapters=[(i,obj.load_page(i).get_text()) for i in range(obj.page_count)]
 
     # Handle getters
