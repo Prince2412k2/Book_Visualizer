@@ -44,6 +44,7 @@
 │
 └── "exalted....".json ──> __Google_API__
 
-__Notes - HG_API and Google_api is private (not included in repo)__
+__Note - HG_API and Google_api is private (not included in repo)__
 
-.env -> HF_API=hf_F*********************************
+`.env` -> `HF_API=hf_F*********************************`
+
