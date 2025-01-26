@@ -1,50 +1,52 @@
 # Book Helper
 
 ## Dir-Structure
-
+```
 .
-├── __pycache__
+├── **pycache**
 ├── books
-│   └──> __Input_books__
+│   └──> **Input_books**
 │
 │
 ├── Images
-│    └──> __Output of tti_models.ipynb__
+│    └──> **Output of tti_models.ipynb**
 │
 ├── media
-│    └──> __Sudo-code for Image_gen.ipynb__
+│    └──> **Sudo-code for Image_gen.ipynb**
 │
 ├── Model_lists
-│    └──> __List of Models in Huggingface__
+│    └──> **List of Models in Huggingface**
 │
 ├── output
-│   ├── audio ────> __output of audio.ipynb__
+│   ├── audio ────> **output of audio.ipynb**
 │   ├── HP
 │   ├── Images
 │   ├── LP
 │   ├── Old
 │   ├──  Stranger
-│   └──────────────> __Output of image_gen.ipynb__
+│   └──────────────> **Output of image_gen.ipynb**
 │
-├── temp ───────────────> __Junk__
+├── temp ───────────────> **Junk**
 │
-├── audio.ipynb ────────> __audio gen pipeline__
+├── audio.ipynb ────────> **audio gen pipeline**
 │
-├── epy.py ─────────────> __Alt-reader library__
+├── epy.py ─────────────> **Alt-reader library**
 │
-├── image_gen.ipynb ────> __Image/summary gen pipeline__
+├── image_gen.ipynb ────> **Image/summary gen pipeline**
 │
-├── reader.py ──────────> __Main-reader library__
+├── reader.py ──────────> **Main-reader library**
 │
-├── requirement.txt ────> __pip-requirements__
+├── requirement.txt ────> **pip-requirements**
 │
-├── tti_models.ipynb ────> __Testrun for Text-to-img models from HG__
+├── tti_models.ipynb ────> **Testrun for Text-to-img models from HG**
 │
-├── .env ────────────────> __HG_API__
+├── .env ────────────────> **HG_API**
 │
-└── "exalted....".json ──> __Google_API__
+└── "exalted....".json ──> **Google_API**
 
-__Note - HG_API and Google_api is private (not included in repo)__
+```
+
+**Note - HG_API and Google_api is private (not included in repo)**
 
 `.env` -> `HF_API=hf_F*********************************`
 
