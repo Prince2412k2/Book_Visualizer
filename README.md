@@ -1,6 +1,7 @@
 # Book Helper
 
 ## Dir-Structure
+
 ```
 .
 ├── **pycache**
@@ -34,11 +35,13 @@
 │
 ├── image_gen.ipynb ────> **Image/summary gen pipeline**
 │
+├── groq_image_gen.ipynb ────> **Image/summary gen pipeline using groq api**
+│
 ├── reader.py ──────────> **Main-reader library**
 │
 ├── requirement.txt ────> **pip-requirements**
 │
-├── tti_models.ipynb ────> **Testrun for Text-to-img models from HG**
+├── test_models.ipynb ────> **Testrun for Text-to-img models from HG**
 │
 ├── .env ────────────────> **HG_API**
 │
@@ -49,4 +52,3 @@
 **Note - HG_API and Google_api is private (not included in repo)**
 
 `.env` -> `HF_API=hf_F*********************************`
-
