@@ -1,36 +1,35 @@
-from ebooklib import epub
-import ebooklib
-
 from dataclasses import dataclass, field
-import fitz
-from typing import Optional, Dict
-
-import os
-from zipfile import ZipFile
+from typing import Optional, Dict, Self
+from new_read import HTMLtoLines, det_ebook_cls, Epub, FictionBook, Azw3, Mobi
+from logging import loguru
 
 
-@dataclass()
+@dataclass
 class Chapters:
     """Stores a chapter"""
 
     _title: str
-    _paras: str
-    _len_by_words: int = field(metadata={"description": "Length of chapters by word"})
-    _page_count: int = field(init=False)
-    _split: int = field(
-        metadata={
-            "description": "how many times will this chapter be spilt, incase of length issue",
-        }
-    )
+    _str_data: str
+    _html_data: str
+
+    def get_title(self):
+        return self._title
+
+    def get_str_data(self):
+        return self._str_data
+
+    def get_html_data(self):
+        return self._html_data
 
 
-@dataclass()
+@dataclass
 class Book:
     """Stores a book"""
 
-    _metadata: Optional[Dict[str, str]] = field(init=False)
+    _path: str
+    _file: Epub | Mobi | Azw3 | FictionBook = field(init=False)
+    _metadata: Optional[Dict[str, str]] = field(init=False, default=None)
     _toc: list = field(init=False)
-
     _chapters: list[Chapters] = field(
         default_factory=list,
         init=False,
@@ -39,23 +38,40 @@ class Book:
         },
     )
 
-
-@dataclass()
-class Reader:
-    path: str
-    _file: fitz.Document = field(init=False)
-
     def __post_init__(self):
-        """
-        Check the type of book and return a valid epub format
+        self._file = det_ebook_cls(self._path)
+        self._toc = self._file.contents
+        self._chapters = [self._set_chapters(i) for i in self._toc]
 
-        """
-        pass
+    def _set_chapters(self, chapter_name: str):
+        html_data: str = self._file.get_raw_text(chapter_name)
+        parser = HTMLtoLines()
+        parser.feed(html_data)
+        str_data = "\n".join(parser.get_lines())
+        parser.close()
+        return Chapters(_title=chapter_name, _str_data=str_data, _html_data=html_data)
+
+    def toc(self):
+        return self._toc
+
+    def file(self):
+        return self._file
+
+    def get_str_chapters(self) -> dict:
+        return {i.get_title(): i.get_str_data() for i in self._chapters}
+
+    def get_html_chapters(self) -> dict:
+        return {i.get_title(): i.get_html_data() for i in self._chapters}
 
 
 def main() -> None:
-    with ZipFile("./books/LP.epub", "b") as zip:
-        print(zip.infolist())
+    book = Book("./books/Pixels and Algorithms.epub")
+    out = book.get_str_chapters()
+
+    for key, val in out.items():
+        print(
+            f"{key} \n:{val}\n\n\n----------------------------------------------------------------------"
+        )
 
 
 if __name__ == "__main__":

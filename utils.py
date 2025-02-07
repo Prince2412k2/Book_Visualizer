@@ -39,9 +39,13 @@ def read_json(raw_json: str) -> Optional[dict]:
     try:
         data = json.loads(raw_json)
         return data
+        
+    
     except json.JSONDecodeError as e:
         print(f"Error: {e}")
         print("\n\n\n" + raw_json)
+
+
 
 
 def read_list(raw_text: str) -> Optional[list]:
