@@ -1,0 +1,36 @@
+2025-02-07T11:26:00.188478+0530 | DEBUG | This is a debug message
+2025-02-07T11:26:00.188794+0530 | INFO | This is an info message
+2025-02-07T11:26:00.188928+0530 | SUCCESS | This is a success message
+2025-02-07T11:26:00.189055+0530 | WARNING | This is a warning message
+2025-02-07T11:26:00.189209+0530 | ERROR | This is an error message
+2025-02-07T11:26:00.189349+0530 | CRITICAL | This is a critical message
+2025-02-07T11:27:51.764191+0530 | DEBUG | This is a debug message | {}
+2025-02-07T11:27:51.764518+0530 | INFO | This is an info message | {}
+2025-02-07T11:27:51.764652+0530 | SUCCESS | This is a success message | {}
+2025-02-07T11:27:51.764776+0530 | WARNING | This is a warning message | {}
+2025-02-07T11:27:51.764910+0530 | ERROR | This is an error message | {}
+2025-02-07T11:27:51.765031+0530 | CRITICAL | This is a critical message | {}
+2025-02-07T11:28:10.642168+0530 | DEBUG | This is a debug message | {} 
+2025-02-07T11:28:10.642488+0530 | INFO | This is an info message | {} 
+2025-02-07T11:28:10.642628+0530 | SUCCESS | This is a success message | {} 
+2025-02-07T11:28:10.642751+0530 | WARNING | This is a warning message | {} 
+2025-02-07T11:28:10.642892+0530 | ERROR | This is an error message | {} 
+2025-02-07T11:28:10.643026+0530 | CRITICAL | This is a critical message | {} 
+2025-02-07T11:28:48.508278+0530 | DEBUG | This is a debug message | {} 
+2025-02-07T11:28:48.508639+0530 | INFO | This is an info message | {} 
+2025-02-07T11:28:48.508790+0530 | SUCCESS | This is a success message | {} 
+2025-02-07T11:28:48.508925+0530 | WARNING | This is a warning message | {} 
+2025-02-07T11:28:48.509065+0530 | ERROR | This is an error message | {} 
+2025-02-07T11:28:48.509215+0530 | CRITICAL | This is a critical message | {} 
+2025-02-07T11:30:43.383260+0530 | DEBUG | This is a debug message | {} 
+2025-02-07T11:30:43.383616+0530 | INFO | This is an info message | {} 
+2025-02-07T11:30:43.383750+0530 | SUCCESS | This is a success message | {} 
+2025-02-07T11:30:43.383876+0530 | WARNING | This is a warning message | {} 
+2025-02-07T11:30:43.384014+0530 | ERROR | This is an error message | {} 
+2025-02-07T11:30:43.384168+0530 | CRITICAL | This is a critical message | {} 
+2025-02-07T11:50:31.229073+0530 | DEBUG | This is a debug message | {} 
+2025-02-07T11:50:31.229417+0530 | INFO | This is an info message | {} 
+2025-02-07T11:50:31.229547+0530 | SUCCESS | This is a success message | {} 
+2025-02-07T11:50:31.229672+0530 | WARNING | This is a warning message | {} 
+2025-02-07T11:50:31.229809+0530 | ERROR | This is an error message | {} 
+2025-02-07T11:50:31.229943+0530 | CRITICAL | This is a critical message | {} 
