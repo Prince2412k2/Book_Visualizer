@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict, Self
-from new_read import HTMLtoLines, det_ebook_cls, Epub, FictionBook, Azw3, Mobi
+from typing import Optional, Dict
+from base_reader import HTMLtoLines, det_ebook_cls, Epub, FictionBook, Azw3, Mobi
 from loguru import logger
 import sys
 
@@ -70,12 +70,9 @@ class Book:
 
 
 def main() -> None:
-    logger.debug("This is a debug message")
-    logger.info("This is an info message")
-    logger.success("This is a success message")
-    logger.warning("This is a warning message")
-    logger.error("This is an error message")
-    logger.critical("This is a critical message")
+    book = Book("./books/LP.epub")
+    chaps = book.get_html_chapters()
+    print(len(chaps))
 
 
 if __name__ == "__main__":

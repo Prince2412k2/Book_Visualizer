@@ -75,7 +75,7 @@ class Epub:
             else:
                 self.toc = "default_toc_path"  # or handle this case appropriately
 
-            self.contents = []
+        self.contents = []
         self.toc_entries = [[], [], []]
 
         # cont = ET.parse(self.file.open(self.rootfile)).getroot()

@@ -1,20 +1,5 @@
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
-from pydantic import BaseModel
-from typing import List, Dict
-
-
-model = HfApiModel(
-    model="mistralai/Mistral-7B-Instruct-v0.3", provider="hf-inference", token=api
-)
-
-
-class SummarySchema(BaseModel):
-    summary: str
-    characters: Dict[str, str]
-    places: Dict[str, str]
-
-
-system_prompt = """(NOTE: Only output in JSON. Ensure the JSON format is valid, well-formed, and Ready to parse. nothing before or after the json file)
+SUMMARY_ROLE = """
+NOTE: Only output in JSON. Ensure the JSON format is valid, well-formed, and Ready to parse. nothing before or after the json file)
 Input:  
 1.Current Chapter Text: The current chapter to be analyzed.
 2.Character List: A list of characters with their physical/visual descriptions till now (This chapter).
@@ -39,7 +24,3 @@ Generate a JSON object in this format:
   }
 }
 """
-agent = CodeAgent(
-    model=model,
-    grammar=SummarySchema,
-)
