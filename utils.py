@@ -1,8 +1,13 @@
-from typing import List, Optional, Union, Tuple
+from typing import List, Optional, Tuple
 from huggingface_hub import login
 from transformers import AutoTokenizer
 from dataclasses import dataclass
 from logger_module import logger
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+hf_token = os.environ.get("HF_API")
 
 
 @dataclass
@@ -12,7 +17,7 @@ class Tokenizer:
 
     def __post_init__(self):
         try:
-            login(token=self.api_key)
+            login(token=hf_token)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         except Exception as error:
             logger.error(f"Error while downloading tokenizer, {error=}")
@@ -42,7 +47,7 @@ class Chunker:
         """
         Splits text into chunks that do not exceed the token limit.
 
-        -> List of (Id: str, chunk_text: str)
+        -> List of (Id: str,Chptr:str chunk_text: str)
         """
         total_chunks = []
 
@@ -53,9 +58,8 @@ class Chunker:
             while start < num_tokens:
                 chunk_tokens = tokens[start : start + self.max_len]
                 chunk_text = self.tokenizer.detokenize(chunk_tokens)
-                chunk_id = f"CH{id}C{count}"
+                chunk_id = f"${id}#{count}"
                 total_chunks.append((chunk_id, orig_id, chunk_text))
                 count += 1
                 start += self.max_len  # Move to next chunk
-
         return total_chunks

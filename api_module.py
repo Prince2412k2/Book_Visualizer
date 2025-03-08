@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional, Type, Union, Tuple
+from typing import Dict, List, Optional, Type, Tuple
 from pydantic import BaseModel, Field, ValidationError
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
@@ -8,6 +8,7 @@ from utils import Chunker, Tokenizer
 import requests
 import asyncio
 from prompts import SUMMARY_ROLE
+from json.decoder import JSONDecodeError
 
 summary_role = ""
 
@@ -141,7 +142,7 @@ class Summary:
             assistant_message = response_data["choices"][0]["message"]["content"]
             return False, assistant_message
         else:
-            logger.warning(f"Error: {response.status_code}")
+            logger.warning(f"Error: {response.json()}")
             return True, "ERROR_API_CALL"
 
     def validate_json(
@@ -159,8 +160,8 @@ class Summary:
             parsed_data = json.loads(raw_data)
             validated_data = schema.model_validate(parsed_data)
             return validated_data
-        except:
-            logger.warning(f"ValidationError {raw_data=}")
+        except (ValidationError, JSONDecodeError):
+            logger.warning("ValidationError")
 
 
 class SummaryLoop(BaseModel):
@@ -193,20 +194,19 @@ class SummaryLoop(BaseModel):
         """
         for idx, (id, title, content) in enumerate(self.chunked_content):
             past_context = self.summary_pool[idx]
-
             message = self.summary.messages(
                 content=content,
                 previous_summary=past_context.summary,
                 characters=past_context.characters,
                 places=past_context.places,
             )
-
             error, response = self.summary.get(messages=message)
 
             if not error:
                 validated_response = self.summary.validate_json(
                     response, SummaryResponseSchema
                 )
+
                 if validated_response is not None:
                     logger.trace(f"Chunk_{id=} Done")
                     self.summary_pool.append(
@@ -236,10 +236,11 @@ async def test() -> None:
     chapter_content = book.get_chapters()
 
     sum = Summary(
-        api_key=api,
+        url="http://localhost:11434/api/chat",
+        api_key="FAKETOKEN",
     )
 
-    looper = SummaryLoop(content=chapter_content[1:3], summary=sum).initialize()
+    looper = SummaryLoop(content=chapter_content, summary=sum).initialize()
     looper.run()
     for i in looper.get_summary_pool:
         if not i.places or not i.characters:
@@ -253,7 +254,7 @@ async def test() -> None:
         for k, v in i.characters.items():
             print(f"\t - {k} : {v}")
         print()
-        print("Summary")
+        print("places")
         for k, v in i.places.items():
             print(f"\t - {k} : {v}")
         print("\n\n")

@@ -17,12 +17,15 @@ class Chapters:
     _str_data: str
     _html_data: str
 
+    @property
     def get_title(self):
         return self._title
 
+    @property
     def get_str_data(self):
         return self._str_data
 
+    @property
     def get_html_data(self):
         return self._html_data
 
@@ -56,23 +59,27 @@ class Book:
         parser.close()
         return Chapters(_title=chapter_name, _str_data=str_data, _html_data=html_data)
 
+    @property
     def toc(self):
         return self._toc
 
+    @property
     def file(self):
         return self._file
 
+    @property
     def get_str_chapters(self) -> dict:
         return {i.get_title(): i.get_str_data() for i in self._chapters}
 
+    @property
     def get_html_chapters(self) -> dict:
         return {i.get_title(): i.get_html_data() for i in self._chapters}
 
 
 def main() -> None:
     book = Book("./books/LP.epub")
-    chaps = book.get_html_chapters()
-    print(len(chaps))
+    chaps = book.get_str_chapters()
+    print(chaps)
 
 
 if __name__ == "__main__":
