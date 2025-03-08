@@ -24,3 +24,6 @@ Generate a JSON object in this format:
   }
 }
 """
+
+PROMPT_ROLE = """
+    """
