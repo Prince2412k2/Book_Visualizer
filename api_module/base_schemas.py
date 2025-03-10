@@ -31,7 +31,7 @@ class PayloadSchema(BaseModel):
     """Basic payload for a Instruct Model"""
 
     model: str = ""
-    messages: List[Type[BaseModel]] = Field(default=[])
+    messages: List[MessageSchema] = Field(default=[])
     temperature: float = 0.5
     stream: bool = Field(init=False, default=False)
     max_tokens: int = 32000
