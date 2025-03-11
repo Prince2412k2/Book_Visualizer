@@ -236,7 +236,7 @@ async def test() -> None:
     chapter_content = book.get_chapters()
 
     sum = Summary(
-        url="http://localhost:11434/api/chat",
+        url="http://localhost:8000/completions",
         api_key="FAKETOKEN",
     )
 
