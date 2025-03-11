@@ -232,6 +232,7 @@ async def test() -> None:
     api = os.environ.get("HF_API")
     if not api:
         raise Exception("API NOT SET IN .env, HF_API=None")
+
     book = ebook("./books/HP.epub")
     chapter_content = book.get_chapters()
 
