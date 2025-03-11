@@ -2,6 +2,7 @@ from enum import Enum
 from typing import Dict, List, Optional, Type, Union
 from pydantic import BaseModel, Field
 from abc import ABC
+import openai
 
 import sys
 import os
@@ -154,6 +155,21 @@ class OllamaSummaryPayloadSchema(PayloadSchema):
 
 class OllamaSummaryResponseSchema(SummaryResponseSchema):
     """Ollama API Response Format"""
+
+    created_at: str
+    message: MessageSchema
+    total_duration: int
+
+
+###GroqHandleSchemas
+class GroqSummaryPayloadSchema(PayloadSchema):
+    """Groq payload schema for ollama API handler"""
+
+    format: dict = SummaryOutputSchema.model_json_schema()
+
+
+class GroqSummaryResponseSchema(SummaryResponseSchema):
+    """Groq API Response Format"""
 
     created_at: str
     message: MessageSchema
