@@ -1,3 +1,6 @@
+from groq import Groq
+
+
 
 def get_recipe(recipe_name: str) -> SummaryOutputSchema:
     chat_completion = client.chat.completions.create(
