@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional, Type, Tuple
+from typing import Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
@@ -7,7 +7,11 @@ from logger_module import logger
 from utils import Chunker, Tokenizer
 import requests
 import asyncio
-from prompts import SUMMARY_ROLE
+from prompts import (
+    MAX_VALIDATION_ERROR_TRY,
+    SUMMARY_ROLE,
+    SUMMARY_VALIDATION_RESOLVE_ROLE,
+)
 from json.decoder import JSONDecodeError
 import os
 from dotenv import load_dotenv
@@ -28,20 +32,6 @@ class HeadersSchema(BaseModel):
 
     class Config:
         populate_by_name = True
-
-
-## PayloadSchema
-class GrammarSchema(BaseModel):
-    type_: str = Field(alias="type", default="json")
-    value: dict = Field(default_factory=dict)
-
-    class Config:
-        populate_by_name = True
-
-
-class ParameterSchema(BaseModel):
-    repetition_penalty: Optional[float] = 1.3
-    grammar: GrammarSchema
 
 
 class MessageSchema(BaseModel):
@@ -100,14 +90,17 @@ class LLM_API(ABC):
 class Summary:
     api_key: str
     url: str = "https://api.groq.com/openai/v1/chat/completions"
-    role: str = SUMMARY_ROLE
+    role: str = (
+        f"{SUMMARY_ROLE} follow given schema: {SummaryOutputSchema.model_json_schema()}"
+    )
+    validation_role: str = f"{SUMMARY_VALIDATION_RESOLVE_ROLE} Schema :{SummaryOutputSchema.model_json_schema()}"
     model: str = "llama-3.1-8b-instant"
     temperature: float = 0.1
     stream: bool = False
     repetition_penalty: float = 1.5
     max_tokens: int = 6000
 
-    def messages(
+    def get_messages(
         self,
         content: str,
         previous_summary: str,
@@ -127,17 +120,22 @@ class Summary:
             ),
         ]
 
+    def validation_messages(self, input_text: str) -> List[MessageSchema]:
+        return [
+            MessageSchema(role="system", content=self.validation_role),
+            MessageSchema(
+                role="user",
+                content=input_text,
+            ),
+        ]
+
     def get(self, messages: List[MessageSchema]) -> Tuple[bool, str]:
         payload = SummaryPayloadSchema(
             model=self.model,
             messages=messages,
             temperature=self.temperature,
             stream=self.stream,
-            parameters=ParameterSchema(
-                repetition_penalty=self.repetition_penalty,
-                grammar=GrammarSchema(value=SummaryResponseSchema.model_json_schema()),
-            ),
-        ).model_dump()
+        ).model_dump(by_alias=True)
 
         headers = HeadersSchema.create(api_key=self.api_key).model_dump(by_alias=True)
         response = requests.post(url=self.url, headers=headers, json=payload)
@@ -151,7 +149,7 @@ class Summary:
 
     def validate_json(
         self, raw_data: str, schema: Type[SummaryResponseSchema]
-    ) -> Optional[SummaryResponseSchema]:
+    ) -> Union[SummaryResponseSchema, bool]:
         """
         Validates JSON data against a provided Pydantic schema.
 
@@ -166,6 +164,7 @@ class Summary:
             return validated_data
         except (ValidationError, JSONDecodeError):
             logger.warning("ValidationError")
+            return False
 
 
 class SummaryLoop(BaseModel):
@@ -203,7 +202,7 @@ class SummaryLoop(BaseModel):
         """
         for idx, (id, title, content) in enumerate(self.chunked_content):
             past_context = self.summary_pool[idx]
-            message = self.summary.messages(
+            message = self.summary.get_messages(
                 content=content,
                 previous_summary=past_context.summary,
                 characters=past_context.characters,
@@ -216,16 +215,27 @@ class SummaryLoop(BaseModel):
                     response, SummaryResponseSchema
                 )
 
-                if validated_response is not None:
+                if not validated_response:
                     logger.trace(f"Chunk_{id=} Done")
                     self.summary_pool.append(
-                        SummaryOutputSchema(**validated_response.model_dump(), id=id)
+                        SummaryOutputSchema(
+                            **(validated_response.model_dump(by_alias=True)), id=id
+                        )
                     )
                     time.sleep(20)
                     continue
 
             self.summary_pool.append(past_context)
             logger.warning(f"error getting {id=}")
+
+    def handle_validation_error(self, input_text):
+        message = self.summary.validation_messages(input_text)
+        for _ in range(MAX_VALIDATION_ERROR_TRY):
+            err, response = self.summary.get(messages=message)
+            if not err:
+                validated_response = self.summary.validate_json(
+                    response, SummaryResponseSchema
+                )
 
     @property
     def get_summary_pool(self):

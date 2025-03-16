@@ -1,3 +1,5 @@
+MAX_VALIDATION_ERROR_TRY = 3
+
 SUMMARY_ROLE = """
 Given Json was wrong i want valid json tht is ready to parse!!try again.
 NOTE: Only output in JSON. Ensure the JSON format is valid, well-formed, and ready to parse. Nothing should appear before or after the JSON output.
@@ -36,6 +38,17 @@ You are a book parser that processes text chunks along with contextual informati
 }
 """
 
+SUMMARY_VALIDATION_RESOLVE_ROLE = """
+Given output doesnt follow the mentioned schema
+Only return a ready to parse json with no aditional string 
+format->
+{
+  "summary": "...",
+  "characters": { "name": "...", "description": "..." },
+  "places": { "name": "...", "description": "..." }
+}
+
+"""
 
 PROMPT_ROLE = """
     """
