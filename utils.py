@@ -17,8 +17,7 @@ class Tokenizer:
 
     def __post_init__(self):
         try:
-            api = os.environ.get("HF_API")
-            login(token=api)
+            login(token=os.environ.get("HF_API"))
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         except Exception as error:
             logger.error(f"Error while downloading tokenizer, {error=}")
@@ -68,10 +67,6 @@ class Chunker:
 
 
 def main():
-    login(token=api)
     tokenizer = AutoTokenizer.from_pretrained(
         pretrained_model_name_or_path="meta-llama/Llama-3.1-8B-Instruct"
     )
-
-
-main()

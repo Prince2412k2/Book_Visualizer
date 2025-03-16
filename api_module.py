@@ -215,15 +215,19 @@ class SummaryLoop(BaseModel):
                     response, SummaryResponseSchema
                 )
 
-                if not validated_response:
+                if validated_response:
                     logger.trace(f"Chunk_{id=} Done")
                     self.summary_pool.append(
                         SummaryOutputSchema(
                             **(validated_response.model_dump(by_alias=True)), id=id
                         )
                     )
-                    time.sleep(20)
+                    time.sleep(30)
                     continue
+                else:
+                    output = self.handle_validation_error(response)
+                    if output:
+                        past_context = output
 
             self.summary_pool.append(past_context)
             logger.warning(f"error getting {id=}")
@@ -236,6 +240,10 @@ class SummaryLoop(BaseModel):
                 validated_response = self.summary.validate_json(
                     response, SummaryResponseSchema
                 )
+                if validated_response:
+                    return validated_response
+        logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
+        return None
 
     @property
     def get_summary_pool(self):
