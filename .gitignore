@@ -1,6 +1,7 @@
 __pycache__/
 .env
 epy.py
+exp_book/
 output/
 Audios/
 exalted-skein-446217-e2-e83f57244ce8.json

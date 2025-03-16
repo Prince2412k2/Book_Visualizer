@@ -1,52 +1,14 @@
 # Book Helper
 
-## Dir-Structure
-
 ```
-.
-├── **pycache**
-├── books
-│   └──> **Input_books**
-│
-│
-├── Images
-│    └──> **Output of tti_models.ipynb**
-│
-├── media
-│    └──> **Sudo-code for Image_gen.ipynb**
-│
-├── Model_lists
-│    └──> **List of Models in Huggingface**
-│
-├── output
-│   ├── audio ────> **output of audio.ipynb**
-│   ├── HP
-│   ├── Images
-│   ├── LP
-│   ├── Old
-│   ├──  Stranger
-│   └──────────────> **Output of image_gen.ipynb**
-│
-├── temp ───────────────> **Junk**
-│
-├── audio.ipynb ────────> **audio gen pipeline**
-│
-├── epy.py ─────────────> **Alt-reader library**
-│
-├── image_gen.ipynb ────> **Image/summary gen pipeline**
-│
-├── groq_image_gen.ipynb ────> **Image/summary gen pipeline using groq api**
-│
-├── reader.py ──────────> **Main-reader library**
-│
-├── requirement.txt ────> **pip-requirements**
-│
-├── test_models.ipynb ────> **Testrun for Text-to-img models from HG**
-│
-├── .env ────────────────> **HG_API**
-│
-└── "exalted....".json ──> **Google_API**
+api_module.py is the main module tht handles groq api 
+api_module depends on utils.py and logger_module.py
 
+api_module requires GROQ_API in .env file 
+utils requires HF_API in .env file
+
+make sure the HF account tht HF_API belongs to has access to "meta-llama/Llama-3.1-8B-Instruct" model 
+you can go to the huggingface repo of "meta-llama/Llama-3.1-8B-Instruct" to get access 
 ```
 
 **Note - HG_API and Google_api is private (not included in repo)**

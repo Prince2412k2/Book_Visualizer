@@ -3,16 +3,22 @@ from huggingface_hub import login
 from transformers import AutoTokenizer
 from dataclasses import dataclass
 from logger_module import logger
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
 
 
 @dataclass
 class Tokenizer:
     api_key: str
-    model_name: str = "mistralai/Mistral-Nemo-Instruct-2407"
+    model_name: str = "meta-llama/Llama-3.1-8B-Instruct"
 
     def __post_init__(self):
         try:
-            login(token=self.api_key)
+            api = os.environ.get("HF_API")
+            login(token=api)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         except Exception as error:
             logger.error(f"Error while downloading tokenizer, {error=}")
@@ -59,3 +65,13 @@ class Chunker:
                 start += self.max_len  # Move to next chunk
 
         return total_chunks
+
+
+def main():
+    login(token=api)
+    tokenizer = AutoTokenizer.from_pretrained(
+        pretrained_model_name_or_path="meta-llama/Llama-3.1-8B-Instruct"
+    )
+
+
+main()
