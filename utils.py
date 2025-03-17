@@ -58,7 +58,7 @@ class Chunker:
             while start < num_tokens:
                 chunk_tokens = tokens[start : start + self.max_len]
                 chunk_text = self.tokenizer.detokenize(chunk_tokens)
-                chunk_id = f"CH{id}C{count}"
+                chunk_id = f"${id}#{count}"
                 total_chunks.append((chunk_id, orig_id, chunk_text))
                 count += 1
                 start += self.max_len  # Move to next chunk
