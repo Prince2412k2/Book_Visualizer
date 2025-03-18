@@ -1,0 +1,122 @@
+2025-03-17T15:11:34.878725+0530 | DEBUG | extract.py | file: ./exp_book/LP.azw3
+2025-03-17T15:11:34.879976+0530 | DEBUG | kindleunpack.py | Palm DB type: BOOKMOBI, 93 sections.
+2025-03-17T15:11:34.880241+0530 | DEBUG | kindleunpack.py | Unpacking a KF8 book...
+2025-03-17T15:11:34.880726+0530 | DEBUG | kindleunpack.py | Processing K8 section of book...
+2025-03-17T15:11:34.880817+0530 | DEBUG | mobi_header.py | Mobi Version: 8
+2025-03-17T15:11:34.880875+0530 | DEBUG | mobi_header.py | Codec: utf-8
+2025-03-17T15:11:34.880923+0530 | DEBUG | mobi_header.py | Title: The Little Prince
+2025-03-17T15:11:34.880969+0530 | DEBUG | mobi_header.py | EXTH Title: The Little Prince
+2025-03-17T15:11:34.881026+0530 | DEBUG | mobi_header.py | Palmdoc compression
+2025-03-17T15:11:34.881070+0530 | DEBUG | kindleunpack.py | Unpacking images, resources, fonts, etc
+2025-03-17T15:11:34.881135+0530 | DEBUG | kindleunpack.py | Extracting image: image00045.png from section 45
+2025-03-17T15:11:34.881288+0530 | DEBUG | kindleunpack.py | Extracting image: image00046.jpeg from section 46
+2025-03-17T15:11:34.881438+0530 | DEBUG | kindleunpack.py | Extracting image: image00047.jpeg from section 47
+2025-03-17T15:11:34.881578+0530 | DEBUG | kindleunpack.py | Extracting image: image00048.png from section 48
+2025-03-17T15:11:34.881712+0530 | DEBUG | kindleunpack.py | Extracting image: image00049.jpeg from section 49
+2025-03-17T15:11:34.881856+0530 | DEBUG | kindleunpack.py | Extracting image: image00050.jpeg from section 50
+2025-03-17T15:11:34.881992+0530 | DEBUG | kindleunpack.py | Extracting image: image00051.jpeg from section 51
+2025-03-17T15:11:34.882150+0530 | DEBUG | kindleunpack.py | Extracting image: image00052.jpeg from section 52
+2025-03-17T15:11:34.882302+0530 | DEBUG | kindleunpack.py | Extracting image: image00053.jpeg from section 53
+2025-03-17T15:11:34.882469+0530 | DEBUG | kindleunpack.py | Extracting image: image00054.jpeg from section 54
+2025-03-17T15:11:34.882612+0530 | DEBUG | kindleunpack.py | Extracting image: image00055.jpeg from section 55
+2025-03-17T15:11:34.882742+0530 | DEBUG | kindleunpack.py | Extracting image: image00056.jpeg from section 56
+2025-03-17T15:11:34.882894+0530 | DEBUG | kindleunpack.py | Extracting image: image00057.jpeg from section 57
+2025-03-17T15:11:34.883013+0530 | DEBUG | kindleunpack.py | Extracting image: image00058.jpeg from section 58
+2025-03-17T15:11:34.883139+0530 | DEBUG | kindleunpack.py | Extracting image: image00059.jpeg from section 59
+2025-03-17T15:11:34.883275+0530 | DEBUG | kindleunpack.py | Extracting image: image00060.gif from section 60
+2025-03-17T15:11:34.883460+0530 | DEBUG | kindleunpack.py | Extracting image: image00061.jpeg from section 61
+2025-03-17T15:11:34.883607+0530 | DEBUG | kindleunpack.py | Extracting image: image00062.jpeg from section 62
+2025-03-17T15:11:34.883762+0530 | DEBUG | kindleunpack.py | Extracting image: image00063.png from section 63
+2025-03-17T15:11:34.883892+0530 | DEBUG | kindleunpack.py | Extracting image: image00064.jpeg from section 64
+2025-03-17T15:11:34.884037+0530 | DEBUG | kindleunpack.py | Extracting image: image00065.jpeg from section 65
+2025-03-17T15:11:34.884171+0530 | DEBUG | kindleunpack.py | Extracting image: image00066.jpeg from section 66
+2025-03-17T15:11:34.884295+0530 | DEBUG | kindleunpack.py | Extracting image: image00067.jpeg from section 67
+2025-03-17T15:11:34.884499+0530 | DEBUG | kindleunpack.py | Extracting image: image00068.jpeg from section 68
+2025-03-17T15:11:34.884639+0530 | DEBUG | kindleunpack.py | Extracting image: image00069.jpeg from section 69
+2025-03-17T15:11:34.884765+0530 | DEBUG | kindleunpack.py | Extracting image: image00070.jpeg from section 70
+2025-03-17T15:11:34.884899+0530 | DEBUG | kindleunpack.py | Extracting image: image00071.jpeg from section 71
+2025-03-17T15:11:34.885065+0530 | DEBUG | kindleunpack.py | Extracting image: image00072.gif from section 72
+2025-03-17T15:11:34.885207+0530 | DEBUG | kindleunpack.py | Extracting image: image00073.jpeg from section 73
+2025-03-17T15:11:34.885338+0530 | DEBUG | kindleunpack.py | Extracting image: image00074.jpeg from section 74
+2025-03-17T15:11:34.885540+0530 | DEBUG | kindleunpack.py | Extracting image: image00075.png from section 75
+2025-03-17T15:11:34.885673+0530 | DEBUG | kindleunpack.py | Extracting image: image00076.jpeg from section 76
+2025-03-17T15:11:34.885820+0530 | DEBUG | kindleunpack.py | Extracting image: image00077.jpeg from section 77
+2025-03-17T15:11:34.885958+0530 | DEBUG | kindleunpack.py | Extracting image: image00078.jpeg from section 78
+2025-03-17T15:11:34.886094+0530 | DEBUG | kindleunpack.py | Extracting image: image00079.jpeg from section 79
+2025-03-17T15:11:34.886246+0530 | DEBUG | kindleunpack.py | Extracting image: image00080.jpeg from section 80
+2025-03-17T15:11:34.886395+0530 | DEBUG | kindleunpack.py | Extracting image: image00081.jpeg from section 81
+2025-03-17T15:11:34.886525+0530 | DEBUG | kindleunpack.py | Extracting image: image00082.jpeg from section 82
+2025-03-17T15:11:34.886660+0530 | DEBUG | kindleunpack.py | Extracting image: image00083.jpeg from section 83
+2025-03-17T15:11:34.886813+0530 | DEBUG | kindleunpack.py | Extracting image: image00084.jpeg from section 84
+2025-03-17T15:11:34.886946+0530 | DEBUG | kindleunpack.py | Extracting image: image00085.jpeg from section 85
+2025-03-17T15:11:34.887078+0530 | DEBUG | kindleunpack.py | Extracting image: image00086.jpeg from section 86
+2025-03-17T15:11:34.887237+0530 | DEBUG | kindleunpack.py | Extracting image: image00087.jpeg from section 87
+2025-03-17T15:11:34.887434+0530 | DEBUG | kindleunpack.py | Extracting image: image00088.jpeg from section 88
+2025-03-17T15:11:34.887606+0530 | DEBUG | mobi_header.py | Unpacking raw markup language
+2025-03-17T15:11:34.923518+0530 | DEBUG | kindleunpack.py | Processing ncx / toc
+2025-03-17T15:11:34.925029+0530 | DEBUG | kindleunpack.py | Building an epub-like structure
+2025-03-17T15:11:34.925370+0530 | DEBUG | mobi_html.py | Building proper xhtml for each file
+2025-03-17T15:11:34.941267+0530 | DEBUG | mobi_opf.py | Building an opf for mobi8 using epub version: 2
+2025-03-17T15:11:34.941767+0530 | DEBUG | mobi_ncx.py | Write K8 ncx
+2025-03-17T15:11:34.942169+0530 | DEBUG | kindleunpack.py | Creating an epub-like file
+2025-03-17T15:11:58.321169+0530 | DEBUG | extract.py | file: ./exp_book/LP.azw3
+2025-03-17T15:11:58.322453+0530 | DEBUG | kindleunpack.py | Palm DB type: BOOKMOBI, 93 sections.
+2025-03-17T15:11:58.322734+0530 | DEBUG | kindleunpack.py | Unpacking a KF8 book...
+2025-03-17T15:11:58.323247+0530 | DEBUG | kindleunpack.py | Processing K8 section of book...
+2025-03-17T15:11:58.323342+0530 | DEBUG | mobi_header.py | Mobi Version: 8
+2025-03-17T15:11:58.323418+0530 | DEBUG | mobi_header.py | Codec: utf-8
+2025-03-17T15:11:58.323468+0530 | DEBUG | mobi_header.py | Title: The Little Prince
+2025-03-17T15:11:58.323515+0530 | DEBUG | mobi_header.py | EXTH Title: The Little Prince
+2025-03-17T15:11:58.323577+0530 | DEBUG | mobi_header.py | Palmdoc compression
+2025-03-17T15:11:58.323621+0530 | DEBUG | kindleunpack.py | Unpacking images, resources, fonts, etc
+2025-03-17T15:11:58.323694+0530 | DEBUG | kindleunpack.py | Extracting image: image00045.png from section 45
+2025-03-17T15:11:58.323856+0530 | DEBUG | kindleunpack.py | Extracting image: image00046.jpeg from section 46
+2025-03-17T15:11:58.323988+0530 | DEBUG | kindleunpack.py | Extracting image: image00047.jpeg from section 47
+2025-03-17T15:11:58.324125+0530 | DEBUG | kindleunpack.py | Extracting image: image00048.png from section 48
+2025-03-17T15:11:58.324261+0530 | DEBUG | kindleunpack.py | Extracting image: image00049.jpeg from section 49
+2025-03-17T15:11:58.324429+0530 | DEBUG | kindleunpack.py | Extracting image: image00050.jpeg from section 50
+2025-03-17T15:11:58.324584+0530 | DEBUG | kindleunpack.py | Extracting image: image00051.jpeg from section 51
+2025-03-17T15:11:58.324743+0530 | DEBUG | kindleunpack.py | Extracting image: image00052.jpeg from section 52
+2025-03-17T15:11:58.324889+0530 | DEBUG | kindleunpack.py | Extracting image: image00053.jpeg from section 53
+2025-03-17T15:11:58.325033+0530 | DEBUG | kindleunpack.py | Extracting image: image00054.jpeg from section 54
+2025-03-17T15:11:58.325184+0530 | DEBUG | kindleunpack.py | Extracting image: image00055.jpeg from section 55
+2025-03-17T15:11:58.325310+0530 | DEBUG | kindleunpack.py | Extracting image: image00056.jpeg from section 56
+2025-03-17T15:11:58.325475+0530 | DEBUG | kindleunpack.py | Extracting image: image00057.jpeg from section 57
+2025-03-17T15:11:58.325596+0530 | DEBUG | kindleunpack.py | Extracting image: image00058.jpeg from section 58
+2025-03-17T15:11:58.325720+0530 | DEBUG | kindleunpack.py | Extracting image: image00059.jpeg from section 59
+2025-03-17T15:11:58.325854+0530 | DEBUG | kindleunpack.py | Extracting image: image00060.gif from section 60
+2025-03-17T15:11:58.326005+0530 | DEBUG | kindleunpack.py | Extracting image: image00061.jpeg from section 61
+2025-03-17T15:11:58.326179+0530 | DEBUG | kindleunpack.py | Extracting image: image00062.jpeg from section 62
+2025-03-17T15:11:58.326332+0530 | DEBUG | kindleunpack.py | Extracting image: image00063.png from section 63
+2025-03-17T15:11:58.326475+0530 | DEBUG | kindleunpack.py | Extracting image: image00064.jpeg from section 64
+2025-03-17T15:11:58.326615+0530 | DEBUG | kindleunpack.py | Extracting image: image00065.jpeg from section 65
+2025-03-17T15:11:58.326742+0530 | DEBUG | kindleunpack.py | Extracting image: image00066.jpeg from section 66
+2025-03-17T15:11:58.326877+0530 | DEBUG | kindleunpack.py | Extracting image: image00067.jpeg from section 67
+2025-03-17T15:11:58.327017+0530 | DEBUG | kindleunpack.py | Extracting image: image00068.jpeg from section 68
+2025-03-17T15:11:58.327150+0530 | DEBUG | kindleunpack.py | Extracting image: image00069.jpeg from section 69
+2025-03-17T15:11:58.327272+0530 | DEBUG | kindleunpack.py | Extracting image: image00070.jpeg from section 70
+2025-03-17T15:11:58.327420+0530 | DEBUG | kindleunpack.py | Extracting image: image00071.jpeg from section 71
+2025-03-17T15:11:58.327585+0530 | DEBUG | kindleunpack.py | Extracting image: image00072.gif from section 72
+2025-03-17T15:11:58.327723+0530 | DEBUG | kindleunpack.py | Extracting image: image00073.jpeg from section 73
+2025-03-17T15:11:58.327847+0530 | DEBUG | kindleunpack.py | Extracting image: image00074.jpeg from section 74
+2025-03-17T15:11:58.327976+0530 | DEBUG | kindleunpack.py | Extracting image: image00075.png from section 75
+2025-03-17T15:11:58.328102+0530 | DEBUG | kindleunpack.py | Extracting image: image00076.jpeg from section 76
+2025-03-17T15:11:58.328244+0530 | DEBUG | kindleunpack.py | Extracting image: image00077.jpeg from section 77
+2025-03-17T15:11:58.328389+0530 | DEBUG | kindleunpack.py | Extracting image: image00078.jpeg from section 78
+2025-03-17T15:11:58.328527+0530 | DEBUG | kindleunpack.py | Extracting image: image00079.jpeg from section 79
+2025-03-17T15:11:58.328668+0530 | DEBUG | kindleunpack.py | Extracting image: image00080.jpeg from section 80
+2025-03-17T15:11:58.328807+0530 | DEBUG | kindleunpack.py | Extracting image: image00081.jpeg from section 81
+2025-03-17T15:11:58.328929+0530 | DEBUG | kindleunpack.py | Extracting image: image00082.jpeg from section 82
+2025-03-17T15:11:58.329064+0530 | DEBUG | kindleunpack.py | Extracting image: image00083.jpeg from section 83
+2025-03-17T15:11:58.329195+0530 | DEBUG | kindleunpack.py | Extracting image: image00084.jpeg from section 84
+2025-03-17T15:11:58.329323+0530 | DEBUG | kindleunpack.py | Extracting image: image00085.jpeg from section 85
+2025-03-17T15:11:58.329487+0530 | DEBUG | kindleunpack.py | Extracting image: image00086.jpeg from section 86
+2025-03-17T15:11:58.329646+0530 | DEBUG | kindleunpack.py | Extracting image: image00087.jpeg from section 87
+2025-03-17T15:11:58.329809+0530 | DEBUG | kindleunpack.py | Extracting image: image00088.jpeg from section 88
+2025-03-17T15:11:58.329972+0530 | DEBUG | mobi_header.py | Unpacking raw markup language
+2025-03-17T15:11:58.365295+0530 | DEBUG | kindleunpack.py | Processing ncx / toc
+2025-03-17T15:11:58.366828+0530 | DEBUG | kindleunpack.py | Building an epub-like structure
+2025-03-17T15:11:58.367157+0530 | DEBUG | mobi_html.py | Building proper xhtml for each file
+2025-03-17T15:11:58.382973+0530 | DEBUG | mobi_opf.py | Building an opf for mobi8 using epub version: 2
+2025-03-17T15:11:58.383491+0530 | DEBUG | mobi_ncx.py | Write K8 ncx
+2025-03-17T15:11:58.383906+0530 | DEBUG | kindleunpack.py | Creating an epub-like file

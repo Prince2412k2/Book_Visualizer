@@ -129,7 +129,7 @@ class Summary:
             ),
         ]
 
-    def get(self, messages: List[MessageSchema]) -> Tuple[bool, str]:
+    def get(self, messages: List[MessageSchema]) -> Tuple[int, str]:
         payload = SummaryPayloadSchema(
             model=self.model,
             messages=messages,
@@ -139,13 +139,14 @@ class Summary:
 
         headers = HeadersSchema.create(api_key=self.api_key).model_dump(by_alias=True)
         response = requests.post(url=self.url, headers=headers, json=payload)
-        if response.status_code == 200:
+        code = response.status_code
+        if code == 200:
             response_data = response.json()
             assistant_message = response_data["choices"][0]["message"]["content"]
-            return False, assistant_message
+            return code, assistant_message
         else:
             logger.warning(f"Error: {response.json()}")
-            return True, "ERROR_API_CALL"
+            return code, "ERROR_API_CALL"
 
     def validate_json(
         self, raw_data: str, schema: Type[SummaryResponseSchema]
@@ -208,9 +209,9 @@ class SummaryLoop(BaseModel):
                 characters=past_context.characters,
                 places=past_context.places,
             )
-            error, response = self.summary.get(messages=message)
+            status_code, response = self.summary.get(messages=message)
 
-            if not error:
+            if status_code == 200:
                 validated_response = self.summary.validate_json(
                     response, SummaryResponseSchema
                 )
@@ -228,9 +229,9 @@ class SummaryLoop(BaseModel):
                     output = self.handle_validation_error(response)
                     if output:
                         past_context = output
-
-            self.summary_pool.append(past_context)
-            logger.warning(f"error getting {id=}")
+            elif status_code == 400:
+                self.summary_pool.append(past_context)
+                logger.warning(f"error getting {id=}")
 
     def handle_validation_error(self, input_text):
         message = self.summary.validation_messages(input_text)
@@ -244,6 +245,9 @@ class SummaryLoop(BaseModel):
                     return validated_response
         logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
+    
+    def retry(self,message:[MessageSchema])->:
+
 
     @property
     def get_summary_pool(self):
@@ -259,7 +263,8 @@ async def test() -> None:
 
     book = ebook("./exp_book/LP.epub")
     chapter_content = book.get_chapters()
-
+    
+    from audio_module import speech_for_loop
     sum = Summary(
         api_key=api,
     )

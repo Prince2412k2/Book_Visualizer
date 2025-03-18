@@ -1,12 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict
 from base_reader import HTMLtoLines, det_ebook_cls, Epub, FictionBook, Azw3, Mobi
-from loguru import logger
 import sys
-
-logger.remove()
-logger.add(sys.stdout)
-logger.add("app.log", format="{time} | {level} | {message} | {extra} ", level="DEBUG")
 
 
 @dataclass

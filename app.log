@@ -1,0 +1,61 @@
+2025-03-17T15:00:22.165659+0530 | DEBUG | file: ./exp_book/LP.azw3 | {} 
+2025-03-17T15:00:22.166915+0530 | DEBUG | Palm DB type: BOOKMOBI, 93 sections. | {} 
+2025-03-17T15:00:22.167306+0530 | DEBUG | Unpacking a KF8 book... | {} 
+2025-03-17T15:00:22.167910+0530 | DEBUG | Processing K8 section of book... | {} 
+2025-03-17T15:00:22.168079+0530 | DEBUG | Mobi Version: 8 | {} 
+2025-03-17T15:00:22.168207+0530 | DEBUG | Codec: utf-8 | {} 
+2025-03-17T15:00:22.168319+0530 | DEBUG | Title: The Little Prince | {} 
+2025-03-17T15:00:22.168452+0530 | DEBUG | EXTH Title: The Little Prince | {} 
+2025-03-17T15:00:22.168564+0530 | DEBUG | Palmdoc compression | {} 
+2025-03-17T15:00:22.168670+0530 | DEBUG | Unpacking images, resources, fonts, etc | {} 
+2025-03-17T15:00:22.168800+0530 | DEBUG | Extracting image: image00045.png from section 45 | {} 
+2025-03-17T15:00:22.169040+0530 | DEBUG | Extracting image: image00046.jpeg from section 46 | {} 
+2025-03-17T15:00:22.169247+0530 | DEBUG | Extracting image: image00047.jpeg from section 47 | {} 
+2025-03-17T15:00:22.169474+0530 | DEBUG | Extracting image: image00048.png from section 48 | {} 
+2025-03-17T15:00:22.169693+0530 | DEBUG | Extracting image: image00049.jpeg from section 49 | {} 
+2025-03-17T15:00:22.169920+0530 | DEBUG | Extracting image: image00050.jpeg from section 50 | {} 
+2025-03-17T15:00:22.170128+0530 | DEBUG | Extracting image: image00051.jpeg from section 51 | {} 
+2025-03-17T15:00:22.170372+0530 | DEBUG | Extracting image: image00052.jpeg from section 52 | {} 
+2025-03-17T15:00:22.170602+0530 | DEBUG | Extracting image: image00053.jpeg from section 53 | {} 
+2025-03-17T15:00:22.170812+0530 | DEBUG | Extracting image: image00054.jpeg from section 54 | {} 
+2025-03-17T15:00:22.171021+0530 | DEBUG | Extracting image: image00055.jpeg from section 55 | {} 
+2025-03-17T15:00:22.171217+0530 | DEBUG | Extracting image: image00056.jpeg from section 56 | {} 
+2025-03-17T15:00:22.171451+0530 | DEBUG | Extracting image: image00057.jpeg from section 57 | {} 
+2025-03-17T15:00:22.171651+0530 | DEBUG | Extracting image: image00058.jpeg from section 58 | {} 
+2025-03-17T15:00:22.171846+0530 | DEBUG | Extracting image: image00059.jpeg from section 59 | {} 
+2025-03-17T15:00:22.172055+0530 | DEBUG | Extracting image: image00060.gif from section 60 | {} 
+2025-03-17T15:00:22.172309+0530 | DEBUG | Extracting image: image00061.jpeg from section 61 | {} 
+2025-03-17T15:00:22.172555+0530 | DEBUG | Extracting image: image00062.jpeg from section 62 | {} 
+2025-03-17T15:00:22.172786+0530 | DEBUG | Extracting image: image00063.png from section 63 | {} 
+2025-03-17T15:00:22.172990+0530 | DEBUG | Extracting image: image00064.jpeg from section 64 | {} 
+2025-03-17T15:00:22.173203+0530 | DEBUG | Extracting image: image00065.jpeg from section 65 | {} 
+2025-03-17T15:00:22.173464+0530 | DEBUG | Extracting image: image00066.jpeg from section 66 | {} 
+2025-03-17T15:00:22.173682+0530 | DEBUG | Extracting image: image00067.jpeg from section 67 | {} 
+2025-03-17T15:00:22.173905+0530 | DEBUG | Extracting image: image00068.jpeg from section 68 | {} 
+2025-03-17T15:00:22.174115+0530 | DEBUG | Extracting image: image00069.jpeg from section 69 | {} 
+2025-03-17T15:00:22.174310+0530 | DEBUG | Extracting image: image00070.jpeg from section 70 | {} 
+2025-03-17T15:00:22.174594+0530 | DEBUG | Extracting image: image00071.jpeg from section 71 | {} 
+2025-03-17T15:00:22.174869+0530 | DEBUG | Extracting image: image00072.gif from section 72 | {} 
+2025-03-17T15:00:22.175091+0530 | DEBUG | Extracting image: image00073.jpeg from section 73 | {} 
+2025-03-17T15:00:22.175305+0530 | DEBUG | Extracting image: image00074.jpeg from section 74 | {} 
+2025-03-17T15:00:22.175560+0530 | DEBUG | Extracting image: image00075.png from section 75 | {} 
+2025-03-17T15:00:22.175767+0530 | DEBUG | Extracting image: image00076.jpeg from section 76 | {} 
+2025-03-17T15:00:22.176003+0530 | DEBUG | Extracting image: image00077.jpeg from section 77 | {} 
+2025-03-17T15:00:22.176216+0530 | DEBUG | Extracting image: image00078.jpeg from section 78 | {} 
+2025-03-17T15:00:22.176492+0530 | DEBUG | Extracting image: image00079.jpeg from section 79 | {} 
+2025-03-17T15:00:22.176772+0530 | DEBUG | Extracting image: image00080.jpeg from section 80 | {} 
+2025-03-17T15:00:22.177003+0530 | DEBUG | Extracting image: image00081.jpeg from section 81 | {} 
+2025-03-17T15:00:22.177202+0530 | DEBUG | Extracting image: image00082.jpeg from section 82 | {} 
+2025-03-17T15:00:22.177426+0530 | DEBUG | Extracting image: image00083.jpeg from section 83 | {} 
+2025-03-17T15:00:22.177651+0530 | DEBUG | Extracting image: image00084.jpeg from section 84 | {} 
+2025-03-17T15:00:22.177857+0530 | DEBUG | Extracting image: image00085.jpeg from section 85 | {} 
+2025-03-17T15:00:22.178063+0530 | DEBUG | Extracting image: image00086.jpeg from section 86 | {} 
+2025-03-17T15:00:22.178292+0530 | DEBUG | Extracting image: image00087.jpeg from section 87 | {} 
+2025-03-17T15:00:22.178543+0530 | DEBUG | Extracting image: image00088.jpeg from section 88 | {} 
+2025-03-17T15:00:22.178779+0530 | DEBUG | Unpacking raw markup language | {} 
+2025-03-17T15:00:22.215284+0530 | DEBUG | Processing ncx / toc | {} 
+2025-03-17T15:00:22.217008+0530 | DEBUG | Building an epub-like structure | {} 
+2025-03-17T15:00:22.217438+0530 | DEBUG | Building proper xhtml for each file | {} 
+2025-03-17T15:00:22.233438+0530 | DEBUG | Building an opf for mobi8 using epub version: 2 | {} 
+2025-03-17T15:00:22.234111+0530 | DEBUG | Write K8 ncx | {} 
+2025-03-17T15:00:22.234658+0530 | DEBUG | Creating an epub-like file | {} 
