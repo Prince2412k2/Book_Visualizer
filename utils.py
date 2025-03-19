@@ -5,9 +5,25 @@ from dataclasses import dataclass
 from logger_module import logger
 import os
 from dotenv import load_dotenv
+import unicodedata
+import codecs
+
 
 load_dotenv()
 os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
+
+
+def normalize_text(text):
+    # Decode all escape sequences (e.g., \n, \u3000, \xNN)
+    text = codecs.decode(text, "unicode_escape")
+
+    # Normalize Unicode (fixes accents, special symbols, converts full-width to half-width)
+    text = unicodedata.normalize("NFKC", text)
+
+    # Remove excessive spaces and newlines
+    text = " ".join(text.split())
+
+    return text
 
 
 @dataclass
@@ -52,6 +68,9 @@ class Chunker:
         total_chunks = []
 
         for id, (orig_id, text) in enumerate(content):
+            clean_text = normalize_text(text)
+            if clean_text:
+                text = clean_text
             num_tokens, tokens = self.tokenizer.tokenize(text)
             count = 1
             start = 0

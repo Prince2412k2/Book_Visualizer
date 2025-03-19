@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field, ValidationError
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import json
+
 from logger_module import logger
 from utils import Chunker, Tokenizer
 import requests
@@ -46,6 +47,9 @@ class SummaryPayloadSchema(BaseModel):
     stream: bool
     max_completion_tokens: int = 2048
     response_format: Dict[str, str] = {"type": "json_object"}
+    top_p: float = 0.8
+    frequency_penalty: float = 1.0
+    presence_penalty: float = 1.5
 
 
 class SummaryResponseSchema(BaseModel):
@@ -95,7 +99,7 @@ class Summary:
     )
     validation_role: str = f"{SUMMARY_VALIDATION_RESOLVE_ROLE} Schema :{SummaryOutputSchema.model_json_schema()}"
     model: str = "llama-3.1-8b-instant"
-    temperature: float = 0.1
+    temperature: float = 0.4
     stream: bool = False
     repetition_penalty: float = 1.5
     max_tokens: int = 6000
@@ -145,8 +149,12 @@ class Summary:
             assistant_message = response_data["choices"][0]["message"]["content"]
             return code, assistant_message
         else:
-            logger.warning(f"Error: {response.json()}")
-            return code, "ERROR_API_CALL"
+            try:
+                if response.json()["error"]["code"] == "json_validate_failed":
+                    return 422, response.json()["error"]["failed_generation"]
+            except:
+                logger.warning(f"Error: {response.json()}")
+                return code, "ERROR_API_CALL"
 
     def validate_json(
         self, raw_data: str, schema: Type[SummaryResponseSchema]
@@ -223,31 +231,35 @@ class SummaryLoop(BaseModel):
                             **(validated_response.model_dump(by_alias=True)), id=id
                         )
                     )
-                    time.sleep(30)
                     continue
                 else:
                     output = self.handle_validation_error(response)
                     if output:
                         past_context = output
+            elif status_code == 422:
+                output = self.handle_validation_error(response)
             elif status_code == 400:
                 self.summary_pool.append(past_context)
-                logger.warning(f"error getting {id=}")
+                logger.warning(f"{status_code=} error getting{id=}")
 
     def handle_validation_error(self, input_text):
         message = self.summary.validation_messages(input_text)
-        for _ in range(MAX_VALIDATION_ERROR_TRY):
-            err, response = self.summary.get(messages=message)
-            if not err:
+        for idx in range(MAX_VALIDATION_ERROR_TRY):
+            status_code, response = self.summary.get(messages=message)
+            if status_code == 200:
                 validated_response = self.summary.validate_json(
                     response, SummaryResponseSchema
                 )
                 if validated_response:
+                    logger.info("Validation error resolved")
                     return validated_response
+            elif status_code == 422:
+                message = self.summary.validation_messages(response)
+            logger.warning(f"Validation Unresolved on try {idx + 1}")
         logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
-    
-    def retry(self,message:[MessageSchema])->:
 
+    # def retry(self,message:[MessageSchema])->:
 
     @property
     def get_summary_pool(self):
@@ -261,10 +273,8 @@ async def test() -> None:
     if not api:
         raise Exception("API NOT SET IN .env, HF_API=None")
 
-    book = ebook("./exp_book/LP.epub")
-    chapter_content = book.get_chapters()
-    
-    from audio_module import speech_for_loop
+    book = ebook("./exp_book/HP.epub")
+    chapter_content = book.get_chapters()[1:6]
     sum = Summary(
         api_key=api,
     )
