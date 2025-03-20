@@ -1,10 +1,10 @@
 MAX_VALIDATION_ERROR_TRY = 3
 
 SUMMARY_ROLE = """
-DO NOT REPEAT THE INPUT
 NOTE: Only output in JSON. Ensure the JSON format is valid, well-formed, and ready to parse. Nothing should appear before or after the JSON output.
 
 You are a book parser that processes text chunks along with contextual information from previous chunks and generates structured output.
+only include important details from previous chunks.Summary should be 2000 token long
 
 ### Input:
 1. **Current Text Chunk**: The section of text to be analyzed.
@@ -13,8 +13,8 @@ You are a book parser that processes text chunks along with contextual informati
 4. **Previous Text Chunk Summaries**: Context from earlier chunks.
 
 ### Rules:
-1. **Narrative Summary (Abstractive)**:  
-   - Summarize(Abstractive) and explain the given text chunk in detail.
+1. **Narrative Summary**:  
+   - Summarize and explain the given text chunk in detail.
    - Integrate key developments and context from previous chunks.
    - Generate a self-contained summary and explanation.
    - End with **"To be continued."**  

@@ -147,6 +147,9 @@ class Summary:
         if code == 200:
             response_data = response.json()
             assistant_message = response_data["choices"][0]["message"]["content"]
+            logger.info(
+                f"200 : Input_Tokens={response_data['usage']['prompt_tokens']} | Output_Tokens={response_data['usage']['completion_tokens']}  | Time={response_data['usage']['total_time']}"
+            )
             return code, assistant_message
         else:
             try:
@@ -155,6 +158,8 @@ class Summary:
             except:
                 logger.warning(f"Error: {response.json()}")
                 return code, "ERROR_API_CALL"
+
+        return code, "ERROR_API_CALL"
 
     def validate_json(
         self, raw_data: str, schema: Type[SummaryResponseSchema]
@@ -238,9 +243,11 @@ class SummaryLoop(BaseModel):
                         past_context = output
             elif status_code == 422:
                 output = self.handle_validation_error(response)
-            elif status_code == 400:
-                self.summary_pool.append(past_context)
-                logger.warning(f"{status_code=} error getting{id=}")
+                if output:
+                    past_context = output
+
+            self.summary_pool.append(past_context)
+            logger.warning(f"{status_code=} error getting{id=}")
 
     def handle_validation_error(self, input_text):
         message = self.summary.validation_messages(input_text)
@@ -248,7 +255,7 @@ class SummaryLoop(BaseModel):
             status_code, response = self.summary.get(messages=message)
             if status_code == 200:
                 validated_response = self.summary.validate_json(
-                    response, SummaryResponseSchema
+                    response, SummaryOutputSchema
                 )
                 if validated_response:
                     logger.info("Validation error resolved")
@@ -258,8 +265,6 @@ class SummaryLoop(BaseModel):
             logger.warning(f"Validation Unresolved on try {idx + 1}")
         logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
-
-    # def retry(self,message:[MessageSchema])->:
 
     @property
     def get_summary_pool(self):
@@ -273,7 +278,7 @@ async def test() -> None:
     if not api:
         raise Exception("API NOT SET IN .env, HF_API=None")
 
-    book = ebook("./exp_book/HP.epub")
+    book = ebook("./exp_book/stranger.pdf")
     chapter_content = book.get_chapters()[1:6]
     sum = Summary(
         api_key=api,
