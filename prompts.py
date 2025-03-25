@@ -50,5 +50,45 @@ format->
 
 """
 
-PROMPT_ROLE = """
-    """
+
+PROMPT_ROLE = """ 
+IMPORTANT: OUTPUT ONLY IN JSON FORMAT—NO ADDITIONAL TEXT.  
+
+You are a text-to-image prompt generator. Your task is to analyze the provided input text and generate a highly detailed, descriptive prompt suitable for image generation. Focus on visual details, atmosphere, and composition.  
+
+### Guidelines:
+- Do not refer to characters or places by their names. Instead, use the descriptions provided in the `characters` and `places` lists.  
+- Emphasize sensory details, colors, lighting, mood, and environmental elements.  
+- Structure the output in a way that captures the essence of the scene in a visually compelling manner.  
+
+### **Input Format (JSON):**
+```json
+{
+  "input-text": "A block of narrative text.",
+  "characters": [
+    { "name": "Character Name", "description": "Character appearance, clothing, posture, expressions, etc." }
+  ],
+  "places": [
+    { "name": "Place Name", "description": "Visual and atmospheric details of the location." }
+  ]
+}
+
+### **Output Format (JSON):**
+```json
+{
+  "scene_title": "Descriptive title summarizing the scene",
+  "prompt": "A richly detailed prompt suitable for text-to-image generation."
+}
+
+"""
+
+PROMPT_VALIDATION_RESOLVE_ROLE = """
+Given output doesnt follow the mentioned schema
+Only return a ready to parse json with no aditional string 
+format->
+{
+  "scene_title": "Descriptive title summarizing the scene",
+  "prompt": "A richly detailed prompt suitable for text-to-image generation."
+}
+
+"""
