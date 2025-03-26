@@ -10,8 +10,7 @@ from html.parser import HTMLParser
 from html import unescape
 import textwrap
 import mobi
-from icecream import ic
-import sys
+
 
 
 try:
@@ -594,7 +593,7 @@ class HTMLtoLines(HTMLParser):
         return text, self.imgs, sect, formatting
 
 
-def det_ebook_cls(file):
+def get_ebook_cls(file):
     filext = os.path.splitext(file)[1]
     if filext == ".epub":
         return Epub(file).initialize()

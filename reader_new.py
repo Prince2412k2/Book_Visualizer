@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict
-from base_reader import HTMLtoLines, det_ebook_cls, Epub, FictionBook, Azw3, Mobi
+from base_reader import HTMLtoLines, get_ebook_cls, Epub, FictionBook, Azw3, Mobi
 import sys
 
 
@@ -39,16 +39,18 @@ class Book:
     )
 
     def __post_init__(self):
-        self._file = det_ebook_cls(self._path)
+        self._file = get_ebook_cls(self._path)
         self._toc = self._file.contents
+        self._spine=self._file.spine
+        self._parser=HTMLtoLines(sects=set(self._spine))
         self._chapters = [self._set_chapters(i) for i in self._toc]
 
     def _set_chapters(self, chapter_name: str):
         html_data: str = self._file.get_raw_text(chapter_name)
-        parser = HTMLtoLines()
-        parser.feed(html_data)
-        str_data = "\n".join(parser.get_lines())
-        parser.close()
+        
+        self._parser.feed(html_data)
+        str_data = "\n".join(self._parser.get_lines())
+        self._parser.close()
         return Chapters(_title=chapter_name, _str_data=str_data, _html_data=html_data)
 
     def toc(self):
@@ -65,9 +67,9 @@ class Book:
 
 
 def main() -> None:
-    book = Book("./books/LP.epub")
-    chaps = book.get_html_chapters()
-    print(len(chaps))
+        file = Book("./test_books/PP.epub")
+        chap=file.get_str_chapters()
+        print(chap.keys())
 
 
 if __name__ == "__main__":
