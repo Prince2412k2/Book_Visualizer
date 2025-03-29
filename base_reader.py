@@ -12,7 +12,6 @@ import textwrap
 import mobi
 
 
-
 try:
     import _markupbase
 except ImportError:

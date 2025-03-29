@@ -4,16 +4,14 @@ from transformers import AutoTokenizer
 from dataclasses import dataclass
 from logger_module import logger
 import os
-from dotenv import load_dotenv
 import unicodedata
 import codecs
-
+from dotenv import load_dotenv
 
 load_dotenv()
-os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
 
 
-def normalize_text(text):
+def normalize_text(text) -> str:
     # Decode all escape sequences (e.g., \n, \u3000, \xNN)
     text = codecs.decode(text, "unicode_escape")
 
@@ -28,19 +26,33 @@ def normalize_text(text):
 
 @dataclass
 class Tokenizer:
-    api_key: str
+    _instance = None  # Store the single instance
+    api_key: Optional[str]
     model_name: str = "meta-llama/Llama-3.1-8B-Instruct"
 
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
     def __post_init__(self):
+        hf_api = os.environ.get("HF_API")
+        if not hf_api:
+            raise Exception("HF_API for Tokenizer is Null")
         try:
-            login(token=os.environ.get("HF_API"))
-            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+            login(token=hf_api)
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                self.model_name, use_fast=True, trust_remote_code=True
+            )
         except Exception as error:
             logger.error(f"Error while downloading tokenizer, {error=}")
+        return self
 
-    def tokenize(self, text: str) -> Optional[Tuple[int, List[int]]]:
+    def tokenize(self, text: str) -> Tuple[int, List[int]]:
         try:
-            tokens: List[int] = self.tokenizer.encode(text, add_special_tokens=False)
+            tokens: List[int] = self.tokenizer.encode(
+                text, add_special_tokens=False, truncation=False
+            )
         except Exception as error:
             logger.warning(f"Error while counting token, {error=}")
             return 0, []
@@ -56,36 +68,38 @@ class Tokenizer:
 
 @dataclass
 class Chunker:
+    _instance = None  # Store the single instance
     max_len: int
     tokenizer: Tokenizer
 
-    def chunk(self, content: List[Tuple[str, str]]) -> List[Tuple[str, str, str]]:
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+    def chunk(self, str_content: str) -> List[str]:
         """
         Splits text into chunks that do not exceed the token limit.
 
-        -> List of (Id: str, chunk_text: str)
+        -> List[str]
         """
         total_chunks = []
 
-        for id, (orig_id, text) in enumerate(content):
-            clean_text = normalize_text(text)
-            if clean_text:
-                text = clean_text
-            num_tokens, tokens = self.tokenizer.tokenize(text)
-            count = 1
-            start = 0
-            while start < num_tokens:
-                chunk_tokens = tokens[start : start + self.max_len]
-                chunk_text = self.tokenizer.detokenize(chunk_tokens)
-                chunk_id = f"${id}#{count}"
-                total_chunks.append((chunk_id, orig_id, chunk_text))
-                count += 1
-                start += self.max_len  # Move to next chunk
-
+        clean_text = normalize_text(str_content)
+        if clean_text is not None:
+            num_tokens, tokens = self.tokenizer.tokenize(clean_text)
+        else:
+            raise Exception("normalize_text raised an error")
+        start, count = 0, 1
+        while start < num_tokens:
+            chunk_tokens = tokens[start : start + self.max_len]
+            chunk_text = self.tokenizer.detokenize(chunk_tokens)
+            total_chunks.append(chunk_text)
+            count += 1
+            start += self.max_len  # Move to next chunk
         return total_chunks
 
 
-def main():
-    tokenizer = AutoTokenizer.from_pretrained(
-        pretrained_model_name_or_path="meta-llama/Llama-3.1-8B-Instruct"
-    )
+def get_chunker(max_len):
+    tokenizer = Tokenizer(os.environ.get("HF_API"))
+    return Chunker(max_len=max_len, tokenizer=tokenizer)

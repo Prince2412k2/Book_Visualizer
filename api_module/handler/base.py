@@ -32,6 +32,8 @@ class HFHandler(HFPayloadSchema):
             payload,
         )
 
+class GroqHandler(GroqHandler)
+
 
 def main() -> None:
     handler = HFHandler(api_key="sac", url="csvd", model="guyb")
