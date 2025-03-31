@@ -4,13 +4,16 @@ from pydantic import BaseModel, Field
 from abc import ABC
 
 
-from book.logger_module import logger
-from book.prompts import SUMMARY_ROLE, PROMPT_ROLE
+from logger_module import logger
+from prompts import SUMMARY_ROLE, PROMPT_ROLE
+from api_module.config import MODEL_NAME, MAXTOKENS, TEMPERATURE
 
 
 class Task(Enum):
     SUMMARY = "SUM"
     PROMPT = "PROMPT"
+    IMAGE = "IMAGE"
+    AUDIO = "AUDIO"
 
 
 class Handler(Enum):
@@ -42,11 +45,11 @@ class HeaderSchema(BaseModel):
 class PayloadSchema(BaseModel):
     """Basic payload for a Instruct Model"""
 
-    model: str = ""
+    model: str = MODEL_NAME
     messages: List[MessageSchema] = Field(default=[])
-    temperature: float = 0.5
+    temperature: float = TEMPERATURE
     stream: bool = Field(init=False, default=False)
-    max_tokens: Optional[int] = 32000
+    # max_tokens: Optional[int] = MAXTOKENS
 
     def set_model(self, model_name: str):
         self.model = model_name
@@ -60,12 +63,18 @@ class PayloadSchema(BaseModel):
         self.max_tokens = tokens
         return self
 
-    def add_role(self, content: str):
-        self.messages.append(MessageSchema(role="system", content=content))
+    def set_role(self, content: str):
+        if self.messages:
+            self.messages[0] = MessageSchema(role="system", content=content)
+        else:
+            self.messages.append(MessageSchema(role="system", content=content))
         return self
 
     def set_input(self, prompt: str):
-        self.messages.append(MessageSchema(role="user", content=prompt))
+        if len(self.messages) < 2:
+            self.messages.append(MessageSchema(role="user", content=prompt))
+        else:
+            self.messages[1].content = prompt
         return self
 
 

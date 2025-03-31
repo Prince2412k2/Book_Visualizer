@@ -1,12 +1,11 @@
 from typing import Dict, List, Optional, Type, Tuple, Union
-import prompts
 from pydantic import BaseModel, Field, ValidationError
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import json
 
+from reader_new import Book, Chapter, Chunk
 from logger_module import logger
-from utils import Chunker, Tokenizer
 import requests
 import asyncio
 from prompts import (
@@ -16,10 +15,10 @@ from prompts import (
     PROMPT_ROLE,
     PROMPT_VALIDATION_RESOLVE_ROLE,
 )
+from api_module import config
 from json.decoder import JSONDecodeError
 import os
 from dotenv import load_dotenv
-import time
 
 load_dotenv()
 summary_role = ""
@@ -307,60 +306,48 @@ class Prompt:
             return False
 
 
-class SummaryLoop(BaseModel):
-    content: List[Tuple[str, str]]
-    summary: Summary
+@dataclass
+class SummaryLoop:
+    book: Book
+    summary_handler: Summary
     summary_pool: List[SummaryOutputSchema] = Field(default_factory=list)
-    chunked_content: List[Tuple[str, str, str]] = Field(default_factory=list)
+    init_chunk: Optional[Chunk] = None
 
-    def initialize(self) -> Optional["SummaryLoop"]:
-        hf_api = os.environ.get("HF_API")
-        if not hf_api:
-            logger.error("[SummaryLoop] HF_API Not defined ")
-            return None
-
-        self.summary_pool = [
-            SummaryOutputSchema(
-                summary="This is The first chapeter There is No context",
-                places={},
-                characters={},
-                id="",
-            ),
-        ]
-        tokenizer = Tokenizer(api_key=hf_api)
-        logger.trace("tokenizer set")
-        chunker = Chunker(max_len=self.summary.max_tokens, tokenizer=tokenizer)
-        logger.trace("Chunker set")
-        self.chunked_content = chunker.chunk(content=self.content)
-        logger.trace("Chapters Chunked")
-
-        return self
+    def __post_init__(self) -> None:
+        self.init_chunk = Chunk(
+            chunk_id="",
+            chapter_id=0,
+            chunk="",
+            summary="This is The first chapeter There is No context",
+            characters={},
+            places={},
+        )
 
     def run(self) -> None:
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
-        for idx, (id, title, content) in enumerate(self.chunked_content):
-            past_context = self.summary_pool[idx]
-            message = self.summary.get_messages(
-                content=content,
+        past_context = self.init_chunk
+        for idx, chunk in enumerate(self.book.get_chunks()):
+            message = self.summary_handler.get_messages(
+                content=chunk.chunk,
                 previous_summary=past_context.summary,
                 characters=past_context.characters,
                 places=past_context.places,
             )
-            status_code, response = self.summary.get(messages=message)
+            status_code, response = self.summary_handler.get(messages=message)
 
             if status_code == 200:
-                validated_response = self.summary.validate_json(
+                validated_response = self.summary_handler.validate_json(
                     response, SummaryResponseSchema
                 )
 
                 if validated_response:
-                    logger.trace(f"Chunk_{id=} Done")
-                    self.summary_pool.append(
-                        SummaryOutputSchema(
-                            **(validated_response.model_dump(by_alias=True)), id=id
-                        )
+                    logger.trace(f"Chunk_{chunk.chunk_id=} Done")
+                    chunk.set_sum(
+                        summary=validated_response.summary,
+                        characters=validated_response.characters,
+                        places=validated_response.places,
                     )
                     continue
                 else:
@@ -371,34 +358,33 @@ class SummaryLoop(BaseModel):
                 output = self.handle_validation_error(response)
                 if output:
                     past_context = output
-
-            self.summary_pool.append(past_context)
+            past_context = chunk
             logger.warning(f"{status_code=} error getting{id=}")
 
     def handle_validation_error(self, input_text):
-        message = self.summary.validation_messages(input_text)
+        message = self.summary_handler.validation_messages(input_text)
         for idx in range(MAX_VALIDATION_ERROR_TRY):
-            status_code, response = self.summary.get(messages=message)
+            status_code, response = self.summary_handler.get(messages=message)
             if status_code == 200:
-                validated_response = self.summary.validate_json(
+                validated_response = self.summary_handler.validate_json(
                     response, SummaryOutputSchema
                 )
                 if validated_response:
                     logger.info("Validation error resolved")
                     return validated_response
             elif status_code == 422:
-                message = self.summary.validation_messages(response)
+                message = self.summary_handler.validation_messages(response)
             logger.warning(f"Validation Unresolved on try {idx + 1}")
         logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
 
     @property
-    def get_summary_pool(self):
-        return self.summary_pool
+    def get_book(self):
+        return self.book
 
 
 class PromptLoop(BaseModel):
-    summary_pool: List[SummaryOutputSchema]
+    book: Book
     content: List[Tuple[str, str]]
     prompt: Prompt
     prompt_pool: List[PromptOutputSchema] = Field(default_factory=list)
@@ -463,28 +449,26 @@ class PromptLoop(BaseModel):
         return self.prompt_pool
 
 
-async def test() -> None:
-    from reader import ebook
+def test() -> None:
+    from reader_new import Book
 
     api = os.environ.get("GROQ_API")
     if not api:
         raise Exception("API NOT SET IN .env, HF_API=None")
 
-    book = ebook("./exp_book/stranger.pdf")
-    chapter_content = book.get_chapters()[1:6]
+    book = Book("./test_books/PP.epub")
     sum = Summary(
         api_key=api,
     )
 
-    looper = SummaryLoop(content=chapter_content, summary=sum).initialize()
-    if not looper:
-        return None
+    looper = SummaryLoop(book=book, summary_handler=sum)
+
     looper.run()
-    for i in looper.get_summary_pool:
+    for i in book.get_chunks():
         if not i.places or not i.characters:
             continue
         print("-" * 50)
-        print(f"Chapter:{i.id}")
+        print(f"Chapter:{i.chunk_id}")
         print("Summary")
         print(f"\t - {i.summary}")
         print()
@@ -499,4 +483,4 @@ async def test() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(test())
+    test()

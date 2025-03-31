@@ -1,0 +1,102 @@
+2025-04-01 00:07:14 | INFO | api_module.py | 200 : Input_Tokens=8036 | Output_Tokens=575  | Time=1.03142564
+2025-04-01 00:07:19 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=794  | Time=1.284958091
+2025-04-01 00:07:23 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=465  | Time=1.003328546
+2025-04-01 00:07:25 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=482  | Time=0.949026466
+2025-04-01 00:07:28 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=840  | Time=1.500212482
+2025-04-01 00:07:31 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=568  | Time=1.008271428
+2025-04-01 00:07:34 | INFO | api_module.py | 200 : Input_Tokens=8037 | Output_Tokens=384  | Time=0.890926674
+2025-04-01 00:07:44 | WARNING | api_module.py | Validation Unresolved on try 1
+2025-04-01 00:07:51 | WARNING | api_module.py | Validation Unresolved on try 2
+2025-04-01 00:07:56 | WARNING | api_module.py | Validation Unresolved on try 3
+2025-04-01 00:07:56 | ERROR | api_module.py | COULDNT VALIDATE THE CHUNK, SKIPPING...
+2025-04-01 00:07:56 | WARNING | api_module.py | status_code=422 error gettingid=<built-in function id>
+2025-04-01 00:07:58 | INFO | api_module.py | 200 : Input_Tokens=8025 | Output_Tokens=245  | Time=0.577900636
+2025-04-01 00:08:06 | INFO | api_module.py | 200 : Input_Tokens=8027 | Output_Tokens=790  | Time=1.5291506940000001
+2025-04-01 00:08:09 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=637  | Time=1.148810006
+2025-04-01 00:08:12 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=663  | Time=1.29095391
+2025-04-01 00:08:15 | INFO | api_module.py | 200 : Input_Tokens=4149 | Output_Tokens=493  | Time=0.769376897
+2025-04-01 00:08:17 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=572  | Time=1.091251501
+2025-04-01 00:08:19 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=682  | Time=1.141841311
+2025-04-01 00:08:22 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=619  | Time=1.179921315
+2025-04-01 00:08:24 | INFO | api_module.py | 200 : Input_Tokens=8025 | Output_Tokens=523  | Time=1.118888003
+2025-04-01 00:08:28 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=564  | Time=1.00293516
+2025-04-01 00:08:30 | INFO | api_module.py | 200 : Input_Tokens=8026 | Output_Tokens=655  | Time=1.103255357
+Traceback (most recent call last):
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 1395, in getresponse
+    response.begin()
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 1395, in getresponse
+    response.begin()
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/http/client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/prince/Documents/Project/book/api_module.py", line 486, in <module>
+    test()
+  File "/home/prince/Documents/Project/book/api_module.py", line 466, in test
+    looper.run()
+  File "/home/prince/Documents/Project/book/api_module.py", line 338, in run
+    status_code, response = self.summary_handler.get(messages=message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/Documents/Project/book/api_module.py", line 181, in get
+    response = requests.post(url=self.url, headers=headers, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prince/anaconda3/envs/book/lib/python3.11/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

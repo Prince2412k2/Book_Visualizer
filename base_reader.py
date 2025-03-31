@@ -596,11 +596,9 @@ def get_ebook_cls(file):
     filext = os.path.splitext(file)[1]
     if filext == ".epub":
         return Epub(file).initialize()
-    elif filext == ".fb2":
-        return FictionBook(file).initialize()
     elif filext == ".mobi":
         return Mobi(file).initialize()
     elif filext == ".azw3":
         return Azw3(file).initialize()
     else:
-        sys.exit("ERROR: Format not supported. (Supported: epub, fb2, mobi, azw3)")
+        sys.exit("ERROR: Format not supported. (Supported: epub,  mobi, azw3)")

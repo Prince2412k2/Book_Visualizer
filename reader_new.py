@@ -1,21 +1,25 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Union
 from uuid import UUID
 
+from loguru import logger
 from mobi.mobi_header import uuid
+from numpy import character
+from api_module.schemas.base import SummaryInputSchema
 from base_reader import HTMLtoLines, get_ebook_cls, Epub, FictionBook, Azw3, Mobi
 from utils import Chunker, get_chunker
 from pydantic import BaseModel
+from api_module.schemas import SummaryOutputSchema
 
 
 class State_attrs(Enum):
-    summary = "summary"
-    characters = "characters"
-    places = "places"
-    prompt = "prompt"
-    image = "prompt"
-    audio = "audio"
+    summary = "SUM"
+    characters = "SUM"
+    places = "SUM"
+    prompt = "PROMPT"
+    image = "IMAGE"
+    audio = "AUDIO"
 
 
 class ChunkState(BaseModel):
@@ -39,17 +43,20 @@ class ChunkState(BaseModel):
             ]
         )
 
+    def to_do(self) -> List[State_attrs]:
+        tasks = {
+            "summary": "SUM",
+            "characters": "SUM",
+            "places": "SUM",
+            "prompt": "PROMPT",
+            "image": "IMAGE",
+            "audio": "AUDIO",
+        }
 
-def to_do(self) -> List[State_attrs]:
-    tasks = {
-        "summary": self.summary,
-        "characters": self.characters,
-        "places": self.places,
-        "image": self.image,
-        "audio": self.audio,
-    }
+        return [getattr(State_attrs, key) for key, value in tasks.items() if not value]
 
-    return [getattr(State_attrs, key) for key, value in tasks.items() if not value]
+    def check(self):
+        pass
 
 
 class ChapterState(BaseModel):
@@ -70,67 +77,89 @@ class BookState(BaseModel):
 
 @dataclass
 class Chunk:
-    _chunk_id: str
-    _chapter_id: int
-    _chunk: str
-    _summary: Optional[str] = None
-    _prompt: Optional[str] = None
+    chunk_id: str
+    chapter_id: int
+    chunk: str
+    summary: str = ""
+    prompt: str = ""
+    characters: Dict[str, str] = field(default_factory=dict)
+    places: Dict[str, str] = field(default_factory=dict)
+
+    def __post_init__(self):
+        logger.trace(f"Chunk : {self.chunk_id} set")
 
     def get_chunk(self) -> str:
-        return self._chunk
+        return self.chunk
+
+    def set_sum(self, summary: str, characters: Dict[str, str], places: Dict[str, str]):
+        self.summary = summary
+        self.characters = characters
+        self.places = places
+
+    def set_prompt(self, prompt: str):
+        self.prompt = prompt
+
+    def get_sum(self):
+        return SummaryInputSchema(
+            past_context=self.summary,
+            character_list=self.characters,
+            places_list=self.places,
+            current_chapter="",
+        )
 
 
 @dataclass
 class Chapter:
     """Stores a chapter"""
 
-    _id: int
-    _chunker: Chunker
-    _title: str
-    _str_data: str
-    _html_data: str
-    _chunks: List[Chunk] = field(init=False)
+    id: int
+    chunker: Chunker
+    title: str
+    str_data: str
+    html_data: str
+    chunks: List[Chunk] = field(init=False)
 
     def __post_init__(self) -> None:
         self.set_chunks()
+        logger.trace(f"Chapter : {self.id} set")
 
     def set_chunks(self) -> None:
-        self._chunks = [
+        self.chunks = [
             Chunk(
-                _chunk_id=f"{self._id}%{idx}",
-                _chapter_id=self._id,
-                _chunk=chunk,
+                chunk_id=f"{self.id}%{idx}",
+                chapter_id=self.id,
+                chunk=chunk,
             )
-            for idx, chunk in enumerate(self._chunker.chunk(self._str_data))
+            for idx, chunk in enumerate(self.chunker.chunk(self.str_data))
         ]
 
     def get_chunks_str(self) -> List[str]:
-        return [i.get_chunk() for i in self._chunks]
+        return [i.get_chunk() for i in self.chunks]
 
     def get_chunks(self) -> List[Chunk]:
-        return self._chunks
+        return self.chunks
 
     def get_title(self) -> str:
-        return self._title
+        return self.title
 
     def get_str_data(self) -> str:
-        return self._str_data
+        return self.str_data
 
     def get_html_data(self) -> str:
-        return self._html_data
+        return self.html_data
 
 
 @dataclass
 class Book:
     """Stores a book"""
 
-    _path: str
-    _user_id: uuid.UUID
-    _book_id: uuid.UUID = field(default_factory=uuid.UUID)
-    _file: Epub | Mobi | Azw3 | FictionBook = field(init=False)
-    _metadata: Optional[Dict[str, str]] = field(init=False, default=None)
-    _toc: list = field(init=False)
-    _chapters: list[Chapter] = field(
+    path: str
+    user_id: uuid.UUID = uuid.uuid4()
+    book_id: uuid.UUID = field(default_factory=uuid.uuid4)
+    file: Optional[Union[Epub, Mobi, Azw3]] = field(init=False)
+    metadata: Optional[Dict[str, str]] = field(init=False, default=None)
+    toc: list = field(init=False)
+    chapters: list[Chapter] = field(
         default_factory=list,
         init=False,
         metadata={
@@ -139,51 +168,61 @@ class Book:
     )
 
     def __post_init__(self):
-        self._chunker = get_chunker(max_len=7000)
-        file = get_ebook_cls(self._path)
-        if not file:
+        self.chunker = get_chunker(max_len=7500)
+        logger.trace("got chunker")
+        file_class = get_ebook_cls(self.path)
+        logger.trace("got book_file")
+        if not file_class:
             raise Exception("get_book_cls returned None")
-        self._file = file
-        self._toc = self._file.contents
-        self._parser = HTMLtoLines()
-        self._chapters = [
-            self._set_chapters(idx, name) for idx, name in enumerate(self._toc)
+        self.file = file_class
+        file_toc = self.file.contents
+        if file_toc:
+            self.toc = file_toc
+        logger.trace("got toc")
+        self.parser = HTMLtoLines()
+        self.chapters = [
+            self.set_chapters(idx, name) for idx, name in enumerate(self.toc)
         ]
+        logger.info(f"Total Chunks {len(self.get_chunks())}")
+        exit(0)
 
-    def _set_chapters(self, id, chapter_name: str) -> Chapter:
-        html_data: str = self._file.get_raw_text(chapter_name)
-        self._parser.feed(html_data)
-        str_data = "\n".join(self._parser.get_lines())
-        self._parser.close()
+    def set_chapters(self, id, chapter_name: str) -> Chapter:
+        html_data: str = self.file.get_raw_text(chapter_name)
+        self.parser.feed(html_data)
+        str_data = "\n".join(self.parser.get_lines())
+        self.parser.close()
         return Chapter(
-            _id=id,
-            _title=chapter_name,
-            _str_data=str_data,
-            _html_data=html_data,
-            _chunker=self._chunker,
+            id=id,
+            title=chapter_name,
+            str_data=str_data,
+            html_data=html_data,
+            chunker=self.chunker,
         )
 
-    def toc(self) -> list:
-        return self._toc
+    def get_toc(self) -> list:
+        return self.toc
 
-    def file(self):
-        return self._file
+    def get_file(self):
+        return self.file
 
     def get_str_chapters(self) -> dict:
-        return {i.get_title(): i.get_str_data() for i in self._chapters}
+        return {i.get_title(): i.get_str_data() for i in self.chapters}
 
     def get_html_chapters(self) -> dict:
-        return {i.get_title(): i.get_html_data() for i in self._chapters}
+        return {i.get_title(): i.get_html_data() for i in self.chapters}
 
-    def get_chunks(self) -> List[List[Chunk]]:
-        return [i.get_chunks() for i in self._chapters]
+    def get_chunks(self) -> List[Chunk]:
+        return [chunk for chapter in self.chapters for chunk in chapter.chunks]
+
+    def get_chapters(self) -> List[Chapter]:
+        return self.chapters
 
 
 def main() -> None:
     import time
 
     start = time.time()
-    file = Book("./test_books/PP.epub", _user_id=uuid.uuid4())
+    file = Book("./test_books/PP.epub", user_id=uuid.uuid4())
     end = time.time()
     print(end - start)
     chunks = len(file.get_chunks())

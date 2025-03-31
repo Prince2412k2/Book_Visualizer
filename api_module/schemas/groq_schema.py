@@ -1,7 +1,8 @@
+from api_module.config import MAXTOKENS
 from pydantic import BaseModel, Field
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
-from base import (
+from api_module.schemas.base import (
     PayloadSchema,
     SummaryOutputSchema,
     PromptOutputSchema,
@@ -12,34 +13,19 @@ from base import (
 )
 from logger_module import logger
 from prompts import SUMMARY_ROLE, PROMPT_ROLE
+from api_module.utils import clean_json
 
 
 ###GroqHandleSchemas
 class GroqPayloadSchema(PayloadSchema):
     """Groq payload schema for ollama API handler"""
 
-    max_tokens: Optional[int] = 6144
     response_format: Dict[str, str] = {"type": "json_object"}
-    task: Task = Field(default=Task.SUMMARY, exclude=True)
+    max_completion_tokens: int = MAXTOKENS
 
-    def set_task(self, task: Task):
-        self.task = task
-        if self.task == Task.SUMMARY:
-            self.add_role(
-                content=f"{SUMMARY_ROLE} follow given schema: {SummaryOutputSchema.model_json_schema()}",
-            )
-            return self
-
-        elif self.task.value == "PROMPT":
-            self.add_role(
-                content=f"{PROMPT_ROLE} follow given schema: {PromptOutputSchema.model_json_schema()}",
-            )
-            return self
-
-        else:
-            logger.error(
-                f"[HFPayloadSchema] Unkown Task:{task}, Supported : [SUMMARY | PROMPT]"
-            )
+    top_p: float = 0.8
+    frequency_penalty: float = 1.0
+    presence_penalty: float = 1.5
 
 
 class GroqChoiceSchema(BaseModel):
@@ -47,11 +33,31 @@ class GroqChoiceSchema(BaseModel):
     finish_reason: str
 
 
+class ErrorSchema(BaseModel):
+    message: str
+    type_: str = Field(alias="type")
+    code: str
+    failed_generation: str
+
+
+class ValidationErrorSchema(BaseModel):
+    error: ErrorSchema
+
+
 class GroqResponseSchema(ResponseSchema):
     """Groq API Response Format"""
 
     choices: List[GroqChoiceSchema]
     usage: UsageSchema
+
+    def get_content(self) -> str:
+        return str(self.choices[0].message.content)
+
+    def get_usage(self) -> Tuple[int, int]:
+        return (
+            self.usage.prompt_tokens,
+            self.usage.completion_tokens,
+        )
 
 
 def main() -> None:
