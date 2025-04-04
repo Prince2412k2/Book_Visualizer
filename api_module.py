@@ -1,19 +1,24 @@
-from typing import Dict, List, Optional, Type, Tuple, Union
+# TODO: implement Websocket Request in future iterations
+
+from typing import Any, Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import json
+import uuid
+import base64
 
 from reader_new import Book, Chapter, Chunk
 from logger_module import logger
 import requests
-import asyncio
+import time
 from prompts import (
     MAX_VALIDATION_ERROR_TRY,
     SUMMARY_ROLE,
     SUMMARY_VALIDATION_RESOLVE_ROLE,
     PROMPT_ROLE,
     PROMPT_VALIDATION_RESOLVE_ROLE,
+    IMAGE_NEGATIVE_PROMPT,
 )
 from api_module import config
 from json.decoder import JSONDecodeError
@@ -103,6 +108,49 @@ class PromptContentSchema(BaseModel):
     places_list: Dict[str, str]
 
 
+##Image Schemas
+
+
+def save_base64_image(imageBase64Data: str, img_uuid: uuid.UUID):
+    image_data = base64.b64decode(imageBase64Data)
+    path = "./imgout/" + str(img_uuid) + ".webp"
+    with open(path, "wb") as f:
+        f.write(image_data)
+
+
+class Lora(BaseModel):
+    model: str = "civitai:695825@778670"
+    weight: float = 1.5
+
+
+class ImageRequestSchema(BaseModel):
+    positivePrompt: str
+    negativePrompt: str = IMAGE_NEGATIVE_PROMPT
+    model: str = "runware:101@1"
+    CFGScale: float = 3.5
+    height: int = 512
+    width: int = 512
+    taskType: str = "imageInference"
+    taskUUID: uuid.UUID
+    outputType: str = "base64Data"
+    outputFormat: str = "WEBP"
+    checkNSFW: bool = True
+    scheduler: str = "FlowMatchEulerDiscreteScheduler"
+    includeCost: bool = True
+    lora: List[Lora] = [Lora()]
+
+
+class ImageResponseSchema(BaseModel):
+    taskType: str
+    imageUUID: uuid.UUID
+    taskUUID: uuid.UUID
+    cost: float
+    seed: int
+    imageBase64Data: str
+    positivePrompt: str
+    NSFWContent: bool
+
+
 ##Requests
 
 
@@ -128,6 +176,7 @@ class LLM_API(ABC):
         pass
 
 
+# SUMMARY###############################################################################################################################################################################
 @dataclass
 class Summary:
     api_key: str
@@ -139,6 +188,12 @@ class Summary:
     stream: bool = False
     repetition_penalty: float = 1.5
     max_tokens: int = 6000
+
+    def __post_init__(self):
+        self.headers = HeadersSchema.create(api_key=self.api_key).model_dump(
+            by_alias=True
+        )
+        self.session = requests.Session()
 
     def get_messages(
         self,
@@ -169,7 +224,11 @@ class Summary:
             ),
         ]
 
-    def get(self, messages: List[MessageSchema]) -> Tuple[int, str]:
+    def get(
+        self,
+        messages: List[MessageSchema],
+        max_retries=3,
+    ) -> Tuple[int, str]:
         payload = SummaryPayloadSchema(
             model=self.model,
             messages=messages,
@@ -177,25 +236,51 @@ class Summary:
             stream=self.stream,
         ).model_dump(by_alias=True)
 
-        headers = HeadersSchema.create(api_key=self.api_key).model_dump(by_alias=True)
-        response = requests.post(url=self.url, headers=headers, json=payload)
-        code = response.status_code
-        if code == 200:
-            response_data = response.json()
-            assistant_message = response_data["choices"][0]["message"]["content"]
-            logger.info(
-                f"200 : Input_Tokens={response_data['usage']['prompt_tokens']} | Output_Tokens={response_data['usage']['completion_tokens']}  | Time={response_data['usage']['total_time']}"
-            )
-            return code, assistant_message
-        else:
+        for attempt in range(1, max_retries + 1):
             try:
-                if response.json()["error"]["code"] == "json_validate_failed":
-                    return 422, response.json()["error"]["failed_generation"]
-            except:
-                logger.warning(f"Error: {response.json()}")
-                return code, "ERROR_API_CALL"
+                response = self.session.post(
+                    url=self.url, headers=self.headers, json=payload, timeout=10
+                )
 
-        return code, "ERROR_API_CALL"
+                code = response.status_code
+                if code == 200:
+                    response_data = response.json()
+                    assistant_message = response_data["choices"][0]["message"][
+                        "content"
+                    ]
+                    logger.info(
+                        f"[Summary] 200 : Input_Tokens={response_data['usage']['prompt_tokens']} | Output_Tokens={response_data['usage']['completion_tokens']}  | Time={response_data['usage']['total_time']}"
+                    )
+                    return code, assistant_message
+
+                elif code in [500, 502, 503, 504]:  # Retry for server errors
+                    logger.warning(
+                        f"[Summary] Server error ({code}), retrying {attempt}/{max_retries}..."
+                    )
+
+                else:
+                    try:
+                        if (
+                            response.json().get("error", {}).get("code")
+                            == "json_validate_failed"
+                        ):
+                            return 422, response.json()["error"]["failed_generation"]
+                    except Exception as e:
+                        logger.warning(f"[Summary] Error parsing API response: {e}")
+                    return code, "ERROR_API_CALL"
+
+            except (
+                requests.ConnectionError,
+                requests.Timeout,
+                requests.exceptions.RequestException,
+            ) as e:
+                logger.warning(
+                    f"[Summary] Connection error: {e}, retrying {attempt}/{max_retries}..."
+                )
+
+            time.sleep(2**attempt)  # Exponential backoff: 2s, 4s, 8s
+
+        return 500, "ERROR_MAX_RETRIES"
 
     def validate_json(
         self, raw_data: str, schema: Type[SummaryResponseSchema]
@@ -213,96 +298,7 @@ class Summary:
             validated_data = schema.model_validate(parsed_data)
             return validated_data
         except (ValidationError, JSONDecodeError):
-            logger.warning("ValidationError")
-            return False
-
-
-@dataclass
-class Prompt:
-    api_key: str
-    url: str = "https://api.groq.com/openai/v1/chat/completions"
-    role: str = (
-        f"{PROMPT_ROLE} follow given schema: {PromptResponseSchema.model_json_schema()}"
-    )
-    validation_role: str = f"{PROMPT_VALIDATION_RESOLVE_ROLE} Schema :{PromptResponseSchema.model_json_schema()}"
-    model: str = "llama-3.1-8b-instant"
-    temperature: float = 0.4
-    stream: bool = False
-    repetition_penalty: float = 1.5
-    max_tokens: int = 6000
-
-    def get_messages(
-        self,
-        input_text: str,
-        characters: Dict[str, str],
-        places: Dict[str, str],
-    ) -> List[MessageSchema]:
-        return [
-            MessageSchema(role="system", content=self.role),
-            MessageSchema(
-                role="user",
-                content=PromptContentSchema(
-                    input_text=input_text,
-                    character_list=characters,
-                    places_list=places,
-                ).model_dump_json(by_alias=True),
-            ),
-        ]
-
-    def validation_messages(self, input_text: str) -> List[MessageSchema]:
-        return [
-            MessageSchema(role="system", content=self.validation_role),
-            MessageSchema(
-                role="user",
-                content=input_text,
-            ),
-        ]
-
-    def get(self, messages: List[MessageSchema]) -> Tuple[int, str]:
-        payload = PromptPayloadSchema(
-            model=self.model,
-            messages=messages,
-            temperature=self.temperature,
-            stream=self.stream,
-        ).model_dump(by_alias=True)
-
-        headers = HeadersSchema.create(api_key=self.api_key).model_dump(by_alias=True)
-        response = requests.post(url=self.url, headers=headers, json=payload)
-        code = response.status_code
-        if code == 200:
-            response_data = response.json()
-            assistant_message = response_data["choices"][0]["message"]["content"]
-            logger.info(
-                f"200 : Input_Tokens={response_data['usage']['prompt_tokens']} | Output_Tokens={response_data['usage']['completion_tokens']}  | Time={response_data['usage']['total_time']}"
-            )
-            return code, assistant_message
-        else:
-            try:
-                if response.json()["error"]["code"] == "json_validate_failed":
-                    return 422, response.json()["error"]["failed_generation"]
-            except:
-                logger.warning(f"Error: {response.json()}")
-                return code, "ERROR_API_CALL"
-
-        return code, "ERROR_API_CALL"
-
-    def validate_json(
-        self, raw_data: str, schema: Type[PromptResponseSchema]
-    ) -> Union[PromptResponseSchema, bool]:
-        """
-        Validates JSON data against a provided Pydantic schema.
-
-        :param data: JSON string to be validated.
-        :param schema: A Pydantic model class to validate against.
-        :return: A tuple where the first element is a boolean indicating if there was an error,
-                 and the second element is either the validated data or a list of error details.
-        """
-        try:
-            parsed_data = json.loads(raw_data)
-            validated_data = schema.model_validate(parsed_data)
-            return validated_data
-        except (ValidationError, JSONDecodeError):
-            logger.warning("ValidationError")
+            logger.warning("[Summary] ValidationError")
             return False
 
 
@@ -310,7 +306,6 @@ class Prompt:
 class SummaryLoop:
     book: Book
     summary_handler: Summary
-    summary_pool: List[SummaryOutputSchema] = Field(default_factory=list)
     init_chunk: Optional[Chunk] = None
 
     def __post_init__(self) -> None:
@@ -343,7 +338,7 @@ class SummaryLoop:
                 )
 
                 if validated_response:
-                    logger.trace(f"Chunk_{chunk.chunk_id=} Done")
+                    logger.trace(f"[Summary] : Chunk_{chunk.chunk_id=} Done")
                     chunk.set_sum(
                         summary=validated_response.summary,
                         characters=validated_response.characters,
@@ -358,8 +353,21 @@ class SummaryLoop:
                 output = self.handle_validation_error(response)
                 if output:
                     past_context = output
+                else:
+                    chunk.set_sum(
+                        summary=past_context.summary,
+                        characters=past_context.characters,
+                        places=past_context.places,
+                    )
+            else:
+                chunk.set_sum(
+                    summary=past_context.summary,
+                    characters=past_context.characters,
+                    places=past_context.places,
+                )
+
             past_context = chunk
-            logger.warning(f"{status_code=} error getting{id=}")
+            logger.warning(f"[Summary] : {status_code=} error getting{id=}")
 
     def handle_validation_error(self, input_text):
         message = self.summary_handler.validation_messages(input_text)
@@ -370,12 +378,12 @@ class SummaryLoop:
                     response, SummaryOutputSchema
                 )
                 if validated_response:
-                    logger.info("Validation error resolved")
+                    logger.info("[Summary] : Validation error resolved")
                     return validated_response
             elif status_code == 422:
                 message = self.summary_handler.validation_messages(response)
-            logger.warning(f"Validation Unresolved on try {idx + 1}")
-        logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
+            logger.warning(f"[Summary] : Validation Unresolved on try {idx + 1}")
+        logger.error("[Summary] : COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
 
     @property
@@ -383,70 +391,267 @@ class SummaryLoop:
         return self.book
 
 
+# Prompt ###############################################################################################################################################################################
+@dataclass
+class Prompt:
+    api_key: str
+    url: str = "https://api.groq.com/openai/v1/chat/completions"
+    role: str = (
+        f"{PROMPT_ROLE} follow given schema: {PromptResponseSchema.model_json_schema()}"
+    )
+    validation_role: str = f"{PROMPT_VALIDATION_RESOLVE_ROLE} Schema :{PromptResponseSchema.model_json_schema()}"
+    model: str = "llama-3.1-8b-instant"
+    temperature: float = 0.4
+    stream: bool = False
+    repetition_penalty: float = 1.5
+    max_tokens: int = 6000
+
+    def __post_init__(self):
+        self.headers = HeadersSchema.create(api_key=self.api_key).model_dump(
+            by_alias=True
+        )
+        self.session = requests.Session()
+
+    def get_messages(
+        self,
+        input_text: str,
+        characters: Dict[str, str],
+        places: Dict[str, str],
+    ) -> List[MessageSchema]:
+        return [
+            MessageSchema(role="system", content=self.role),
+            MessageSchema(
+                role="user",
+                content=PromptContentSchema(
+                    input_text=input_text,
+                    character_list=characters,
+                    places_list=places,
+                ).model_dump_json(by_alias=True),
+            ),
+        ]
+
+    def validation_messages(self, input_text: str) -> List[MessageSchema]:
+        return [
+            MessageSchema(role="system", content=self.validation_role),
+            MessageSchema(
+                role="user",
+                content=input_text,
+            ),
+        ]
+
+    def get(
+        self,
+        messages: List[MessageSchema],
+        max_retries=3,
+    ) -> Tuple[int, str]:
+        payload = PromptPayloadSchema(
+            model=self.model,
+            messages=messages,
+            temperature=self.temperature,
+            stream=self.stream,
+        ).model_dump(by_alias=True)
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = self.session.post(
+                    url=self.url, headers=self.headers, json=payload, timeout=10
+                )
+
+                code = response.status_code
+                if code == 200:
+                    response_data = response.json()
+                    assistant_message = response_data["choices"][0]["message"][
+                        "content"
+                    ]
+                    logger.info(
+                        f"[Prompt] : 200 : Input_Tokens={response_data['usage']['prompt_tokens']} | Output_Tokens={response_data['usage']['completion_tokens']}  | Time={response_data['usage']['total_time']}"
+                    )
+                    return code, assistant_message
+
+                elif code in [500, 502, 503, 504]:  # Retry for server errors
+                    logger.warning(
+                        f"[Prompt] : Server error ({code}), retrying {attempt}/{max_retries}..."
+                    )
+
+                else:
+                    try:
+                        if (
+                            response.json().get("error", {}).get("code")
+                            == "json_validate_failed"
+                        ):
+                            return 422, response.json()["error"]["failed_generation"]
+                    except Exception as e:
+                        logger.warning(f"[Prompt] : Error parsing API response: {e}")
+                return code, "ERROR_API_CALL"
+
+            except (
+                requests.ConnectionError,
+                requests.Timeout,
+                requests.exceptions.RequestException,
+            ) as e:
+                logger.warning(
+                    f"[Prompt] : Connection error: {e}, retrying {attempt}/{max_retries}..."
+                )
+
+            time.sleep(2**attempt)  # Exponential backoff: 2s, 4s, 8s
+
+        return 500, "ERROR_MAX_RETRIES"
+
+    def validate_json(
+        self, raw_data: str, schema: Type[PromptResponseSchema]
+    ) -> Union[PromptResponseSchema, bool]:
+        """
+        Validates JSON data against a provided Pydantic schema.
+
+        :param data: JSON string to be validated.
+        :param schema: A Pydantic model class to validate against.
+        :return: A tuple where the first element is a boolean indicating if there was an error,
+                 and the second element is either the validated data or a list of error details.
+        """
+        try:
+            parsed_data = json.loads(raw_data)
+            validated_data = schema.model_validate(parsed_data)
+            return validated_data
+        except (ValidationError, JSONDecodeError):
+            logger.warning("[Prompt] : ValidationError")
+            return False
+
+
 class PromptLoop(BaseModel):
     book: Book
-    content: List[Tuple[str, str]]
-    prompt: Prompt
-    prompt_pool: List[PromptOutputSchema] = Field(default_factory=list)
-    chunked_content: List[Tuple[str, str, str]] = Field(default_factory=list)
+    prompt_handler: Prompt
 
     def run(self) -> None:
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
-        for (id, title, content), sum in zip(self.chunked_content, self.summary_pool):
-            prompt_out = PromptOutputSchema()
-            message = self.prompt.get_messages(
-                input_text=content, characters=sum.characters, places=sum.places
-            )
+        is_done = False
+        while not is_done:
+            logger.info("Sum Loop is Empty")
+            for idx, chunk in enumerate(self.book.get_chunks()):
+                if chunk.prompt:
+                    continue
 
-            status_code, response = self.prompt.get(messages=message)
-
-            if status_code == 200:
-                validated_response = self.summary.validate_json(
-                    response, PromptResponseSchema
+                message = self.prompt_handler.get_messages(
+                    input_text=chunk.chunk,
+                    characters=chunk.characters,
+                    places=chunk.places,
                 )
 
-                if validated_response:
-                    logger.trace(f"Chunk_{id=} Done")
-                    self.prompt_pool.append(
-                        PromptOutputSchema(
-                            **(validated_response.model_dump(by_alias=True)), id=id
-                        )
-                    )
-                    continue
-                else:
-                    output = self.handle_validation_error(response)
-                    if output:
-                        prompt_out = output
-            elif status_code == 422:
-                output = self.handle_validation_error(response)
-                if output:
-                    prompt_out = output
+                status_code, response = self.prompt_handler.get(messages=message)
 
-            self.prompt_pool.append(prompt_out)
-            logger.warning(f"{status_code=} error getting{id=}")
+                if status_code == 200:
+                    validated_response = self.prompt_handler.validate_json(
+                        response, PromptResponseSchema
+                    )
+
+                    if validated_response:
+                        logger.trace(f"[Prompt] : Chunk_{chunk.chunk_id=} Done")
+                        chunk.set_prompt(
+                            scene_title=validated_response.scene_title,
+                            prompt=validated_response.prompt,
+                        )
+                        continue
+
+                logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
+            is_done = self.book.is_sum_done()
+        logger.info("[Prompt] : Prompts Done for ALL Chunks")
 
     def handle_validation_error(self, input_text):
-        message = self.prompt.validation_messages(input_text)
+        message = self.prompt_handler.validation_messages(input_text)
         for idx in range(MAX_VALIDATION_ERROR_TRY):
-            status_code, response = self.prompt.get(messages=message)
+            status_code, response = self.prompt_handler.get(messages=message)
             if status_code == 200:
-                validated_response = self.prompt.validate_json(
-                    response, PromptResponseSchema
+                validated_response = self.prompt_handler.validate_json(
+                    response, PromptOutputSchema
                 )
                 if validated_response:
-                    logger.info("Validation error resolved")
+                    logger.info("[Summary] : Validation error resolved")
                     return validated_response
             elif status_code == 422:
-                message = self.summary.validation_messages(response)
-            logger.warning(f"Validation Unresolved on try {idx + 1}")
-        logger.error("COULDNT VALIDATE THE CHUNK, SKIPPING...")
+                message = self.prompt_handler.validation_messages(response)
+            logger.warning(f"[Prompt] : Validation Unresolved on try {idx + 1}")
+        logger.error("[Prompts] : COULDNT VALIDATE THE CHUNK, SKIPPING...")
         return None
 
     @property
-    def get_prompt_pool(self):
-        return self.prompt_pool
+    def get_book(self):
+        return self.book
+
+
+# Image###############################################################################################################################################################################
+@dataclass
+class Image:
+    api_key: str
+    url: str = "https://api.runware.ai/v1"
+    headers: Dict[str, Any] = Field(default_factory=dict)
+
+    def __post_init__(self):
+        self.headers = HeadersSchema.create(api_key=self.api_key).model_dump(
+            by_alias=True
+        )
+        self.session = requests.Session()
+
+    def get(self, payload, max_retries=3) -> Tuple[int, Optional[ImageResponseSchema]]:
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = self.session.post(
+                    url=self.url, headers=self.headers, json=payload, timeout=10
+                )
+
+                code = response.status_code
+                if code == 200:
+                    response_data = response.json()
+                    response_model = ImageResponseSchema.validate_json(response_data)
+                    logger.info(
+                        f"[Prompt] : 200 : | task={response_model.taskUUID} | cost = {response_model.cost}$ | NSFW = {response_model.NSFWContent}"
+                    )
+                    return code, response_model
+
+                elif code in [500, 502, 503, 504]:  # Retry for server errors
+                    logger.warning(
+                        f"[Prompt] : Server error ({code}), retrying {attempt}/{max_retries}..."
+                    )
+
+            except (
+                requests.ConnectionError,
+                requests.Timeout,
+                requests.exceptions.RequestException,
+            ) as e:
+                logger.warning(
+                    f"[Prompt] : Connection error: {e}, retrying {attempt}/{max_retries}..."
+                )
+
+            time.sleep(2**attempt)  # Exponential backoff: 2s, 4s, 8s
+
+        return 500, "ERROR"
+
+
+class ImageLoop(BaseModel):
+    book: Book
+    image_handler: Image
+
+    def run(self) -> None:
+        """
+        Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
+        """
+        is_done = False
+        while not is_done:
+            logger.info("Image Loop is Running")
+            for idx, chunk in enumerate(self.book.get_chunks()):
+                if chunk.image or not chunk.prompt:
+                    continue
+                payload = ImageRequestSchema(positivePrompt=chunk.prompt)
+
+                status_code, response = self.image_handler.get(payload=payload)
+
+                if status_code == 200:
+                    if response:
+                        save_base64_image(response.imageBase64Data, response.imageUUID)
+                        continue
+
+                logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
+        logger.info("[Prompt] : Prompts Done for ALL Chunks")
 
 
 def test() -> None:
@@ -456,17 +661,18 @@ def test() -> None:
     if not api:
         raise Exception("API NOT SET IN .env, HF_API=None")
 
-    book = Book("./test_books/PP.epub")
+    book = Book("./test_books/AF.epub")
     sum = Summary(
         api_key=api,
     )
-
-    looper = SummaryLoop(book=book, summary_handler=sum)
-
-    looper.run()
+    prompt = Prompt(api_key=api)
+    looper_sum = SummaryLoop(book=book, summary_handler=sum)
+    looper_prompt = PromptLoop(book=book, prompt_handler=prompt)
+    looper_sum.run()
+    looper_prompt.run()
     for i in book.get_chunks():
-        if not i.places or not i.characters:
-            continue
+        # if not i.places or not i.characters:
+        #    continue
         print("-" * 50)
         print(f"Chapter:{i.chunk_id}")
         print("Summary")
@@ -479,6 +685,9 @@ def test() -> None:
         print("places")
         for k, v in i.places.items():
             print(f"\t - {k} : {v}")
+
+        print("prompt")
+        print(f"{i.scene_title} : {i.prompt} ")
         print("\n\n")
 
 

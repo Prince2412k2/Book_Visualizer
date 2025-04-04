@@ -81,9 +81,11 @@ class Chunk:
     chapter_id: int
     chunk: str
     summary: str = ""
+    scene_title = ""
     prompt: str = ""
     characters: Dict[str, str] = field(default_factory=dict)
     places: Dict[str, str] = field(default_factory=dict)
+    image: str = ""
 
     def __post_init__(self):
         logger.trace(f"Chunk : {self.chunk_id} set")
@@ -96,7 +98,8 @@ class Chunk:
         self.characters = characters
         self.places = places
 
-    def set_prompt(self, prompt: str):
+    def set_prompt(self, scene_title: str, prompt: str):
+        self.scene_title = scene_title
         self.prompt = prompt
 
     def get_sum(self):
@@ -184,7 +187,6 @@ class Book:
             self.set_chapters(idx, name) for idx, name in enumerate(self.toc)
         ]
         logger.info(f"Total Chunks {len(self.get_chunks())}")
-        exit(0)
 
     def set_chapters(self, id, chapter_name: str) -> Chapter:
         html_data: str = self.file.get_raw_text(chapter_name)
@@ -217,16 +219,17 @@ class Book:
     def get_chapters(self) -> List[Chapter]:
         return self.chapters
 
+    def is_sum_done(self) -> bool:
+        return all(i.summary != "" for i in self.get_chunks())
+
+    def set_prompt_done(self) -> bool:
+        return all(i.prompt != "" for i in self.get_chunks())
+
 
 def main() -> None:
-    import time
-
-    start = time.time()
     file = Book("./test_books/PP.epub", user_id=uuid.uuid4())
-    end = time.time()
-    print(end - start)
-    chunks = len(file.get_chunks())
-    print(chunks)
+
+    print(file.is_sum_done())
 
 
 if __name__ == "__main__":
