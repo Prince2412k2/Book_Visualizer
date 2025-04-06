@@ -92,3 +92,8 @@ format->
 }
 
 """
+
+IMAGE_NEGATIVE_PROMPT = """
+hands,nudity, realistic,potrait,hdr,4k
+    """
+STYLE_TAG = "sketch illustration style "

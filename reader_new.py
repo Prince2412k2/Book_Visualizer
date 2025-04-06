@@ -85,7 +85,7 @@ class Chunk:
     prompt: str = ""
     characters: Dict[str, str] = field(default_factory=dict)
     places: Dict[str, str] = field(default_factory=dict)
-    image: str = ""
+    image_url: str = ""
 
     def __post_init__(self):
         logger.trace(f"Chunk : {self.chunk_id} set")
@@ -222,7 +222,7 @@ class Book:
     def is_sum_done(self) -> bool:
         return all(i.summary != "" for i in self.get_chunks())
 
-    def set_prompt_done(self) -> bool:
+    def is_prompt_done(self) -> bool:
         return all(i.prompt != "" for i in self.get_chunks())
 
 

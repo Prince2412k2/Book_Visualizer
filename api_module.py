@@ -1,4 +1,5 @@
 # TODO: implement Websocket Request in future iterations
+import threading
 
 from typing import Any, Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
@@ -7,6 +8,9 @@ from dataclasses import dataclass
 import json
 import uuid
 import base64
+from PIL import Image as pil_img
+from io import BytesIO
+from pathlib import Path
 
 from reader_new import Book, Chapter, Chunk
 from logger_module import logger
@@ -19,6 +23,7 @@ from prompts import (
     PROMPT_ROLE,
     PROMPT_VALIDATION_RESOLVE_ROLE,
     IMAGE_NEGATIVE_PROMPT,
+    STYLE_TAG,
 )
 from api_module import config
 from json.decoder import JSONDecodeError
@@ -27,6 +32,44 @@ from dotenv import load_dotenv
 
 load_dotenv()
 summary_role = ""
+
+
+###Helper##
+def fetch_image_with_retries(
+    session, url: str, retries: int = 3, delay: int = 2
+) -> Optional[bytes]:
+    for attempt in range(1, retries + 1):
+        try:
+            response = session.get(url)
+            if response.status_code == 200:
+                return response.content
+            else:
+                raise Exception(f"Status code: {response.status_code}")
+        except Exception as e:
+            logger.warning(f"Attempt {attempt} failed to fetch image: {e}")
+            if attempt < retries:
+                time.sleep(delay)
+            else:
+                raise Exception(f"All {retries} attempts failed for URL: {url}")
+
+
+def save_img(book: Book) -> None:
+    book_id = Path(book.user_id)
+    session = requests.session()
+
+    for chunk in book.get_chunks():
+        path = book_id / str(chunk.chapter_id) / f"{chunk.chunk_id}.webp"
+        try:
+            img_bytes = fetch_image_with_retries(session, chunk.image_url)
+            if img_bytes:
+                image = pil_img.open(BytesIO(img_bytes))
+                Path(path).parent.mkdir(parents=True, exist_ok=True)
+                image.save(path, format="WEBP")
+                logger.info(f"Image saved at: {path}")
+            else:
+                logger.error("Response was empty")
+        except Exception as e:
+            logger.error(f"Failed to save image for chunk {chunk.chunk_id}: {e}")
 
 
 ## HeadersSchema
@@ -111,44 +154,43 @@ class PromptContentSchema(BaseModel):
 ##Image Schemas
 
 
-def save_base64_image(imageBase64Data: str, img_uuid: uuid.UUID):
-    image_data = base64.b64decode(imageBase64Data)
-    path = "./imgout/" + str(img_uuid) + ".webp"
-    with open(path, "wb") as f:
-        f.write(image_data)
-
-
 class Lora(BaseModel):
     model: str = "civitai:695825@778670"
-    weight: float = 1.5
+    weight: float = 1
 
 
 class ImageRequestSchema(BaseModel):
     positivePrompt: str
-    negativePrompt: str = IMAGE_NEGATIVE_PROMPT
+    # negativePrompt: str = ""  # IMAGE_NEGATIVE_PROMPT
     model: str = "runware:101@1"
     CFGScale: float = 3.5
     height: int = 512
     width: int = 512
     taskType: str = "imageInference"
-    taskUUID: uuid.UUID
-    outputType: str = "base64Data"
+    taskUUID: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    outputType: str = "URL"  # or "base64Data"
     outputFormat: str = "WEBP"
     checkNSFW: bool = True
     scheduler: str = "FlowMatchEulerDiscreteScheduler"
     includeCost: bool = True
-    lora: List[Lora] = [Lora()]
+    lora: List[Lora] = Field(default_factory=lambda: [Lora()])
+    numberResults: int = 1
+    steps: int = 30
+
+
+class ImageItem(BaseModel):
+    taskType: str
+    imageUUID: str
+    taskUUID: str
+    cost: float
+    seed: int
+    imageURL: str
+    # imageBase64Data: str
+    NSFWContent: bool
 
 
 class ImageResponseSchema(BaseModel):
-    taskType: str
-    imageUUID: uuid.UUID
-    taskUUID: uuid.UUID
-    cost: float
-    seed: int
-    imageBase64Data: str
-    positivePrompt: str
-    NSFWContent: bool
+    data: List[ImageItem]
 
 
 ##Requests
@@ -527,7 +569,6 @@ class PromptLoop(BaseModel):
         """
         is_done = False
         while not is_done:
-            logger.info("Sum Loop is Empty")
             for idx, chunk in enumerate(self.book.get_chunks()):
                 if chunk.prompt:
                     continue
@@ -596,15 +637,17 @@ class Image:
         for attempt in range(1, max_retries + 1):
             try:
                 response = self.session.post(
-                    url=self.url, headers=self.headers, json=payload, timeout=10
+                    url=self.url, headers=self.headers, json=[payload], timeout=30
                 )
-
+                logger.debug(f"try: {attempt}")
                 code = response.status_code
+                logger.debug(f"status_code : {code}")
+                logger.debug(response.text)
                 if code == 200:
                     response_data = response.json()
-                    response_model = ImageResponseSchema.validate_json(response_data)
+                    response_model = ImageResponseSchema.model_validate(response_data)
                     logger.info(
-                        f"[Prompt] : 200 : | task={response_model.taskUUID} | cost = {response_model.cost}$ | NSFW = {response_model.NSFWContent}"
+                        f"[Prompt] : 200 : | task={response_model.data[0].taskUUID} | cost = {response_model.data[0].cost}$ | NSFW = {response_model.data[0].NSFWContent}"
                     )
                     return code, response_model
 
@@ -624,7 +667,7 @@ class Image:
 
             time.sleep(2**attempt)  # Exponential backoff: 2s, 4s, 8s
 
-        return 500, "ERROR"
+        return 500, None
 
 
 class ImageLoop(BaseModel):
@@ -636,58 +679,87 @@ class ImageLoop(BaseModel):
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
         is_done = False
+        response: Optional[ImageResponseSchema]
         while not is_done:
-            logger.info("Image Loop is Running")
             for idx, chunk in enumerate(self.book.get_chunks()):
-                if chunk.image or not chunk.prompt:
+                if chunk.image_url or not chunk.prompt:
                     continue
-                payload = ImageRequestSchema(positivePrompt=chunk.prompt)
+                payload = ImageRequestSchema(positivePrompt=STYLE_TAG + chunk.prompt)
 
-                status_code, response = self.image_handler.get(payload=payload)
+                status_code, response = self.image_handler.get(
+                    payload=payload.model_dump(mode="json")
+                )
 
                 if status_code == 200:
                     if response:
-                        save_base64_image(response.imageBase64Data, response.imageUUID)
+                        chunk.image_url = response.data[0].imageURL
                         continue
 
                 logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
+
+            is_done = self.book.is_prompt_done()
         logger.info("[Prompt] : Prompts Done for ALL Chunks")
 
 
 def test() -> None:
     from reader_new import Book
 
-    api = os.environ.get("GROQ_API")
-    if not api:
-        raise Exception("API NOT SET IN .env, HF_API=None")
+    groq_api = os.environ.get("GROQ_API")
+    img_api = os.environ.get("IMAGE_API")
+    if not groq_api:
+        raise Exception("GROQ_API NOT SET IN .env")
+    if not img_api:
+        raise Exception("IMAGE_API NOT SET IN .env")
 
-    book = Book("./test_books/AF.epub")
-    sum = Summary(
-        api_key=api,
-    )
-    prompt = Prompt(api_key=api)
+    book: Book = Book("./test_books/AF.epub")
+
+    sum = Summary(api_key=groq_api)
+    prompt = Prompt(api_key=groq_api)
+    image = Image(api_key=img_api)
+
     looper_sum = SummaryLoop(book=book, summary_handler=sum)
     looper_prompt = PromptLoop(book=book, prompt_handler=prompt)
-    looper_sum.run()
-    looper_prompt.run()
+    looper_img = ImageLoop(book=book, image_handler=image)
+
+    thread_img = threading.Thread(target=looper_img.run)
+    thread_prompt = threading.Thread(target=looper_prompt.run)
+    thread_sum = threading.Thread(target=looper_sum.run)
+
+    thread_img.start()
+    thread_prompt.start()
+    thread_sum.start()
+
+    thread_img.join()
+    thread_prompt.join()
+    thread_sum.join()
+
+    chunks = book.get_chunks()
+
     for i in book.get_chunks():
-        # if not i.places or not i.characters:
-        #    continue
+        if not i.places or not i.characters:
+            continue
         print("-" * 50)
         print(f"Chapter:{i.chunk_id}")
+
         print("Summary")
         print(f"\t - {i.summary}")
         print()
+
         print("characters")
         for k, v in i.characters.items():
             print(f"\t - {k} : {v}")
         print()
+
         print("places")
         for k, v in i.places.items():
             print(f"\t - {k} : {v}")
 
         print("prompt")
         print(f"{i.scene_title} : {i.prompt} ")
+        print("\n\n")
+
+        print("IMAGE")
+        print(f"{i.scene_title} : {i.image_url} ")
         print("\n\n")
 
 
