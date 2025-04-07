@@ -1,0 +1,1059 @@
+
+2025-04-07 13:01:35 | INFO | reader_new.py | Total Chunks 33
+2025-04-07 13:01:36 | INFO | api_module.py | [Summary] 200 : Input_Tokens=707 | Output_Tokens=214  | Time=0.352168679
+2025-04-07 13:01:37 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=556 | Output_Tokens=169  | Time=0.327802418
+2025-04-07 13:01:38 | INFO | api_module.py | [Summary] 200 : Input_Tokens=793 | Output_Tokens=154  | Time=0.290909512
+2025-04-07 13:01:38 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=642 | Output_Tokens=135  | Time=0.220190705
+2025-04-07 13:01:39 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=4014 | Output_Tokens=256  | Time=0.467124096
+2025-04-07 13:01:39 | INFO | api_module.py | [Summary] 200 : Input_Tokens=4165 | Output_Tokens=594  | Time=0.949189205
+2025-04-07 13:01:41 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7313 | Output_Tokens=279  | Time=0.704079002
+2025-04-07 13:01:41 | INFO | api_module.py | [Summary] 200 : Input_Tokens=7464 | Output_Tokens=247  | Time=0.565911925
+2025-04-07 13:01:44 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=468  | Time=1.03648137
+2025-04-07 13:01:45 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=513  | Time=1.029800301
+2025-04-07 13:01:45 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=2696 | Output_Tokens=223  | Time=0.424205256
+2025-04-07 13:01:46 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=327  | Time=0.717707011
+2025-04-07 13:01:47 | INFO | api_module.py | [Summary] 200 : Input_Tokens=2847 | Output_Tokens=577  | Time=0.892697032
+2025-04-07 13:01:48 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=5002 | Output_Tokens=243  | Time=0.539290629
+2025-04-07 13:01:48 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=309  | Time=0.781907262
+2025-04-07 13:01:49 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=247  | Time=0.838448512
+2025-04-07 13:01:51 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=265  | Time=0.864645527
+2025-04-07 13:01:51 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=1593 | Output_Tokens=344  | Time=0.533867049
+2025-04-07 13:01:52 | INFO | api_module.py | [Summary] 200 : Input_Tokens=5153 | Output_Tokens=617  | Time=1.013186848
+2025-04-07 13:01:53 | INFO | api_module.py | [Image] : 200 : | task=141909d2-d405-411d-a633-f4ebf753cf31 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:01:53 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=229  | Time=0.752148649
+2025-04-07 13:01:54 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=295  | Time=0.699191576
+2025-04-07 13:01:55 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=246  | Time=0.631633503
+2025-04-07 13:01:56 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=5172 | Output_Tokens=209  | Time=0.520067121
+2025-04-07 13:01:56 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=642  | Time=1.177235929
+2025-04-07 13:01:58 | INFO | api_module.py | [Summary] 200 : Input_Tokens=1744 | Output_Tokens=509  | Time=0.84131837
+2025-04-07 13:01:58 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=251  | Time=0.907357171
+2025-04-07 13:01:59 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=224  | Time=0.820045511
+2025-04-07 13:02:00 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=535  | Time=1.155294163
+2025-04-07 13:02:01 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=245  | Time=0.703266023
+2025-04-07 13:02:02 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=534  | Time=1.101884971
+2025-04-07 13:02:03 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=2489 | Output_Tokens=376  | Time=0.677630363
+2025-04-07 13:02:03 | INFO | api_module.py | [Image] : 200 : | task=11b82354-e6ee-4cf3-b3bf-032cfa581089 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:02:04 | INFO | api_module.py | [Summary] 200 : Input_Tokens=5323 | Output_Tokens=557  | Time=1.005627146
+2025-04-07 13:02:05 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=272  | Time=0.738223186
+2025-04-07 13:02:06 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=495  | Time=1.057839899
+2025-04-07 13:02:07 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=248  | Time=0.745417054
+2025-04-07 13:02:08 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=782  | Time=1.416639766
+2025-04-07 13:02:09 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=342  | Time=0.717133346
+2025-04-07 13:02:11 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7805 | Output_Tokens=230  | Time=0.659991896
+2025-04-07 13:02:12 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=903  | Time=1.587242078
+2025-04-07 13:02:12 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=227  | Time=0.802922087
+2025-04-07 13:02:13 | INFO | api_module.py | [Summary] 200 : Input_Tokens=2640 | Output_Tokens=470  | Time=0.750342366
+2025-04-07 13:02:14 | INFO | api_module.py | [Image] : 200 : | task=88d68266-f015-4689-98fc-ac266860a4a5 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:02:14 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=257  | Time=0.702127048
+2025-04-07 13:02:15 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=525  | Time=1.069993276
+2025-04-07 13:02:16 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=200  | Time=0.540281345
+2025-04-07 13:02:17 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=639  | Time=1.2808320229999999
+2025-04-07 13:02:17 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=223  | Time=0.929012707
+2025-04-07 13:02:18 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=632  | Time=1.118604267
+2025-04-07 13:02:19 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=5155 | Output_Tokens=297  | Time=0.7010093
+2025-04-07 13:02:21 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=239  | Time=0.650612472
+2025-04-07 13:02:21 | INFO | api_module.py | [Summary] 200 : Input_Tokens=7956 | Output_Tokens=1098  | Time=1.726247124
+2025-04-07 13:02:21 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=243  | Time=0.753523958
+2025-04-07 13:02:24 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=227  | Time=0.752870844
+2025-04-07 13:02:24 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=767  | Time=1.370884674
+2025-04-07 13:02:24 | INFO | api_module.py | [Image] : 200 : | task=78e35335-cd9d-44ed-8c3c-34e889a49fd7 | cost = 0.0051$ | NSFW = False
+2025-04-07 13:02:26 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=315  | Time=0.78543999
+2025-04-07 13:02:27 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=832  | Time=1.395719541
+2025-04-07 13:02:27 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=247  | Time=0.733606763
+2025-04-07 13:02:29 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=483  | Time=1.023764795
+2025-04-07 13:02:29 | INFO | api_module.py | [Prompt] : 200 : Input_Tokens=2014 | Output_Tokens=237  | Time=0.50510943
+2025-04-07 13:02:29 | INFO | api_module.py | [Prompt] : Prompts Done for ALL Chunks
+2025-04-07 13:02:31 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=786  | Time=1.399967443
+2025-04-07 13:02:33 | INFO | api_module.py | [Summary] 200 : Input_Tokens=5306 | Output_Tokens=556  | Time=1.060141109
+2025-04-07 13:02:34 | INFO | api_module.py | [Image] : 200 : | task=97009eac-0dfd-4ea6-aad2-3c854edc4a7e | cost = 0.0045$ | NSFW = False
+2025-04-07 13:02:36 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=662  | Time=1.252148765
+2025-04-07 13:02:39 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=760  | Time=1.385500142
+2025-04-07 13:02:42 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=705  | Time=1.434038305
+2025-04-07 13:02:44 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=526  | Time=1.03254434
+2025-04-07 13:02:45 | INFO | api_module.py | [Image] : 200 : | task=1976a16e-6162-4139-b11c-4a44a53c8e65 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:02:47 | INFO | api_module.py | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=414  | Time=0.930211055
+2025-04-07 13:02:48 | INFO | api_module.py | [Summary] 200 : Input_Tokens=2165 | Output_Tokens=421  | Time=0.63540381
+2025-04-07 13:02:55 | INFO | api_module.py | [Image] : 200 : | task=bcf37937-4563-40cf-8932-eef629467e48 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:06 | INFO | api_module.py | [Image] : 200 : | task=9e2381b3-e59b-4e6d-bf18-d142eae669e9 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:16 | INFO | api_module.py | [Image] : 200 : | task=dab1cf9d-de55-45d7-b215-d025a236c36e | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:26 | INFO | api_module.py | [Image] : 200 : | task=33b9961a-f64b-4c80-96c4-dd179d82671d | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:36 | INFO | api_module.py | [Image] : 200 : | task=d3f5dee4-89ee-4ede-b71b-ee2c8c36d5fe | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:47 | INFO | api_module.py | [Image] : 200 : | task=0b59246a-370c-4a64-9e28-3bc775a2e779 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:03:56 | INFO | api_module.py | [Image] : 200 : | task=89d8e98a-d4b1-4e3e-87c9-80abba936999 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:06 | INFO | api_module.py | [Image] : 200 : | task=0cb02bff-cbe8-4ad8-8486-20d30efb02fc | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:15 | INFO | api_module.py | [Image] : 200 : | task=00cb9095-cab3-4972-9ebe-99fd5e9a7db1 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:26 | INFO | api_module.py | [Image] : 200 : | task=50490238-db64-4f54-93fa-a52433e9630c | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:36 | INFO | api_module.py | [Image] : 200 : | task=570c36d1-155e-4d50-9300-acae97f7271b | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:47 | INFO | api_module.py | [Image] : 200 : | task=07be3609-8376-4d02-941b-c968214e506c | cost = 0.0045$ | NSFW = False
+2025-04-07 13:04:57 | INFO | api_module.py | [Image] : 200 : | task=316e0867-4db1-4acc-ad8f-22ba3cae6bef | cost = 0.0045$ | NSFW = False
+2025-04-07 13:05:07 | INFO | api_module.py | [Image] : 200 : | task=96815f4f-d6f6-45c9-952c-ce0509edaaee | cost = 0.0045$ | NSFW = False
+2025-04-07 13:05:18 | INFO | api_module.py | [Image] : 200 : | task=b359b907-de40-4b8a-88cd-5ef47e9cca44 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:05:27 | INFO | api_module.py | [Image] : 200 : | task=fa52f487-12a8-4afd-b163-42b2d692542e | cost = 0.0045$ | NSFW = False
+2025-04-07 13:05:38 | INFO | api_module.py | [Image] : 200 : | task=fa26b810-40b4-42c7-b399-3648d990805f | cost = 0.0045$ | NSFW = False
+2025-04-07 13:05:49 | INFO | api_module.py | [Image] : 200 : | task=e61cf3d0-169d-4be9-84ef-4d7cd4cbd0e7 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:00 | INFO | api_module.py | [Image] : 200 : | task=bc05fa66-05af-4c15-8538-d0ae10f1ade3 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:10 | INFO | api_module.py | [Image] : 200 : | task=1b72609a-9a8a-426c-bb10-e1036a503f58 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:20 | INFO | api_module.py | [Image] : 200 : | task=1a761904-593e-478a-b7d8-375f8d2dbee4 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:32 | INFO | api_module.py | [Image] : 200 : | task=a44fda70-9935-40b1-8aeb-37eacaf9a900 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:41 | INFO | api_module.py | [Image] : 200 : | task=1f952002-8867-4190-be8e-f123863d0c2f | cost = 0.0045$ | NSFW = False
+2025-04-07 13:06:51 | INFO | api_module.py | [Image] : 200 : | task=c354976e-e707-4f9e-ad4b-bc042aece1a4 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:07:01 | INFO | api_module.py | [Image] : 200 : | task=e8185816-b2c0-4ab9-b586-54f6480e46a9 | cost = 0.0045$ | NSFW = False
+2025-04-07 13:07:12 | INFO | api_module.py | [Image] : 200 : | task=c90bf5e1-bbec-4d82-bd5e-c482ba047574 | cost = 0.0045$ | NSFW = False
+--------------------------------------------------
+Chapter:0%0
+Summary
+         - The novel Animal Farm by George Orwell, first published in 1944, is a classic tale of a group of farm animals who rebel against their human oppressors. The story takes place in an unspecified location, likely in England, an
+
+characters
+2025-04-07 13:07:22 | INFO | api_module.py | [Image] : 200 : | task=6a8617c6-4624-4865-b46b-428681b8c23d | cost = 0.0045$ | NSFW = False
+         - George Orwell : George Orwell is the author of the novel Animal Farm. He is a British novelist and essayist, best known for his dystopian novel 1984.
+
+places
+         - England : England is a country in the United Kingdom, where the story of Animal Farm is likely set. The exact location is not specified, but it is implied to be a rural area with a farm.
+prompt
+A rustic farm at sunset : A serene and idyllic farm scene at sunset, with a vast expanse of rolling hills and lush green pastures in the background. The sky is painted with hues of warm orange, pink, and purple, with a few wispy cloud
+
+
+
+2025-04-07 13:07:22 | INFO | api_module.py | [Image] : Prompts Done for ALL Chunks
+IMAGE
+A rustic farm at sunset : https://im.runware.ai/image/ws/2/ii/05d8341d-96cd-4bdf-8954-88fea61b844f.webp
+
+
+
+--------------------------------------------------
+Chapter:1%0
+Summary
+         - The novel 'Animal Farm' by George Orwell, first published in 1944, is a classic tale of rebellion and the corrupting influence of power. The story begins with a table of contents, hinting at the themes and events that will
+
+characters
+         - George Orwell : The author of the novel, known for his thought-provoking works that critique societal norms.
+
+places
+         - University of Adelaide : A prestigious institution in South Australia, home to the eBooks@Adelaide library, where the digital version of 'Animal Farm' is hosted.
+prompt
+A rustic farm on a cold, winter morning : A serene, snow-covered farm landscape with a dilapidated wooden barn in the background, surrounded by a frozen pond and a forest of bare trees. The sky above is a deep shade of indigo, with a
+
+
+
+IMAGE
+A rustic farm on a cold, winter morning : https://im.runware.ai/image/ws/2/ii/1cb54334-6393-4e44-8d8c-459a29625dd7.webp
+
+
+
+--------------------------------------------------
+Chapter:2%0
+Summary
+         - The chapter begins with Mr. Jones, the owner of Manor Farm, locking up the hen-houses for the night but forgetting to shut the pop-holes. The animals, who have been waiting for this opportunity, gather in the big barn to he
+
+characters
+         - Old Major : a wise and benevolent pig who has had a dream that he believes is a message from the animals of the past
+         - Mr. Jones : the owner of Manor Farm who is drunk and forgets to shut the pop-holes
+         - Boxer : a large and powerful horse who is one of the most respected animals on the farm
+         - Clover : a stout and motherly mare who is one of the most respected animals on the farm
+         - Benjamin : an old and cynical donkey who is one of the most respected animals on the farm
+         - Mollie : a foolish and pretty white mare who is one of the most respected animals on the farm
+         - Moses : a tame raven who sleeps on a perch behind the back door
+         - Bluebell : one of the three dogs who are loyal to Mr. Jones
+         - Jessie : one of the three dogs who are loyal to Mr. Jones
+         - Pincher : one of the three dogs who are loyal to Mr. Jones
+
+places
+         - Manor Farm : the farm where the animals live and work
+         - The big barn : the place where the animals gather to hear Old Major's speech
+         - The yard : the place where Mr. Jones locks up the hen-houses for the night
+         - The scullery : the place where Mr. Jones draws himself a last glass of beer from the barrel
+         - The bedroom : the place where Mr. Jones sleeps
+         - The orchard : the place where Boxer and Benjamin spend their Sundays grazing
+         - The paddock : the place where Boxer and Benjamin spend their Sundays grazing
+         - The nearest pond : the place where the dogs are drowned when they grow old and toothless
+prompt
+The Animals Gather in the Barn for Old Major's Speech : A dimly lit, rustic barn on a rural farm, with a large group of animals gathered around a raised platform. The atmosphere is tense and expectant, with the animals' eyes fixed on
+
+
+
+IMAGE
+The Animals Gather in the Barn for Old Major's Speech : https://im.runware.ai/image/ws/2/ii/9b86ba8e-5c10-420c-b343-5fc964a38d39.webp
+
+
+
+--------------------------------------------------
+Chapter:3%0
+Summary
+         - The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have renamed the farm Animal Farm and have established a new system of government based on the principle
+
+characters
+         - name : Old Major
+         - description : A wise and benevolent pig who is highly regarded on the farm. He is 12 years old and has had over 400 children. He is the one who delivers the famous speech about the Rebellion and the need for animals to work
+
+places
+         - name : Manor Farm
+         - description : A farm owned by Mr. Jones, where the animals live and work. It is a place of hard labor and mistreatment by the humans, but it is also a place of great potential for the animals to rise up and take control.
+prompt
+The Animals' Rebellion on Manor Farm : A dramatic and vibrant scene depicting the animals of Manor Farm, led by a wise old boar, gathering in a large barn to hear his final words before his passing. The boar, with a majestic appearanc
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/bc30f0d9-3b25-4e83-b0c0-e796c0808187.webp
+
+
+
+--------------------------------------------------
+Chapter:4%0
+Summary
+         - The animals on Manor Farm, led by Old Major, a wise and benevolent pig, decide to rebel against their human oppressors. They are inspired by Major's speech, which emphasizes the importance of unity and the need to overthrow
+
+characters
+         - Old Major : a wise and benevolent pig who inspires the animals to rebel against their human oppressors
+         - Snowball : a clever and charismatic pig who helps to lead the rebellion and establish Animal Farm
+         - Napoleon : a large and powerful pig who becomes the leader of Animal Farm and begins to abuse his power
+         - Boxer : a hardworking and loyal horse who is admired by the other animals for his strength and dedication
+         - Clover : a motherly and intelligent mare who is one of the leaders of the rebellion and helps to establish Animal Farm
+         - Mollie : a foolish and vain mare who is more interested in her appearance than in the welfare of the farm
+         - Squealer : a clever and persuasive pig who helps to justify the pigs' actions and maintain their power
+         - Moses : a tame raven who is a spy and a tale-bearer and helps to undermine the rebellion
+
+places
+         - Manor Farm : the farm where the animals live and work, and where the rebellion takes place
+         - Animal Farm : the new society established by the animals after they expel Mr. Jones
+         - The Barn : a building where the animals hold meetings and discuss their plans
+         - The Field : a area of land where the animals work and harvest crops
+         - The Farmhouse : the house where Mr. Jones and his family live, which is later taken over by the pigs
+prompt
+The Animals' Rebellion on Manor Farm : A sun-drenched, lush green landscape of Manor Farm, with the animals gathered in the big barn, listening intently to Old Major's wise and benevolent speech. The barn is filled with a warm, golden
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/bbb723d7-dcad-4e87-88a6-223779148540.webp
+
+
+
+--------------------------------------------------
+Chapter:4%1
+Summary
+         - The animals on the farm have established a new society with the pigs as the leaders. The pigs have taken control of the farm and are working hard to maintain it. They have created a system where everyone works according to
+
+characters
+         - Napoleon : a pig who is one of the leaders of the farm and is responsible for the education of the young animals
+         - Snowball : a pig who is one of the leaders of the farm and is responsible for the organization of the farm and the education of the animals
+         - Squealer : a pig who is responsible for making explanations and justifying the actions of the pigs to the other animals
+         - Mollie : a horse who is not good at getting up in the mornings and has a tendency to leave work early
+         - Benjamin : a donkey who is old and stubborn and does not participate in the new society
+         - Boxer : a horse who is strong and hardworking but has difficulty learning to read and write
+         - Clover : a horse who is able to learn the alphabet but struggles to put words together
+         - Jessie : a dog who has given birth to puppies and is being taken care of by Napoleon
+         - Bluebell : a dog who has given birth to puppies and is being taken care of by Napoleon
+         - Old Benjamin : a donkey who is old and stubborn and does not participate in the new society
+         - Muriel : a goat who is able to read and write and sometimes reads to the other animals in the evenings
+         - Jones : the former owner of the farm who the animals are trying to avoid
+
+places
+         - The Farm : the farm where the animals live and work
+         - The Barn : a large building where the animals hold meetings and store food
+         - The Harness-Room : a room where the pigs store their books and tools
+         - The Orchard : a field where the animals grow fruit and vegetables
+         - The Paddock : a field where the animals graze and rest
+prompt
+A bustling farm, where animals work together under the guidance of intelligent and ambitious pigs. : A serene, sunlit farm landscape with a large barn in the center, surrounded by lush green fields and a few trees. In the foreground,
+
+
+
+IMAGE
+A bustling farm, where animals work together under the guidance of intelligent and ambitious pigs. : https://im.runware.ai/image/ws/2/ii/29166967-334f-46cc-b620-fac82cb07641.webp
+
+
+
+--------------------------------------------------
+Chapter:5%0
+Summary
+         - The animals on Manor Farm, led by the pigs, have successfully overthrown their human master, Mr. Jones. The pigs, who have been secretly teaching the other animals about Animalism, a philosophy that emphasizes the equality
+
+characters
+         - name : Old Major
+         - description : A wise and benevolent pig who is highly regarded on the farm. He is the one who first introduces the idea of Animalism and inspires the animals to rebel against their human oppressors.
+
+places
+         - name : Manor Farm
+         - description : A farm where the animals live and work. It is owned by Mr. Jones, who is a cruel and oppressive master. After the rebellion, the farm is renamed 'Animal Farm' and becomes a symbol of the animals' freedom and e
+prompt
+The Animals' Rebellion on Manor Farm : A dramatic and vibrant scene depicting the animals of Manor Farm, led by a wise and charismatic pig, rising up against their tyrannical human master, Mr. Jones. The animals, driven by a desire fo
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/4393b62c-0b1d-43f9-8299-5770bcfb6a2b.webp
+
+
+
+--------------------------------------------------
+Chapter:5%1
+Summary
+         - The animals on Animal Farm have successfully defended themselves against the human invaders led by Mr. Jones. The battle, known as the Battle of the Cowshed, was fierce and resulted in the death of one sheep. The animals ha
+
+characters
+         - Boxer : A large, powerful horse with iron-shod hooves who played a crucial role in the Battle of the Cowshed.
+         - Snowball : A pig who is one of the leaders of the animals on Animal Farm and is known for his intelligence and bravery.
+         - Mollie : A horse who is known for her beauty and is often seen prancing around the farm.
+         - Benjamin : A wise old donkey who is known for his intelligence and is often seen reading books.
+         - Napoleon : A pig who is one of the leaders of the animals on Animal Farm and is known for his cunning and ambition.
+         - Jones : The former owner of Animal Farm who is now trying to recapture the farm with the help of his men.
+         - Squealer : A pig who is known for his ability to speak and is often used by Napoleon to spread propaganda and lies.
+         - Muriel : A sheep who is known for her intelligence and is often seen reading books.
+         - Clover : A cow who is known for her kindness and is often seen helping the other animals.
+         - Jessie : A dog who is known for her loyalty and is often seen guarding the farm.
+         - Bluebell : A dog who is known for her loyalty and is often seen guarding the farm.
+         - Old Benjamin : A donkey who is known for his wisdom and is often seen reading books.
+         - Mr. Pilkington : The owner of Foxwood farm who is trying to prevent the animals on Animal Farm from learning about their rebellion.
+         - Mr. Frederick : The owner of Pinchfield farm who is trying to prevent the animals on Animal Farm from learning about their rebellion.
+
+places
+         - Animal Farm : The farm where the animals have successfully defended themselves against the human invaders.
+         - Foxwood : A farm owned by Mr. Pilkington that is trying to prevent the animals on Animal Farm from learning about their rebellion.
+         - Pinchfield : A farm owned by Mr. Frederick that is trying to prevent the animals on Animal Farm from learning about their rebellion.
+         - The Red Lion : A pub where Mr. Jones is often seen complaining about the animals on Animal Farm.
+         - The Manor Farm : The former name of Animal Farm that is still used by Mr. Pilkington and Mr. Frederick.
+prompt
+The Battle of the Cowshed: A Heroic Defense of Animal Farm : A dramatic and action-packed scene depicting the courageous defense of Animal Farm against the invading humans. The sun is setting over the farm, casting a warm orange glow
+
+
+
+IMAGE
+The Battle of the Cowshed: A Heroic Defense of Animal Farm : https://im.runware.ai/image/ws/2/ii/a78642c3-9120-44ce-b499-9778ef3489bb.webp
+
+
+
+--------------------------------------------------
+Chapter:6%0
+Summary
+         - The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have established a new government based on the principles of Animalism, which emphasizes the equality an
+
+characters
+         - name : Old Major
+         - description : A wise and benevolent pig who is highly regarded on the farm. He is 12 years old and has grown rather stout, but is still majestic-looking. He has a hoarse voice and is able to sing a stirring tune called 'Bea
+
+places
+         - name : Manor Farm
+         - description : A farm that is home to a group of animals, including pigs, horses, cows, and chickens. The farm is fertile and capable of producing food in abundance, but is currently being exploited by the human owner, Mr. J
+prompt
+The Rebellion of the Animals : A dark and misty dawn breaks over the Manor Farm, the animals stir and the air is filled with the sound of their lowing, bleating, and the distant rumble of thunder. The farm is in disarray, the building
+
+
+
+IMAGE
+The Rebellion of the Animals : https://im.runware.ai/image/ws/2/ii/2533430e-1494-4a83-82de-605d14400c97.webp
+
+
+
+--------------------------------------------------
+Chapter:6%1
+Summary
+         - The animals on Animal Farm have been working hard to build a better life for themselves. They have established a system of government where the pigs are in charge, and they have implemented various reforms to improve the fa
+
+characters
+         - Mollie : A beautiful horse who has been acting strangely and has been seen talking to Mr. Pilkington's men. She eventually disappears, and it is rumored that she has been taken by the humans.
+         - Snowball : A pig who is advocating for the building of a windmill and is also suggesting that the animals send out more pigeons to stir up rebellion among the animals on other farms.
+         - Napoleon : A pig who is opposing the building of a windmill and wants to procure firearms and train themselves in their use. He also announces that the Sunday-morning Meetings will come to an end and that all questions rela
+         - Boxer : A horse who is concerned about the defense of the farm and is also troubled by Napoleon's announcement.
+         - Clover : A horse who is concerned about Mollie's behavior and is also a close friend of Boxer's.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a place of hard work and struggle, but also of hope and possibility.
+         - Foxwood : A neighboring farm that is owned by Mr. Pilkington. It is a large, neglected farm that is overgrown with woodland and has worn-out pastures.
+         - Pinchfield : A neighboring farm that is owned by Mr. Frederick. It is a smaller and better-kept farm that is involved in lawsuits and is known for driving hard bargains.
+         - The Red Lion : A pub in the nearby town of Willingdon where Mr. Jones spends most of his time complaining about his misfortune.
+         - The big barn : A large barn on Animal Farm where the animals hold their Meetings and make important decisions.
+prompt
+The Battle for Animal Farm : A dramatic and action-packed scene depicting the animals of Animal Farm defending their home against the invading humans. The sun is setting over the farm, casting a warm orange glow over the landscape. Th
+
+
+
+IMAGE
+The Battle for Animal Farm : https://im.runware.ai/image/ws/2/ii/60ecec6b-8f31-4212-8883-a53ea305d537.webp
+
+
+
+--------------------------------------------------
+Chapter:6%2
+Summary
+         - The animals on the farm have been discussing the new arrangement, where Comrade Napoleon takes on extra labor. Squealer explains that leadership is a heavy responsibility and that Napoleon would be happy to let the animals
+
+characters
+         - Napoleon : A pig who takes on extra labor and is the leader of the farm. He is described as having a deep and heavy responsibility as a leader.
+         - Squealer : A pig who explains the new arrangement to the other animals. He is described as being persuasive and having a remarkable gift for speaking.
+         - Snowball : A pig who was a rival of Napoleon's and was expelled from the farm. He is described as being a bad influence and a dangerous character.
+         - Boxer : A horse who is a loyal follower of Napoleon. He is described as being hardworking and adopting the maxim 'Napoleon is always right'.
+         - Minimus : A pig who has a remarkable gift for composing songs and poems. He sits on the front of the raised platform with Napoleon and Squealer.
+
+places
+         - The Farm : A farm where the animals live and work. It is described as having a big barn where the animals assemble on Sundays to receive their orders.
+         - The Orchard : A place where the animals have a flagstaff and the skull of old Major is disinterred.
+         - The Incubator Shed : A place where Snowball drew his plans for the windmill, which were later stolen and used as the basis for the actual plans.
+         - The Big Barn : A place where the animals assemble on Sundays to receive their orders. It has a raised platform where Napoleon, Squealer, and Minimus sit.
+prompt
+A totalitarian farm under the rule of Napoleon the pig : A dimly lit, rustic barn filled with a group of animals, including four young pigs, nine young dogs, and a flock of sheep. The atmosphere is tense and oppressive, with the pigs
+
+
+
+IMAGE
+A totalitarian farm under the rule of Napoleon the pig : https://im.runware.ai/image/ws/2/ii/737257e7-06e7-463c-b786-1f8870a5148a.webp
+
+
+
+--------------------------------------------------
+Chapter:7%0
+Summary
+         - The animals on Manor Farm, led by Old Major, a wise and benevolent pig, have been discussing the Rebellion against their human oppressors. Old Major explains that the life of an animal is miserable, laborious, and short, an
+
+characters
+         - Old Major : a wise and benevolent pig, 12 years old, with a long life and much time for thought
+         - Snowball : a young boar, clever and inventive, but not considered to have the same depth of character as Napoleon
+         - Napoleon : a large, rather fierce-looking Berkshire boar, with a reputation for getting his own way
+         - Boxer : an enormous cart-horse, nearly 18 hands high, with tremendous powers of work and a kind heart
+         - Clover : a stout motherly mare, approaching middle life, with a kind and gentle nature
+         - Mollie : a foolish, pretty white mare, who draws Mr. Jones' trap and is fond of sugar and ribbons
+         - Squealer : a small fat pig, with very round cheeks and a shrill voice, who is a brilliant talker and can turn black into white
+
+places
+         - Manor Farm : the farm where the animals live, with a big barn, a farmhouse, and a pasture
+         - Animal Farm : the name of the farm after the Rebellion, with a big barn, a farmhouse, and a pasture
+         - The Orchard : a place where the animals graze and play
+         - The Spinney : a wooded area on the farm, where the animals like to play
+         - The Pool : a body of water on the farm, where the animals like to drink and play
+prompt
+The Animals' Uprising on Manor Farm : A dramatic and detailed scene depicting the animals of Manor Farm, led by a wise and charismatic boar named Major, rising up against their tyrannical human master, Mr. Jones. The animals, fueled b
+
+
+
+IMAGE
+The Animals' Uprising on Manor Farm : https://im.runware.ai/image/ws/2/ii/5c7d21cf-0fc7-4521-a6a2-c306c7ed29a9.webp
+
+
+
+--------------------------------------------------
+Chapter:7%1
+Summary
+         - The animals on Animal Farm are preparing for the coming season, but disagreements between Snowball and Napoleon are causing tension. Snowball wants to build a windmill to save labor, while Napoleon thinks it's a waste of ti
+
+characters
+         - Snowball : A pig who is a leader and a dreamer. He wants to build a windmill to save labor and improve the lives of the animals.
+         - Napoleon : A pig who is a leader and a pragmatist. He thinks the windmill is a waste of time and they should focus on increasing food production.
+         - Mollie : A horse who has gone missing and is believed to have been seen with a man from Foxwood.
+         - Boxer : A horse who is a hard worker and a loyal friend. He is troubled by the disagreements between Snowball and Napoleon.
+         - Clover : A horse who is a friend of Mollie's and is concerned about her disappearance.
+         - Benjamin : A donkey who is a wise old animal and a skeptic. He doesn't think the windmill will make a difference and is worried about the animals' dependence on it.
+
+places
+         - Animal Farm : The farm where the animals live and work. It's a place of conflict and disagreement, but also of hope and possibility.
+         - Foxwood : A neighboring farm that is owned by Mr. Pilkington. It's a place of tension and conflict with Animal Farm.
+         - Pinchfield : Another neighboring farm that is owned by Mr. Frederick. It's a place of competition and rivalry with Animal Farm.
+         - The Big Barn : A meeting place for the animals where they discuss and decide important issues.
+         - The Long Pasture : A field where the animals graze and where Snowball wants to build the windmill.
+prompt
+The Battle for Animal Farm : A dramatic and action-packed scene depicting the Battle of the Cowshed, where the animals of Animal Farm defend their home against the invading humans. The scene should capture the intensity and chaos of t
+
+
+
+IMAGE
+The Battle for Animal Farm : https://im.runware.ai/image/ws/2/ii/a6974eda-0cbf-4441-afeb-f2cd5f152767.webp
+
+
+
+--------------------------------------------------
+Chapter:7%2
+Summary
+         - The animals on Animal Farm worked hard to build a windmill, but it was destroyed by Snowball, who was accused of treason by Napoleon. The animals were shocked and decided to rebuild the windmill, with Napoleon declaring tha
+
+characters
+         - Napoleon : A pig who is the leader of Animal Farm and is known for his cunning and intelligence. He is determined to build the windmill and will stop at nothing to achieve his goal.
+         - Snowball : A pig who was once a leader on Animal Farm but was expelled by Napoleon. He is accused of destroying the windmill and is declared a traitor by Napoleon.
+         - Boxer : A horse who is a hard worker and is known for his strength and loyalty. He is a key player in the building of the windmill.
+         - Clover : A horse who is a close friend of Boxer and is concerned about the welfare of the other animals on the farm.
+         - Squealer : A pig who is a skilled orator and is able to convince the other animals to do what Napoleon wants. He is a key player in the propaganda efforts of the pigs.
+         - Muriel : A goat who is a close friend of Clover and is able to read and write. She is a key player in the efforts to uncover the truth about the windmill.
+         - Benjamin : A donkey who is a wise and experienced animal. He is a key player in the efforts to uncover the truth about the windmill and is able to see through the propaganda efforts of the pigs.
+
+places
+         - Animal Farm : A farm that is owned and operated by the animals. It is a place of hard work and struggle, but also of hope and determination.
+         - The Windmill : A windmill that is being built by the animals on Animal Farm. It is a symbol of their hard work and determination, but also a source of conflict and tension.
+         - The Farmhouse : A house that is owned by the pigs and is used as their residence. It is a symbol of their power and privilege, but also a source of conflict and tension with the other animals.
+prompt
+The Animals of Animal Farm Mourn the Destruction of the Windmill : A dramatic and poignant scene of devastation, set against the backdrop of a stormy autumn evening on the farm of Animal Farm. The windmill, a symbol of the animals' ha
+
+
+
+IMAGE
+The Animals of Animal Farm Mourn the Destruction of the Windmill : https://im.runware.ai/image/ws/2/ii/4c28c95d-8137-4d9b-bd94-197eb4a3c082.webp
+
+
+
+--------------------------------------------------
+Chapter:8%0
+Summary
+         - The animals on Manor Farm, led by Old Major, a wise and benevolent pig, are dissatisfied with their miserable lives under the tyranny of Mr. Jones. After Old Major's death, the pigs, led by Snowball and Napoleon, begin to t
+
+characters
+         - Old Major : a wise and benevolent pig who leads the animals in their rebellion against Mr. Jones
+         - Snowball : a clever and charismatic pig who helps lead the animals in their rebellion and teaches them about Animalism
+         - Napoleon : a large and fierce-looking Berkshire boar who becomes a leader of the pigs and eventually takes control of the farm
+         - Boxer : a strong and hardworking horse who is admired by the other animals for his dedication and loyalty
+         - Clover : a motherly and intelligent mare who is one of the first animals to accept the pigs' teachings and becomes a leader among the horses
+         - Mollie : a foolish and vain white mare who is more concerned with her appearance and comfort than with the welfare of the farm
+         - Squealer : a small and clever pig who is able to argue and persuade the other animals to accept the pigs' teachings and actions
+
+places
+         - Manor Farm : the farm where the animals live and work under the tyranny of Mr. Jones
+         - Animal Farm : the farm where the animals live and work after they have rebelled against Mr. Jones and taken control of the farm
+         - The Barn : a large building where the animals meet to discuss and plan their rebellion and where they hold secret meetings
+         - The Orchard : a small area of the farm where the animals grow fruit and vegetables
+         - The Pasture : a large area of the farm where the animals graze and play
+prompt
+The Animals' Rebellion on Manor Farm : A sun-drenched, golden-brown landscape of rolling hills and lush green pastures, with the Manor Farm barn in the center. The barn's wooden beams are weathered and worn, with a large, old-fashione
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/3995f0b7-ea3b-4c4c-bca6-b4eca268aaea.webp
+
+
+
+--------------------------------------------------
+Chapter:8%1
+Summary
+         - The animals on Animal Farm have been working hard to build a utopian society. Snowball and Napoleon, two of the pigs, have been at odds over the windmill project. Snowball wants to build the windmill to save labor and incre
+
+characters
+         - Snowball : A pig who is one of the leaders of the farm. He is intelligent and charismatic, but also hot-headed and impulsive.
+         - Napoleon : A pig who is also one of the leaders of the farm. He is cunning and manipulative, and is determined to take control of the farm.
+         - Mollie : A horse who is one of the animals on the farm. She is vain and self-centered, and is eventually taken by a man from Foxwood.
+         - Boxer : A horse who is one of the animals on the farm. He is strong and loyal, but also naive and trusting.
+         - Clover : A horse who is one of the animals on the farm. She is kind and gentle, and is concerned about Mollie's behavior.
+         - Benjamin : A donkey who is one of the animals on the farm. He is wise and cynical, and is skeptical of the windmill project.
+         - Squealer : A pig who is one of the leaders of the farm. He is clever and persuasive, but also deceitful and manipulative.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a small, rural farm with a few buildings and a large field.
+         - Foxwood : A neighboring farm that is owned by Mr. Pilkington. It is a large, neglected farm with overgrown pastures and a poor reputation.
+         - Pinchfield : A neighboring farm that is owned by Mr. Frederick. It is a smaller, better-kept farm with a reputation for being ruthless and efficient.
+         - The Red Lion : A pub in the nearby town of Willingdon. It is a popular gathering place for the local farmers and is where Mr. Jones often goes to complain about his situation.
+         - The big barn : A large barn on Animal Farm where the animals hold their meetings and store their food.
+         - The cowshed : A small building on Animal Farm where the cows are kept.
+         - The windmill : A proposed windmill that Snowball wants to build to save labor and increase food production. It is a complex and ambitious project that is opposed by Napoleon.
+         - The road : A road that runs through the nearby countryside and is used by the animals to travel to and from the farm.
+         - The hedge : A hedge that runs along the edge of the field and is used by the animals to escape from the dogs.
+prompt
+A pivotal moment on Animal Farm, where the animals are divided over the windmill project and Napoleon's power grows. : A dramatic and suspenseful scene on a sun-drenched farm, where a group of animals, led by Snowball and Napoleon, ar
+
+
+
+IMAGE
+A pivotal moment on Animal Farm, where the animals are divided over the windmill project and Napoleon's power grows. : https://im.runware.ai/image/ws/2/ii/c3ad9422-8245-454b-88f5-f16735cd3a31.webp
+
+
+
+--------------------------------------------------
+Chapter:8%2
+Summary
+         - The animals on Animal Farm have been working hard to build a windmill, but it has been destroyed by Snowball, who is accused of being a traitor. Napoleon has taken over the farm and is making new rules, including selling ha
+
+characters
+         - Napoleon : Napoleon is a pig who has taken over the farm. He is intelligent and cunning, and has convinced the animals that he is the right leader. However, he is also ruthless and has made many changes to the farm, includi
+         - Snowball : Snowball is a pig who was a leader of the rebellion against Jones. He was accused of being a traitor and destroying the windmill. However, it is unclear if he was really a traitor or if he was just trying to prot
+         - Boxer : Boxer is a horse who is a loyal follower of Napoleon. He is strong and hardworking, but he is also naive and trusting. He believes that Napoleon is the right leader and that he will always do the right thing.
+         - Clover : Clover is a horse who is a close friend of Boxer. She is intelligent and kind, and is one of the few animals who question Napoleon's leadership.
+         - Squealer : Squealer is a pig who is Napoleon's right-hand man. He is intelligent and cunning, and is able to convince the animals that Napoleon's rules are necessary. However, he is also ruthless and has a tendency to manip
+         - Muriel : Muriel is a goat who is a close friend of Clover. She is intelligent and kind, and is one of the few animals who question Napoleon's leadership.
+
+places
+         - Animal Farm : Animal Farm is the farm where the animals live. It is a small farm with a large windmill and a farmhouse. The animals have been working hard to build a new windmill, but it has been destroyed by Snowball. The
+         - Foxwood Farm : Foxwood Farm is a neighboring farm that is owned by Mr. Pilkington. It is a large farm with a beautiful house and a large garden. The animals have been trying to sell hay and wheat to the neighboring farms, b
+         - Pinchfield Farm : Pinchfield Farm is a neighboring farm that is owned by Mr. Frederick. It is a large farm with a beautiful house and a large garden. The animals have been trying to sell hay and wheat to the neighboring far
+         - The Orchard : The orchard is a small area of the farm where the animals grow fruit and vegetables. It is a beautiful place with a large tree and a small stream. The animals have been trying to grow more food, but they are s
+         - The Barn : The barn is a large building on the farm where the animals store their food and supplies. It is a cold and damp place, but it is also a safe place to hide from the weather. The animals have been trying to fix the
+         - The Farmhouse : The farmhouse is a large house on the farm where the pigs live. It is a beautiful house with a large garden and a beautiful view. The pigs have been trying to make the farmhouse into a luxury home, but they
+prompt
+A bleak winter landscape with the ruins of the windmill in the foreground, a symbol of the failed rebellion and the struggle for power on Animal Farm. : A desolate, snow-covered landscape with the remains of the windmill in the foregr
+
+
+
+IMAGE
+A bleak winter landscape with the ruins of the windmill in the foreground, a symbol of the failed rebellion and the struggle for power on Animal Farm. : https://im.runware.ai/image/ws/2/ii/d2c14cc4-9783-4c30-a130-4a6709a49f38.webp
+
+
+
+--------------------------------------------------
+Chapter:8%3
+Summary
+         - Napoleon ordered the animals to assemble in the yard, where he revealed that some of Snowball's agents were lurking among them. Four days later, Napoleon ordered the animals to confess their crimes, and they confessed to ha
+
+characters
+         - Boxer : A large, black horse with a long tail. He is a hard worker and suggests that the solution to the problems on the farm is to work harder.
+         - Clover : A gentle, brown mare. She is a loyal and hard worker and reflects on the past and how it was not what they had hoped for.
+         - Napoleon : A pig with a stern expression. He is the leader of the animals and orders the animals to assemble in the yard and to confess their crimes.
+         - Squealer : A pig with a small, ugly face. He is a messenger for Napoleon and announces that 'Beasts of England' is forbidden to be sung.
+         - Muriel : A sheep with a calm expression. She asks why it is necessary to abolish the song 'Beasts of England'.
+
+places
+         - Animal Farm : A farm where the animals live and work. It has a long pasture, a hayfield, a drinking pool, and a windmill.
+         - The Knoll : A hill where the animals huddle together after the executions. It gives them a wide view of the countryside.
+         - The Farm Buildings : The buildings where the animals live and work. They have smoke curling from the chimneys.
+prompt
+A haunting scene of terror and betrayal on a once-peaceful farm : A dimly lit, moonless spring evening on a farm, with a clear view of the rolling countryside. The long pasture, hayfield, spinney, drinking pool, and ploughed fields ar
+
+
+
+IMAGE
+A haunting scene of terror and betrayal on a once-peaceful farm : https://im.runware.ai/image/ws/2/ii/d37e77f5-2bb8-4ed8-9c4b-499783cb6be4.webp
+
+
+
+--------------------------------------------------
+Chapter:9%0
+Summary
+         - The animals on Manor Farm, led by the pigs, have successfully overthrown their human master, Mr. Jones, and taken control of the farm. The pigs, led by Snowball and Napoleon, have established a new government based on the p
+
+characters
+         - Mr. Jones : A drunk and incompetent human farmer who is overthrown by the animals.
+         - Snowball : A clever and charismatic pig who is one of the leaders of the rebellion and a key figure in the new government.
+         - Napoleon : A large and fierce-looking Berkshire boar who is also a leader of the rebellion and a key figure in the new government.
+         - Boxer : A hardworking and loyal cart-horse who is admired by all the animals for his strength and dedication.
+         - Clover : A motherly and intelligent mare who is one of the leaders of the rebellion and a key figure in the new government.
+         - Mollie : A foolish and vain white mare who is more concerned with her appearance than with the welfare of the farm.
+         - Squealer : A small and clever pig who is a skilled orator and a key figure in the new government.
+         - Moses : A tame raven who is a spy and a tale-bearer and is hated by the animals.
+         - Old Major : A wise and benevolent boar who is the founder of Animalism and the inspiration for the rebellion.
+
+places
+         - Manor Farm : The farm where the animals live and work, which is taken over by the animals in the rebellion.
+         - Animal Farm : The new name given to the farm by the animals, which is a symbol of their independence and freedom.
+         - The Barn : A large building on the farm where the animals hold meetings and make important decisions.
+         - The Field : A large area of land on the farm where the animals work and harvest crops.
+         - The Farmhouse : A large house on the farm where the humans used to live, which is now a museum and a symbol of the animals' victory.
+prompt
+The Animals' Rebellion on Manor Farm : A serene and sunlit landscape of a farm, with a majestic oak tree standing tall in the center. The farm buildings, once worn and neglected, now shine with a fresh coat of paint. The animals, once
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/19989be9-aa15-4917-bd08-116aa1d5814d.webp
+
+
+
+--------------------------------------------------
+Chapter:9%1
+Summary
+         - The animals on Animal Farm have been working hard to build a utopian society. However, tensions are rising between the pigs, led by Snowball and Napoleon, over the windmill project. Snowball wants to build a windmill to pro
+
+characters
+         - Snowball : A charismatic and intelligent pig who is a key leader of the animals on Animal Farm. He is passionate about building a utopian society and is a strong advocate for the windmill project.
+         - Napoleon : A power-hungry and manipulative pig who is also a key leader of the animals on Animal Farm. He is opposed to the windmill project and is using his dogs to intimidate and silence his opponents.
+         - Boxer : A hardworking and loyal horse who is a key member of the animals on Animal Farm. He is a strong supporter of Snowball and the windmill project, but is also struggling with the concept of work and leisure.
+         - Benjamin : A wise and introspective donkey who is a key member of the animals on Animal Farm. He is skeptical of the windmill project and is content with the status quo.
+         - Mollie : A beautiful and vain horse who is a key member of the animals on Animal Farm. She has gone missing and is believed to have been seen with a human, sparking rumors of her betrayal.
+
+places
+         - Animal Farm : A farm that has been taken over by the animals and is being run as a utopian society. The farm is divided into different sections, including the barn, the cowshed, and the fields.
+         - The Cowshed : A building on Animal Farm where the animals have set up a makeshift hospital and are tending to the wounded. It is also the site of the Battle of the Cowshed, where the animals fought against the humans.
+         - The Windmill : A proposed project on Animal Farm that would provide electricity and make life easier for the animals. The project is a source of tension between the pigs, with Snowball advocating for it and Napoleon opposin
+prompt
+A Divided Farm : A detailed, atmospheric scene depicting a divided farm, where a group of pigs, led by Snowball and Napoleon, are engaged in a heated debate over the construction of a windmill. The farm is in the midst of winter, with
+
+
+
+IMAGE
+A Divided Farm : https://im.runware.ai/image/ws/2/ii/40da1074-c874-4178-a5fa-69129c61d363.webp
+
+
+
+--------------------------------------------------
+Chapter:9%2
+Summary
+         - The animals on Animal Farm worked hard to build the windmill, but it was destroyed by Snowball. Napoleon blamed Snowball for the destruction and declared him a traitor. The animals were shocked and began to suspect that Sno
+
+characters
+         - Napoleon : Napoleon is the leader of Animal Farm. He is strong and intelligent, but also power-hungry and manipulative. He is determined to build the windmill and will stop at nothing to achieve his goal.
+         - Snowball : Snowball is a pig who was a key figure in the Rebellion against Jones. He is intelligent and charismatic, but also reckless and impulsive. He was blamed for the destruction of the windmill and declared a traitor
+         - Boxer : Boxer is a horse who is loyal and hardworking. He is a bit dim-witted, but has a good heart and is always willing to help his fellow animals.
+         - Squealer : Squealer is a pig who is Napoleon's right-hand man. He is clever and manipulative, and is able to spin lies and half-truths to suit Napoleon's agenda.
+         - Clover : Clover is a horse who is intelligent and perceptive. She is a bit of a rebel and is not afraid to speak her mind.
+         - Muriel : Muriel is a goat who is intelligent and resourceful. She is a bit of a troublemaker and is always looking for ways to challenge the status quo.
+
+places
+         - Animal Farm : Animal Farm is a farm that was taken over by the animals after they rebelled against their human owner, Jones. It is a place of hard work and struggle, but also of community and cooperation.
+         - The Windmill : The windmill is a project that the animals are building to improve their lives and increase their productivity. It is a symbol of their determination and hard work.
+         - The Quarry : The quarry is a place where the animals go to collect stone for the windmill. It is a difficult and laborious task, but the animals are determined to succeed.
+         - The Farmhouse : The farmhouse is the home of the pigs, who are the leaders of Animal Farm. It is a place of luxury and comfort, but also of power and control.
+         - The Barn : The barn is a place where the animals go to rest and socialize. It is a symbol of their community and cooperation.
+prompt
+The Rebuilding of the Windmill : A desolate winter landscape with a ruined windmill in the foreground, its walls shattered and its stones scattered all around. In the background, a group of animals, including Boxer, Clover, and Napole
+
+
+
+IMAGE
+The Rebuilding of the Windmill : https://im.runware.ai/image/ws/2/ii/1c5c2fab-acf6-461a-9c73-e940ccdc991d.webp
+
+
+
+--------------------------------------------------
+Chapter:9%3
+Summary
+         - The animals on Animal Farm are shocked and miserable after witnessing the executions of their comrades who had leagued themselves with Snowball. They are also dismayed by the cruel retribution they have just witnessed. Boxe
+
+characters
+         - Boxer : A large, black horse with a long mane and a kind heart. He is one of the hardest working animals on the farm and is known for his catchphrase 'I will work harder!'
+         - Napoleon : A pig who is the leader of the farm. He is power-hungry and tyrannical, and is willing to do whatever it takes to maintain his position of power.
+         - Snowball : A pig who is a rival of Napoleon's. He is intelligent and charismatic, but is also power-hungry and willing to do whatever it takes to achieve his goals.
+         - Squealer : A pig who is Napoleon's right-hand man. He is intelligent and persuasive, but is also willing to lie and manipulate others to achieve his goals.
+         - Clover : A horse who is one of the most intelligent and compassionate animals on the farm. She is a close friend of Boxer's and is deeply concerned about the welfare of the other animals.
+         - Muriel : A goat who is one of the most intelligent and level-headed animals on the farm. She is a close friend of Clover's and is deeply concerned about the welfare of the other animals.
+         - Benjamin : A donkey who is one of the oldest and wisest animals on the farm. He is a close friend of Boxer's and is deeply concerned about the welfare of the other animals.
+         - Jessie : A mare who is one of the most intelligent and compassionate animals on the farm. She is a close friend of Boxer's and is deeply concerned about the welfare of the other animals.
+         - Bluebell : A mare who is one of the most intelligent and compassionate animals on the farm. She is a close friend of Boxer's and is deeply concerned about the welfare of the other animals.
+         - Pinkeye : A young pig who is one of Napoleon's most loyal followers. He is willing to do whatever it takes to please Napoleon and maintain his position of power.
+         - Whymper : A human who is a friend of Napoleon's. He is willing to do whatever it takes to help Napoleon achieve his goals and maintain his position of power.
+         - Frederick : A human who is a rival of Napoleon's. He is power-hungry and willing to do whatever it takes to achieve his goals.
+         - Pilkington : A human who is a friend of Napoleon's. He is willing to do whatever it takes to help Napoleon achieve his goals and maintain his position of power.
+
+places
+         - Animal Farm : A farm that is owned and operated by the animals. It is a place of hard work and struggle, but also of community and friendship.
+         - Pinchfield Farm : A farm that is owned and operated by humans. It is a place of cruelty and exploitation, and is a rival of Animal Farm.
+         - Foxwood : A farm that is owned and operated by humans. It is a place of luxury and comfort, and is a rival of Animal Farm.
+         - The Big Barn : A large barn on Animal Farm where the animals hold meetings and celebrations.
+         - The Farmhouse : A large house on Animal Farm where Napoleon and the other pigs live.
+         - The Quarry : A place on Animal Farm where the animals quarry stone for the windmill.
+         - The Windmill : A large windmill on Animal Farm that is built by the animals. It is a symbol of their hard work and determination.
+         - The Orchard : A place on Animal Farm where the animals grow fruit and vegetables.
+         - The Paddock : A place on Animal Farm where the animals graze and rest.
+         - The Cellars : A place on Animal Farm where the animals store food and drink.
+         - The Yards : A place on Animal Farm where the animals live and work.
+prompt
+A Desolate Farm, a Desolate Future : A haunting, desolate landscape of a once-thriving farm, now scarred by the remnants of a brutal battle. The windmill, a symbol of the animals' hard work and determination, lies in ruins, its founda
+
+
+
+IMAGE
+A Desolate Farm, a Desolate Future : https://im.runware.ai/image/ws/2/ii/cc3d0c6f-3d4b-49ff-99bd-2e0e93f45609.webp
+
+
+
+--------------------------------------------------
+Chapter:10%0
+Summary
+         - The animals on Manor Farm, led by Old Major, a wise and benevolent pig, are dissatisfied with their miserable lives under the tyranny of Mr. Jones. After Old Major's death, the pigs, led by Snowball and Napoleon, begin to s
+
+characters
+         - Old Major : A wise and benevolent pig who is the leader of the animals on Manor Farm. He is old and has had many children, but he is still a majestic-looking pig with a wise and benevolent appearance.
+         - Snowball : A young and clever pig who is one of the leaders of the animals on Manor Farm. He is quick in speech and inventive, but he is not considered to have the same depth of character as Napoleon.
+         - Napoleon : A large and fierce-looking Berkshire boar who is one of the leaders of the animals on Manor Farm. He is not much of a talker, but he has a reputation for getting his own way.
+         - Boxer : A large and powerful horse who is one of the main workers on Manor Farm. He is not very intelligent, but he is universally respected for his steadiness of character and tremendous powers of work.
+         - Clover : A stout and motherly mare who is one of the main workers on Manor Farm. She is not very intelligent, but she is a hard worker and is very loyal to the other animals.
+         - Mollie : A foolish and pretty white mare who is one of the main workers on Manor Farm. She is very vain and loves to wear ribbons in her mane.
+         - Squealer : A small and fat pig who is one of the leaders of the animals on Manor Farm. He is a brilliant talker and is very persuasive, but he is also very cunning and manipulative.
+         - Moses : A tame raven who is a spy and a tale-bearer on Manor Farm. He is very clever and can talk very persuasively, but he is also very dishonest and manipulative.
+
+places
+         - Manor Farm : The farm where the animals live and work. It is a large and fertile farm with a good climate, but it is also a place of misery and slavery under the tyranny of Mr. Jones.
+         - Animal Farm : The renamed farm after the animals rebel against Mr. Jones. It is a place of freedom and equality, but it is also a place of hard work and toil.
+         - The Barn : A large building on Manor Farm where the animals meet to discuss and plan their rebellion. It is a place of great importance and is where the animals first learn about Animalism.
+         - The Orchard : A place on Manor Farm where the animals go to graze and relax. It is a beautiful and peaceful place, but it is also a place of danger and uncertainty.
+         - The Farmhouse : The house where Mr. Jones and his family live. It is a place of luxury and comfort, but it is also a place of tyranny and oppression.
+prompt
+The Animals' Rebellion on Manor Farm : A sunlit, green landscape of Manor Farm, with the farmhouse in the background. The farm is bustling with animals, all working together to harvest the hay. In the foreground, a group of pigs, incl
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/c542d571-b82b-496b-8618-4155f6e08743.webp
+
+
+
+--------------------------------------------------
+Chapter:10%1
+Summary
+         - The animals on Animal Farm are preparing for the coming season, but disagreements between Snowball and Napoleon are causing tension. Snowball wants to build a windmill to provide electricity and save labor, while Napoleon t
+
+characters
+         - Snowball : A pig who is intelligent and charismatic, but also reckless and impulsive. He is a strong supporter of the windmill and wants to make Animal Farm a more modern and efficient farm.
+         - Napoleon : A pig who is cunning and manipulative. He is opposed to the windmill and wants to focus on increasing food production. He is also secretly training a group of dogs to do his bidding.
+         - Mollie : A horse who is vain and self-centered. She is seen flirting with a man and receiving treats, and the animals are suspicious of her behavior.
+         - Boxer : A horse who is strong and loyal. He is a supporter of Snowball and the windmill, but is also concerned about the implications of Napoleon's actions.
+         - Clover : A horse who is kind and gentle. She is a supporter of Snowball and the windmill, and is concerned about Mollie's behavior.
+         - Benjamin : A donkey who is wise and cynical. He is opposed to the windmill and thinks it's a waste of time.
+         - Squealer : A pig who is clever and manipulative. He is a supporter of Napoleon and helps to spread his propaganda.
+         - Mr. Jones : The former owner of Animal Farm, who was driven out by the animals. He is still bitter about his loss and is trying to get the farm back.
+         - Mr. Pilkington : A neighboring farmer who is opposed to the animals' rebellion. He is trying to undermine their efforts and get the farm back for himself.
+         - Mr. Frederick : A neighboring farmer who is also opposed to the animals' rebellion. He is trying to drive a hard bargain and get the best deal for himself.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a small, rural farm with a few buildings and a large field.
+         - The Big Barn : A large barn where the animals hold their meetings and gatherings. It is a central location where the animals can come together and discuss important issues.
+         - The Cowshed : A small shed where the cows live and give birth. It is also the site of the Battle of the Cowshed, where the animals defeated the humans.
+         - The Windmill : A proposed windmill that Snowball wants to build to provide electricity and save labor. It is a central issue in the chapter and causes tension between Snowball and Napoleon.
+         - The Road : A road that runs through the farm and connects it to the neighboring farms. It is a key location where the animals can travel and interact with other animals.
+         - Foxwood : A neighboring farm that is owned by Mr. Pilkington. It is a large, neglected farm with overgrown pastures and worn-out hedges.
+         - Pinchfield : A neighboring farm that is owned by Mr. Frederick. It is a smaller farm that is better kept than Foxwood.
+         - Willingdon : A nearby town where the animals can go to buy supplies and interact with other animals. It is a key location where the animals can learn about the outside world and interact with humans.
+prompt
+The Battle for Animal Farm : A dramatic and action-packed scene depicting the Battle of the Cowshed, with a focus on the bravery and determination of the animals as they defend their farm against the invading humans. The scene should
+
+
+
+IMAGE
+The Battle for Animal Farm : https://im.runware.ai/image/ws/2/ii/b55ff10a-f678-44ae-92df-90cb4df9ad0c.webp
+
+
+
+--------------------------------------------------
+Chapter:10%2
+Summary
+         - The animals on Animal Farm are working hard to build the windmill, but they are facing many challenges. The weather is bad, and they are struggling to find enough food. Napoleon has decided to engage in trade with the neigh
+
+characters
+         - Napoleon : The leader of Animal Farm, a pig who is intelligent and cunning. He has a strong sense of self-preservation and is willing to do whatever it takes to maintain his power.
+         - Snowball : A pig who was a close friend of Napoleon's, but was expelled from the farm. He is accused of destroying the windmill and is declared a traitor.
+         - Squealer : A pig who is Napoleon's right-hand man. He is intelligent and persuasive, but also manipulative and deceitful.
+         - Boxer : A horse who is a loyal and hardworking member of the farm. He is simple-minded and trusting, but also kind and gentle.
+         - Clover : A horse who is a close friend of Boxer's. She is intelligent and resourceful, but also worried and anxious.
+         - Mr. Whymper : A solicitor who acts as an intermediary between Animal Farm and the outside world. He is sly and cunning, but also useful to Napoleon.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a place of hard labour and struggle, but also of community and friendship.
+         - Foxwood Farm : A neighbouring farm that is owned by Mr. Pilkington. It is a place of rivalry and competition with Animal Farm.
+         - Pinchfield Farm : A neighbouring farm that is owned by Mr. Frederick. It is a place of threat and danger to Animal Farm.
+         - Willingdon : A nearby town where the animals trade and interact with humans. It is a place of commerce and exchange.
+prompt
+The Rebuilding of the Windmill : A bleak, winter landscape with a ruined windmill in the foreground, its walls shattered and stones scattered all around. The once-majestic structure now lies in ruins, a testament to the destructive po
+
+
+
+IMAGE
+The Rebuilding of the Windmill : https://im.runware.ai/image/ws/2/ii/6860c2e5-1b63-470d-be61-b35d299d117e.webp
+
+
+
+--------------------------------------------------
+Chapter:10%3
+Summary
+         - The animals on Animal Farm were shocked and miserable after witnessing the cruel retribution of the pigs against the animals who had leagued themselves with Snowball. The pigs had killed four pigs, three hens, a goose, and
+
+characters
+         - Boxer : A loyal and hardworking horse who refused to take a day off work despite his split hoof. He was proud of the animals' achievement in rebuilding the windmill and was willing to work even harder to make up for the los
+         - Napoleon : The leader of the pigs who had become increasingly tyrannical and power-hungry. He had sold the pile of timber to Frederick and had instructed Whymper to purchase booklets on brewing and distilling.
+         - Squealer : A pig who served as Napoleon's propagandist and was responsible for spreading false information to the animals. He was seen to be stumbling and confused after the discovery of the altered Commandment.
+         - Snowball : A pig who had been exiled from the farm and was believed to be hiding on Pinchfield Farm. However, it was later revealed that he was living in luxury at Foxwood and had been a pensioner of Pilkington for years.
+         - Clover : A horse who was deeply concerned about the welfare of the animals and was shocked by the cruelty of the pigs. She was also deeply affected by the loss of the windmill and the death of her comrades.
+         - Benjamin : An old donkey who was wise and perceptive. He seemed to understand the altered Commandment and the true intentions of Napoleon, but refused to speak out against him.
+         - Muriel : A goat who was responsible for reading the Seven Commandments to the animals. She was the one who discovered the altered Commandment and was shocked by the pigs' actions.
+
+places
+         - Animal Farm : The farm where the animals lived and worked. It was the site of many battles and conflicts between the animals and the pigs.
+         - Pinchfield Farm : A neighboring farm where Snowball was believed to be hiding. However, it was later revealed that he was living in luxury at Foxwood.
+         - Foxwood : A neighboring farm where Pilkington lived and where Snowball was revealed to be living in luxury.
+         - The Big Barn : A large barn where the animals held meetings and where the Seven Commandments were displayed.
+         - The Farmhouse : The house where Napoleon and the other pigs lived. It was the site of many secret meetings and where Napoleon was seen to emerge at night, wearing an old bowler hat.
+prompt
+The Battle of the Windmill : The sun was setting over the horizon as the animals of Animal Farm gathered in the yard, their faces set with determination. The windmill, their pride and joy, had been destroyed by the enemy, but they wer
+
+
+
+IMAGE
+The Battle of the Windmill : https://im.runware.ai/image/ws/2/ii/eea99470-939a-47e2-a3a8-01a8137594cc.webp
+
+
+
+--------------------------------------------------
+Chapter:10%4
+Summary
+         - Boxer, a loyal and hardworking horse, fell ill and was taken away by the pigs, who claimed he was being sent to a hospital for treatment. However, it was later revealed that Boxer was actually taken to a slaughterhouse, whe
+
+characters
+         - Boxer : a loyal and hardworking horse who fell ill and was taken away by the pigs
+         - Napoleon : the leader of the pigs who is power-hungry and manipulative
+         - Clover : a kind and gentle horse who is Boxer's friend and companion
+         - Benjamin : a wise and old donkey who is one of the few animals who can see through the pigs' lies
+         - Squealer : a clever and persuasive pig who is Napoleon's right-hand man and is responsible for spreading propaganda and lies
+         - Mollie : a vain and selfish horse who is more concerned with her own appearance than with the welfare of the other animals
+         - Snowball : a pig who was once a leader on the farm but was driven out by Napoleon and is now a rival of Napoleon's
+         - Moses : a raven who is a storyteller and a troublemaker who spreads rumors and lies
+
+places
+         - Animal Farm : the farm where the animals live and work
+         - Willow Creek : a nearby town where the pigs buy supplies and where Boxer is taken to be killed
+         - The Windmill : a project that the pigs are working on to increase the farm's productivity
+         - The Farmhouse : the home of the pigs where they live and work
+         - The Barn : a building on the farm where the animals sleep and rest
+         - The Orchard : a area of the farm where fruit trees are grown
+         - The Pasture : a area of the farm where the animals graze and rest
+prompt
+Boxer's Final Days on Animal Farm : A poignant and haunting scene depicting the final days of Boxer, a loyal and hardworking horse, on Animal Farm. The scene takes place in late summer, with the windmill under construction and Boxer's
+
+
+
+IMAGE
+Boxer's Final Days on Animal Farm : https://im.runware.ai/image/ws/2/ii/37db0212-5848-4b5a-a843-9f384b492cc3.webp
+
+
+
+--------------------------------------------------
+Chapter:11%0
+Summary
+         - The animals on Manor Farm, led by the pigs, have successfully overthrown their human master, Mr. Jones. The pigs, who have been secretly teaching the other animals about Animalism, a philosophy that emphasizes the equality
+
+characters
+         - Old Major : a wise and benevolent pig who has a long life and has acquired much wisdom, he is the one who has been teaching the animals about Animalism
+         - Snowball : a clever and inventive pig who is one of the leaders of the animals, he is good at writing and is able to read and write from an old spelling book
+         - Napoleon : a large and fierce-looking Berkshire boar who is also one of the leaders of the animals, he is not much of a talker but is able to get his own way
+         - Boxer : a hardworking horse who is the admiration of everyone, he is strong and has tremendous muscles
+         - Clover : a stout and motherly mare who is one of the leaders of the animals, she is good at thinking and is able to understand the business of mowing and raking
+         - Mollie : a foolish and pretty white mare who is more concerned with her appearance than with the well-being of the other animals
+         - Squealer : a small and fat pig who is good at talking and is able to persuade the other animals to do what he wants
+         - Moses : a tame raven who is a spy and a tale-bearer, he is also a clever talker and is able to convince the other animals that there is a place called Sugarcandy Mountain
+         - Mr. Jones : the human master of Manor Farm who is cruel and oppressive, he is eventually overthrown by the animals
+
+places
+         - Manor Farm : the farm where the animals live, it is a place of hard work and oppression under Mr. Jones's rule
+         - Animal Farm : the farm after it has been taken over by the animals, it is a place of freedom and equality
+         - The Big Barn : a large barn where the animals meet to discuss and make decisions, it is also where the Seven Commandments are inscribed on the wall
+         - The Hayfield : a field where the animals work to harvest the hay, it is a place of hard work and toil
+         - The Orchard : a place where the animals grow fruit and vegetables, it is a place of abundance and plenty
+prompt
+The Animals' Rebellion on Manor Farm : A sun-drenched summer day on a lush green farm, where a group of determined animals, led by pigs, horses, and other farm animals, have successfully overthrown their human oppressors. The farm, on
+
+
+
+IMAGE
+The Animals' Rebellion on Manor Farm : https://im.runware.ai/image/ws/2/ii/9b5b5507-76be-4516-bb51-ba7b0f72d362.webp
+
+
+
+--------------------------------------------------
+Chapter:11%1
+Summary
+         - The animals on Animal Farm are working hard to maintain their farm and keep it running smoothly. Snowball and Napoleon are at odds over the windmill project, with Snowball advocating for its construction and Napoleon opposi
+
+characters
+         - Snowball : A pig who is a leader on the farm and is advocating for the construction of the windmill. He is intelligent and charismatic, but also hot-headed and impulsive.
+         - Napoleon : A pig who is a leader on the farm and is opposing the construction of the windmill. He is cunning and manipulative, and is using his dogs to intimidate and silence his opponents.
+         - Mollie : A horse who has disappeared and is believed to be in contact with the humans. She is vain and self-centered, and is more concerned with her own appearance and well-being than with the welfare of the farm.
+         - Boxer : A horse who is a loyal and hardworking member of the farm. He is kind and gentle, but also naive and trusting.
+         - Clover : A horse who is a close friend of Boxer's and is concerned about the welfare of the farm. She is intelligent and resourceful, but also anxious and worried.
+         - Benjamin : A donkey who is a wise and experienced member of the farm. He is cynical and skeptical, and is often critical of the decisions made by the other animals.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a small and struggling farm, but the animals are determined to make it successful.
+         - Foxwood : A neighboring farm that is owned by Mr. Pilkington. It is a large and neglected farm, but the animals on Animal Farm are concerned about the possibility of an attack by the humans from Foxwood.
+         - Pinchfield : A neighboring farm that is owned by Mr. Frederick. It is a small and well-kept farm, but the animals on Animal Farm are concerned about the possibility of an attack by the humans from Pinchfield.
+         - The Red Lion : A pub in the nearby town where Mr. Jones often goes to complain about his situation and seek sympathy from the other farmers.
+         - The Big Barn : A large barn on the farm where the animals hold their meetings and make decisions.
+         - The Cowshed : A small building on the farm where the animals keep the cows. It is also the site of the Battle of the Cowshed, where the animals defended themselves against an attack by the humans.
+         - The Windmill : A proposed project on the farm that would provide electricity and other benefits to the animals. It is a major point of contention between Snowball and Napoleon.
+         - The Flagstaff : A pole on the farm where the flag is raised and lowered. It is a symbol of the farm's independence and a reminder of the animals' struggles and sacrifices.
+prompt
+A Divided Farm: The Battle for the Windmill : A dramatic and detailed scene of a farm in turmoil, with pigs and other animals gathered in a large barn, surrounded by rolling hills and green pastures. The atmosphere is tense and divide
+
+
+
+IMAGE
+A Divided Farm: The Battle for the Windmill : https://im.runware.ai/image/ws/2/ii/e8b7d726-0b2d-4658-bd78-d33927bf32d4.webp
+
+
+
+--------------------------------------------------
+Chapter:11%2
+Summary
+         - The animals of Animal Farm have been working hard to rebuild the windmill, but they are facing many challenges. The farm is struggling to produce enough food, and the animals are having to make sacrifices. Meanwhile, Napole
+
+characters
+         - Boxer : Boxer is a strong and loyal horse who is always willing to work hard. He is a bit dim-witted, but he is a good friend to the other animals. He has a strong sense of loyalty and will do whatever it takes to protect h
+         - Clover : Clover is a gentle and kind horse who is always looking out for the other animals. She is a bit of a worrier, but she is always willing to help out when needed. She is a good friend to Boxer and the other animals.
+         - Napoleon : Napoleon is a pig who has become increasingly tyrannical and power-hungry. He is using propaganda to control the animals and is making deals with the outside world. He is not what he seems, and the animals are be
+         - Squealer : Squealer is a clever and manipulative pig who is always trying to control the narrative. He is a good liar and is able to convince the other animals that Napoleon is doing the right thing. He is a bit of a traito
+         - Snowball : Snowball is a pig who was accused of being a traitor. He is now said to be hiding on one of the neighboring farms. The animals are frightened and do not know what to believe about him.
+         - Whymper : Whymper is a solicitor who has made a deal with Napoleon to sell the farm's timber to the outside world. He is a bit of a sly character, but he is also a good businessman.
+
+places
+         - Animal Farm : Animal Farm is a farm that is owned by the animals. It is a place of hard work and struggle, but it is also a place of friendship and loyalty. The animals are working hard to rebuild the windmill and to make t
+         - Foxwood Farm : Foxwood Farm is a neighboring farm that is owned by Mr. Pilkington. It is a bit of a rival to Animal Farm, but it is also a place of friendship and cooperation.
+         - Pinchfield Farm : Pinchfield Farm is a neighboring farm that is owned by Mr. Frederick. It is a bit of a rival to Animal Farm, but it is also a place of friendship and cooperation.
+         - Willington : Willington is a town that is located near Animal Farm. It is a place of commerce and trade, and it is also a place where the animals can buy and sell goods.
+prompt
+A bleak winter landscape with the ruins of the windmill in the foreground, surrounded by the animals of Animal Farm, who are working tirelessly to rebuild it. : A desolate, snow-covered farm with the windmill's rubble scattered about,
+
+
+
+IMAGE
+A bleak winter landscape with the ruins of the windmill in the foreground, surrounded by the animals of Animal Farm, who are working tirelessly to rebuild it. : https://im.runware.ai/image/ws/2/ii/4f1f98f8-bb96-4f50-9904-0422e3557669.
+
+
+
+--------------------------------------------------
+Chapter:11%3
+Summary
+         - The animals on Animal Farm have been working hard to rebuild the windmill, but they are facing new challenges. The pigs are becoming more and more tyrannical, and the animals are starting to lose hope. Boxer, the loyal and
+
+characters
+         - Boxer : A loyal and hardworking horse who is struggling with his split hoof and is in pain. He is a symbol of the animals' hard work and dedication to the windmill.
+         - Napoleon : The leader of the pigs who is becoming increasingly paranoid and is making decisions that are detrimental to the animals. He is a symbol of the pigs' tyranny and oppression.
+         - Clover : A kind and gentle horse who is concerned about Boxer's well-being and is trying to help him. She is a symbol of the animals' compassion and empathy.
+         - Benjamin : A wise and old donkey who is watching the situation with a knowing eye. He is a symbol of the animals' wisdom and insight.
+         - Squealer : A pig who is loyal to Napoleon and is trying to justify his actions. He is a symbol of the pigs' manipulation and deception.
+
+places
+         - Animal Farm : The farm where the animals live and work. It is a symbol of their freedom and prosperity, but it is also a reminder of their struggles and hardships.
+         - The Windmill : The windmill that the animals are rebuilding. It is a symbol of their hard work and dedication, but it is also a reminder of their struggles and hardships.
+         - The Big Barn : A large barn where the animals hold meetings and make decisions. It is a symbol of their democracy and freedom, but it is also a reminder of their oppression and tyranny.
+         - The Orchard : A small orchard where the animals are trying to grow fruit and vegetables. It is a symbol of their hard work and dedication, but it is also a reminder of their struggles and hardships.
+prompt
+A Desolate Farm on a Clear Spring Evening : A haunting, golden-hour scene of Animal Farm, with the long pasture stretching down to the main road, the hayfield, the spinney, the drinking pool, the ploughed fields where the young wheat
+
+
+
+IMAGE
+A Desolate Farm on a Clear Spring Evening : https://im.runware.ai/image/ws/2/ii/4e13cd66-af2f-4e07-9711-b4a3b3566e68.webp
+
+
+
+--------------------------------------------------
+Chapter:11%4
+Summary
+         - The animals on Animal Farm are struggling to survive under the leadership of Napoleon, who has become increasingly tyrannical. Boxer, a loyal and hardworking horse, falls ill and is taken away by the pigs, who claim he has
+
+characters
+         - name : Boxer
+         - description : A loyal and hardworking horse who falls ill and is taken away by the pigs, who claim he has been sent to a veterinary surgeon. However, it is later revealed that Boxer has been taken to a slaughterhouse, where
+
+places
+         - name : Animal Farm
+         - description : A farm owned and operated by animals, where the animals are struggling to survive under the leadership of Napoleon, who has become increasingly tyrannical. The farm is now a place of luxury and oppression, whe
+prompt
+A dystopian farm where animals are exploited by their own kind : A hauntingly beautiful scene of a farm where animals, once liberated from human oppression, are now subjected to a new form of tyranny. The farm, once a symbol of hope and equality, has devolved into a place where the pigs, with their sleek coats and cunning eyes, rule with an iron fist. The other animals, once proud and free, now toil in the fields, their spirits crushed by the weight of their own oppression. In the background, the windmill stands as a testament to the failed dreams of the Rebellion. The sun casts a golden glow over the scene, but it is a false promise of happiness, for in this world, all animals are not equal, and some are more equal than others. The air is thick with the smell of manure and despair, and the only sound is the distant hum of flies. In the foreground, a group of animals huddle together, their eyes fixed on the pigs as they march by, their whips cracking in the air. The scene is a powerful commentary on the dangers of unchecked power and the corrupting influence of greed.
+
+
+
+IMAGE
+A dystopian farm where animals are exploited by their own kind : https://im.runware.ai/image/ws/2/ii/8aa0d28c-b1e9-4e31-90a4-8a354e1e1ef1.webp
+
+
+
+--------------------------------------------------
+Chapter:11%5
+Summary
+         - The chapter begins with Mr. Pilkington, a visitor to Animal Farm, praising the farm's discipline and orderliness. He notes that the animals on the farm work harder and receive less food than any other animals in the county. He also jokes that the lower classes have their own struggles and difficulties, similar to those of the lower animals. The chapter then shifts to Napoleon, who is grateful for Mr. Pilkington's words and thanks him for the toast. However, Napoleon also announces that the name of the farm has been changed from Animal Farm to Manor Farm. The chapter ends with a description of the animals outside the farmhouse, who are confused by the change in the pigs' faces. The animals had previously been able to distinguish between pigs and men, but now they are now unsure. The chapter ends with a description of the animals rushing back to the farmhouse to see what is happening.
+
+characters
+         - Mr. Pilkington : A visitor to Animal Farm, who praises the farm's discipline and orderliness. He is a bit of a jokester and makes a comment about the lower classes.
+         - Napoleon : The leader of the pigs on Animal Farm. He is grateful for Mr. Pilkington's words and thanks him for the toast. However, he also announces that the name of the farm has been changed from Animal Farm to Manor Farm.
+         - Clover : A pig who is confused by the change in the pigs' faces. She is described as having old dim eyes.
+
+places
+         - Animal Farm : The farm where the animals live. It is described as being well-ordered and disciplined. However, the name of the farm has been changed to Manor Farm.
+         - Manor Farm : The new name of Animal Farm. It is not clear why the name was changed.
+         - The Farmhouse : The house where the animals live. It is the scene of a violent quarrel between Napoleon and Mr. Pilkington.
+prompt
+A Deceptive Toast at Manor Farm : A dimly lit, smoke-filled dining room with a long wooden table at its center. The table is set with fine china, crystal glasses, and a centerpiece of fresh flowers. The walls are adorned with old portraits, and the atmosphere is thick with the smell of beer and pipe smoke. In the center of the table, Mr. Pilkington, a stout man with a jovial expression and multiple chins, stands up, his mug in hand, ready to give a toast. The pigs, Napoleon and the others, sit around the table, their faces a mix of smiles and sly glances. The animals outside gaze in at the window, their faces filled with a sense of unease and confusion. The lighting is warm and golden, with shadows cast across the faces of the pigs, making it difficult to discern their true intentions. The scene is one of deception and manipulation, where the pigs are hiding their true nature behind a mask of friendship and camaraderie. The atmosphere is tense and foreboding, with a sense of impending doom hanging in the air.
+
+
+
+IMAGE
+A Deceptive Toast at Manor Farm : https://im.runware.ai/image/ws/2/ii/031bf592-5ef4-46ee-b082-0995d6597712.webp

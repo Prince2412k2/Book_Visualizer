@@ -225,6 +225,9 @@ class Book:
     def is_prompt_done(self) -> bool:
         return all(i.prompt != "" for i in self.get_chunks())
 
+    def is_img_done(self) -> bool:
+        return all(i.image_url != "" for i in self.get_chunks())
+
 
 def main() -> None:
     file = Book("./test_books/PP.epub", user_id=uuid.uuid4())

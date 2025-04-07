@@ -595,7 +595,7 @@ class PromptLoop(BaseModel):
                         continue
 
                 logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
-            is_done = self.book.is_sum_done()
+            is_done = self.book.is_prompt_done()
         logger.info("[Prompt] : Prompts Done for ALL Chunks")
 
     def handle_validation_error(self, input_text):
@@ -647,13 +647,13 @@ class Image:
                     response_data = response.json()
                     response_model = ImageResponseSchema.model_validate(response_data)
                     logger.info(
-                        f"[Prompt] : 200 : | task={response_model.data[0].taskUUID} | cost = {response_model.data[0].cost}$ | NSFW = {response_model.data[0].NSFWContent}"
+                        f"[Image] : 200 : | task={response_model.data[0].taskUUID} | cost = {response_model.data[0].cost}$ | NSFW = {response_model.data[0].NSFWContent}"
                     )
                     return code, response_model
 
                 elif code in [500, 502, 503, 504]:  # Retry for server errors
                     logger.warning(
-                        f"[Prompt] : Server error ({code}), retrying {attempt}/{max_retries}..."
+                        f"[Image] : Server error ({code}), retrying {attempt}/{max_retries}..."
                     )
 
             except (
@@ -662,7 +662,7 @@ class Image:
                 requests.exceptions.RequestException,
             ) as e:
                 logger.warning(
-                    f"[Prompt] : Connection error: {e}, retrying {attempt}/{max_retries}..."
+                    f"[Image] : Connection error: {e}, retrying {attempt}/{max_retries}..."
                 )
 
             time.sleep(2**attempt)  # Exponential backoff: 2s, 4s, 8s
@@ -678,9 +678,9 @@ class ImageLoop(BaseModel):
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
-        is_done = False
+        is_prompt_done = False
         response: Optional[ImageResponseSchema]
-        while not is_done:
+        while not is_prompt_done:
             for idx, chunk in enumerate(self.book.get_chunks()):
                 if chunk.image_url or not chunk.prompt:
                     continue
@@ -695,10 +695,10 @@ class ImageLoop(BaseModel):
                         chunk.image_url = response.data[0].imageURL
                         continue
 
-                logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
+                logger.warning(f"[Image] : {status_code=} error getting{idx=}")
 
-            is_done = self.book.is_prompt_done()
-        logger.info("[Prompt] : Prompts Done for ALL Chunks")
+            is_prompt_done = self.book.is_img_done()
+        logger.info("[Image] : Prompts Done for ALL Chunks")
 
 
 def test() -> None:
@@ -711,7 +711,7 @@ def test() -> None:
     if not img_api:
         raise Exception("IMAGE_API NOT SET IN .env")
 
-    book: Book = Book("./test_books/AF.epub")
+    book: Book = Book("./test_books/LP.epub")
 
     sum = Summary(api_key=groq_api)
     prompt = Prompt(api_key=groq_api)
