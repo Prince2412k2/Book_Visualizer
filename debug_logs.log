@@ -2342,3 +2342,679 @@
 }
 2025-04-07 19:28:08 | INFO | api_module.py:649 | [Image] : 200 : | task=76098a32-2b6b-4637-ad42-331276ef3502 | cost = 0.0045$ | NSFW = False
 2025-04-07 19:28:08 | INFO | api_module.py:701 | [Image] : Prompts Done for ALL Chunks
+2025-04-09 13:39:03 | INFO | reader_new.py:205 | Total Chunks 215
+2025-04-09 13:40:44 | INFO | reader_new.py:205 | Total Chunks 215
+2025-04-09 13:44:11 | INFO | reader_new.py:207 | Total Chunks 215
+2025-04-09 13:45:30 | INFO | reader_new.py:207 | Total Chunks 215
+2025-04-09 13:46:33 | INFO | reader_new.py:206 | Total Chunks 215
+2025-04-09 13:48:33 | INFO | reader_new.py:209 | Total Chunks 215
+2025-04-09 14:03:30 | INFO | reader_new.py:215 | Total Chunks 215
+2025-04-09 14:11:41 | INFO | reader_new.py:216 | Total Chunks 215
+2025-04-09 14:31:52 | INFO | reader_new.py:204 | Path is is there for given book
+2025-04-09 14:32:03 | INFO | reader_new.py:221 | Total Chunks 215
+2025-04-09 14:35:02 | INFO | reader_new.py:204 | Path is is there for given book
+2025-04-09 14:35:12 | INFO | reader_new.py:221 | Total Chunks 215
+2025-04-09 14:38:34 | INFO | reader_new.py:221 | Total Chunks 56
+2025-04-09 14:39:54 | INFO | reader_new.py:204 | Path is is there for given book
+2025-04-09 14:39:58 | INFO | reader_new.py:221 | Total Chunks 56
+2025-04-09 14:40:33 | INFO | reader_new.py:204 | Path is is there for given book
+2025-04-09 14:40:38 | INFO | reader_new.py:221 | Total Chunks 56
+2025-04-09 14:40:54 | INFO | reader_new.py:221 | Total Chunks 56
+2025-04-09 14:45:52 | INFO | reader_new.py:222 | Total Chunks 215
+2025-04-10 12:37:57 | INFO | reader_new.py:243 | Path is is there for given book
+2025-04-10 12:38:06 | INFO | reader_new.py:260 | Total Chunks 215
+2025-04-10 12:40:02 | INFO | reader_new.py:259 | Total Chunks 215
+2025-04-10 12:43:00 | INFO | reader_new.py:259 | Total Chunks 215
+2025-04-10 12:45:13 | INFO | reader_new.py:260 | Total Chunks 215
+2025-04-10 12:50:14 | INFO | reader_new.py:261 | Total Chunks 215
+2025-04-10 12:55:38 | INFO | reader_new.py:261 | Total Chunks 215
+2025-04-10 15:01:56 | INFO | reader_new.py:261 | Total Chunks 33
+2025-04-10 15:07:45 | INFO | reader_new.py:261 | Total Chunks 33
+2025-04-10 15:11:29 | INFO | reader_new.py:244 | Path is is there for given book
+2025-04-10 15:11:39 | INFO | reader_new.py:261 | Total Chunks 215
+2025-04-10 15:11:49 | INFO | reader_new.py:261 | Total Chunks 33
+2025-04-10 15:13:15 | INFO | reader_new.py:261 | Total Chunks 33
+2025-04-10 15:16:31 | INFO | reader_new.py:261 | Total Chunks 33
+2025-04-10 15:16:32 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=707 | Output_Tokens=134  | Time=0.244421658
+2025-04-10 15:16:33 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=793 | Output_Tokens=192  | Time=0.330572721
+2025-04-10 15:16:33 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=556 | Output_Tokens=205  | Time=0.309341075
+2025-04-10 15:16:34 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=718 | Output_Tokens=213  | Time=0.378645867
+2025-04-10 15:16:35 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=4014 | Output_Tokens=251  | Time=0.708884996
+2025-04-10 15:16:36 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7313 | Output_Tokens=250  | Time=0.786588383
+2025-04-10 15:16:37 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=261  | Time=0.651530619
+2025-04-10 15:16:39 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2264 | Output_Tokens=608  | Time=0.925826664
+2025-04-10 15:16:39 | WARNING | api_module.py:299 | [Summary] ValidationError
+2025-04-10 15:16:39 | WARNING | api_module.py:383 | [Summary] : Validation Unresolved on try 1
+2025-04-10 15:16:39 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=2696 | Output_Tokens=241  | Time=0.595579721
+2025-04-10 15:16:40 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=309  | Time=0.903228789
+2025-04-10 15:16:41 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2264 | Output_Tokens=775  | Time=1.154934681
+2025-04-10 15:16:41 | WARNING | api_module.py:299 | [Summary] ValidationError
+2025-04-10 15:16:41 | WARNING | api_module.py:383 | [Summary] : Validation Unresolved on try 2
+2025-04-10 15:16:43 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2264 | Output_Tokens=784  | Time=1.194709471
+2025-04-10 15:16:43 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=5002 | Output_Tokens=213  | Time=0.576855466
+2025-04-10 15:16:43 | WARNING | api_module.py:299 | [Summary] ValidationError
+2025-04-10 15:16:43 | WARNING | api_module.py:383 | [Summary] : Validation Unresolved on try 3
+2025-04-10 15:16:43 | ERROR | api_module.py:384 | [Summary] : COULDNT VALIDATE THE CHUNK, SKIPPING...
+2025-04-10 15:16:43 | WARNING | api_module.py:368 | [Summary] : status_code=422 error gettingid=<built-in function id>
+2025-04-10 15:16:44 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:16:44 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:16:44 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "4adab874-de49-4e0a-b19f-1020260c93c2",
+            "taskUUID": "6e2a9b66-385a-4497-951d-d18b78da5c40",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 8626539982532491145,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/4adab874-de49-4e0a-b19f-1020260c93c2.webp"
+        }
+    ]
+}
+2025-04-10 15:16:44 | INFO | api_module.py:605 | [Image] : 200 : | task=6e2a9b66-385a-4497-951d-d18b78da5c40 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:16:45 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=7464 | Output_Tokens=246  | Time=0.659865295
+2025-04-10 15:16:46 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=433  | Time=0.950619161
+2025-04-10 15:16:47 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=237  | Time=0.727554961
+2025-04-10 15:16:48 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=478  | Time=0.973583192
+2025-04-10 15:16:49 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2847 | Output_Tokens=576  | Time=0.876426497
+2025-04-10 15:16:49 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=1593 | Output_Tokens=393  | Time=0.617245069
+2025-04-10 15:16:50 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=518  | Time=0.99437963
+2025-04-10 15:16:50 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=361  | Time=0.801561199
+2025-04-10 15:16:51 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=196  | Time=0.56196299
+2025-04-10 15:16:52 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=5153 | Output_Tokens=1124  | Time=1.695319366
+2025-04-10 15:16:53 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=5172 | Output_Tokens=184  | Time=0.788451145
+2025-04-10 15:16:54 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=1074  | Time=1.890392994
+2025-04-10 15:16:55 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=265  | Time=0.692063215
+2025-04-10 15:16:56 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=497  | Time=1.138328925
+2025-04-10 15:16:56 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=188  | Time=0.549024391
+2025-04-10 15:16:56 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:16:56 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:16:56 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "80a08787-64bf-4803-8b6c-604478d24a1c",
+            "taskUUID": "0bb54c31-7fb2-40e6-8d37-27e403b1ac68",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 4914803699633903144,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/80a08787-64bf-4803-8b6c-604478d24a1c.webp"
+        }
+    ]
+}
+2025-04-10 15:16:56 | INFO | api_module.py:605 | [Image] : 200 : | task=0bb54c31-7fb2-40e6-8d37-27e403b1ac68 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:16:57 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=212  | Time=0.567271903
+2025-04-10 15:16:58 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=1744 | Output_Tokens=453  | Time=0.868952769
+2025-04-10 15:16:59 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=2489 | Output_Tokens=212  | Time=0.378303335
+2025-04-10 15:16:59 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=509  | Time=1.257859829
+2025-04-10 15:17:00 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=212  | Time=0.657880276
+2025-04-10 15:17:02 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=296  | Time=0.884799319
+2025-04-10 15:17:02 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=858  | Time=1.681995597
+2025-04-10 15:17:03 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=228  | Time=0.643518
+2025-04-10 15:17:04 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=5323 | Output_Tokens=641  | Time=1.052503161
+2025-04-10 15:17:04 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7805 | Output_Tokens=352  | Time=0.759223411
+2025-04-10 15:17:05 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=364  | Time=0.833255921
+2025-04-10 15:17:05 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=208  | Time=0.64285866
+2025-04-10 15:17:06 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=236  | Time=0.689294418
+2025-04-10 15:17:06 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=660  | Time=1.178987372
+2025-04-10 15:17:07 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:17:07 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:17:07 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "2b04c20b-4eba-41a6-a480-a0f906d7f46f",
+            "taskUUID": "0048e4e8-7574-4477-80a2-4aa73af1f888",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 8334694478626166948,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/2b04c20b-4eba-41a6-a480-a0f906d7f46f.webp"
+        }
+    ]
+}
+2025-04-10 15:17:07 | INFO | api_module.py:605 | [Image] : 200 : | task=0048e4e8-7574-4477-80a2-4aa73af1f888 | cost = 0.0051$ | NSFW = False
+2025-04-10 15:17:08 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=438  | Time=1.14136843
+2025-04-10 15:17:08 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=200  | Time=0.745976366
+2025-04-10 15:17:09 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=318  | Time=1.010746464
+2025-04-10 15:17:09 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2640 | Output_Tokens=667  | Time=1.053831791
+2025-04-10 15:17:10 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=243  | Time=0.838269319
+2025-04-10 15:17:11 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=5155 | Output_Tokens=207  | Time=0.539543468
+2025-04-10 15:17:12 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=459  | Time=0.893728375
+2025-04-10 15:17:12 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=285  | Time=0.721679206
+2025-04-10 15:17:13 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=232  | Time=0.753237115
+2025-04-10 15:17:14 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=225  | Time=0.545062003
+2025-04-10 15:17:15 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=941  | Time=1.938919992
+2025-04-10 15:17:16 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=255  | Time=0.607135509
+2025-04-10 15:17:17 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=7956 | Output_Tokens=1137  | Time=1.807942116
+2025-04-10 15:17:17 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:17:17 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:17:17 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "3ac35b26-36db-4ea0-be44-c15f1a787ba9",
+            "taskUUID": "2b73d0e5-3134-49a7-835c-af54d05edc4a",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 1062039459909625469,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/3ac35b26-36db-4ea0-be44-c15f1a787ba9.webp"
+        }
+    ]
+}
+2025-04-10 15:17:17 | INFO | api_module.py:605 | [Image] : 200 : | task=2b73d0e5-3134-49a7-835c-af54d05edc4a | cost = 0.0045$ | NSFW = False
+2025-04-10 15:17:20 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=234  | Time=0.71784528
+2025-04-10 15:17:20 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=7886 | Output_Tokens=2048  | Time=3.061680622
+2025-04-10 15:17:21 | INFO | api_module.py:464 | [Prompt] : 200 : Input_Tokens=2014 | Output_Tokens=328  | Time=0.554363845
+2025-04-10 15:17:21 | INFO | api_module.py:555 | [Prompt] : Prompts Done for ALL Chunks
+2025-04-10 15:17:22 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=385  | Time=0.81399166
+2025-04-10 15:17:24 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=1044  | Time=1.649303707
+2025-04-10 15:17:25 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=451  | Time=1.31878578
+2025-04-10 15:17:26 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=5306 | Output_Tokens=385  | Time=0.715190256
+2025-04-10 15:17:28 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:17:28 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:17:28 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "7e0ca93b-1b9e-4761-8cd2-cbfb77f24062",
+            "taskUUID": "1d2de652-3abb-4511-aa83-24ec97d41a10",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 4374170858830772208,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/7e0ca93b-1b9e-4761-8cd2-cbfb77f24062.webp"
+        }
+    ]
+}
+2025-04-10 15:17:28 | INFO | api_module.py:605 | [Image] : 200 : | task=1d2de652-3abb-4511-aa83-24ec97d41a10 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:17:29 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=1376  | Time=2.303389125
+2025-04-10 15:17:31 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=589  | Time=1.170220626
+2025-04-10 15:17:32 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=578  | Time=1.206367673
+2025-04-10 15:17:34 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=1111  | Time=1.901392132
+2025-04-10 15:17:37 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=8037 | Output_Tokens=1519  | Time=2.488039053
+2025-04-10 15:17:39 | INFO | api_module.py:249 | [Summary] 200 : Input_Tokens=2165 | Output_Tokens=250  | Time=0.532318743
+2025-04-10 15:17:39 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:17:39 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:17:39 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "39f12b48-9fa9-4904-8e74-0c440962d641",
+            "taskUUID": "86774a6a-2a98-47c5-99b4-6293882e8e3f",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 5992517424415826741,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/39f12b48-9fa9-4904-8e74-0c440962d641.webp"
+        }
+    ]
+}
+2025-04-10 15:17:39 | INFO | api_module.py:605 | [Image] : 200 : | task=86774a6a-2a98-47c5-99b4-6293882e8e3f | cost = 0.0045$ | NSFW = False
+2025-04-10 15:17:51 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:17:51 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:17:51 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "c2438bdd-9d1c-45b4-ad49-f78122b11477",
+            "taskUUID": "127daa72-3683-4be1-b810-67357c5217dc",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 3758587113927645221,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/c2438bdd-9d1c-45b4-ad49-f78122b11477.webp"
+        }
+    ]
+}
+2025-04-10 15:17:51 | INFO | api_module.py:605 | [Image] : 200 : | task=127daa72-3683-4be1-b810-67357c5217dc | cost = 0.0045$ | NSFW = False
+2025-04-10 15:18:01 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:01 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:01 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "f1b8c4bd-f268-4f5f-8d46-438e20356235",
+            "taskUUID": "72eb1d82-cc42-44db-b7ad-f08e6617a66c",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 3664449029502587999,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/f1b8c4bd-f268-4f5f-8d46-438e20356235.webp"
+        }
+    ]
+}
+2025-04-10 15:18:01 | INFO | api_module.py:605 | [Image] : 200 : | task=72eb1d82-cc42-44db-b7ad-f08e6617a66c | cost = 0.0045$ | NSFW = False
+2025-04-10 15:18:13 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:13 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:13 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "c3275b4b-f2b7-4a94-9ec1-b6404c34c28a",
+            "taskUUID": "355c5454-8686-4c7b-a9e3-7a6629f547aa",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 8645363724122778146,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/c3275b4b-f2b7-4a94-9ec1-b6404c34c28a.webp"
+        }
+    ]
+}
+2025-04-10 15:18:13 | INFO | api_module.py:605 | [Image] : 200 : | task=355c5454-8686-4c7b-a9e3-7a6629f547aa | cost = 0.0045$ | NSFW = False
+2025-04-10 15:18:24 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:24 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:24 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "5ca3fca9-ee6b-4b5c-846a-14109eb2224f",
+            "taskUUID": "fab91589-1bf9-42d5-b9c1-40f0a4495e1d",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 8714517964843885417,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/5ca3fca9-ee6b-4b5c-846a-14109eb2224f.webp"
+        }
+    ]
+}
+2025-04-10 15:18:24 | INFO | api_module.py:605 | [Image] : 200 : | task=fab91589-1bf9-42d5-b9c1-40f0a4495e1d | cost = 0.0051$ | NSFW = False
+2025-04-10 15:18:35 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:35 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:35 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "33dfe870-988a-4ceb-bf7f-eff40cb8f450",
+            "taskUUID": "856722b7-3145-4ed1-b99e-73ee08c800ed",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 2768668737737491615,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/33dfe870-988a-4ceb-bf7f-eff40cb8f450.webp"
+        }
+    ]
+}
+2025-04-10 15:18:35 | INFO | api_module.py:605 | [Image] : 200 : | task=856722b7-3145-4ed1-b99e-73ee08c800ed | cost = 0.0051$ | NSFW = False
+2025-04-10 15:18:47 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:47 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:47 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "f990c85c-0c51-4813-a0fd-0beafeecf82f",
+            "taskUUID": "e4b39766-9131-427a-b37c-01e5dc993212",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 6917479025805860522,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/f990c85c-0c51-4813-a0fd-0beafeecf82f.webp"
+        }
+    ]
+}
+2025-04-10 15:18:47 | INFO | api_module.py:605 | [Image] : 200 : | task=e4b39766-9131-427a-b37c-01e5dc993212 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:18:58 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:18:58 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:18:58 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "0cdfe745-3f72-412b-9e5c-ee47f3af63c2",
+            "taskUUID": "920054b4-83d2-447f-82d4-86ebbb222e75",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 4534573390014153495,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/0cdfe745-3f72-412b-9e5c-ee47f3af63c2.webp"
+        }
+    ]
+}
+2025-04-10 15:18:58 | INFO | api_module.py:605 | [Image] : 200 : | task=920054b4-83d2-447f-82d4-86ebbb222e75 | cost = 0.0051$ | NSFW = False
+2025-04-10 15:19:07 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:07 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:07 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "90826b50-90bf-40a1-83d7-8097520fae2d",
+            "taskUUID": "0db78bba-d36b-4123-939a-037bb706941e",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 8555028975826056261,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/90826b50-90bf-40a1-83d7-8097520fae2d.webp"
+        }
+    ]
+}
+2025-04-10 15:19:07 | INFO | api_module.py:605 | [Image] : 200 : | task=0db78bba-d36b-4123-939a-037bb706941e | cost = 0.0051$ | NSFW = False
+2025-04-10 15:19:18 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:18 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:18 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "36f992ff-4d8c-424c-b6ed-bd618bc896ea",
+            "taskUUID": "185015ac-945f-4d9e-abf8-f22a60758311",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 8881206667943392783,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/36f992ff-4d8c-424c-b6ed-bd618bc896ea.webp"
+        }
+    ]
+}
+2025-04-10 15:19:18 | INFO | api_module.py:605 | [Image] : 200 : | task=185015ac-945f-4d9e-abf8-f22a60758311 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:19:28 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:28 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:28 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "e7d5494a-d663-4b74-b91d-c1eb8d5affc8",
+            "taskUUID": "d28452b6-2e7f-4415-9068-c88c9611cd41",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 7983980303056134482,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/e7d5494a-d663-4b74-b91d-c1eb8d5affc8.webp"
+        }
+    ]
+}
+2025-04-10 15:19:28 | INFO | api_module.py:605 | [Image] : 200 : | task=d28452b6-2e7f-4415-9068-c88c9611cd41 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:19:38 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:38 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:38 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "f75a42ab-cc01-4512-b6d0-8387b9a4c32b",
+            "taskUUID": "a61ca13d-b2fa-4470-bc70-3fa6856ffc58",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 7751743366778346049,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/f75a42ab-cc01-4512-b6d0-8387b9a4c32b.webp"
+        }
+    ]
+}
+2025-04-10 15:19:38 | INFO | api_module.py:605 | [Image] : 200 : | task=a61ca13d-b2fa-4470-bc70-3fa6856ffc58 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:19:48 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:48 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:48 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "571aa2c2-1473-4e6f-942d-d70cebbdb1a4",
+            "taskUUID": "d9990ab0-85ec-4dae-a228-8d506fe20f5a",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 6602727321140032341,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/571aa2c2-1473-4e6f-942d-d70cebbdb1a4.webp"
+        }
+    ]
+}
+2025-04-10 15:19:48 | INFO | api_module.py:605 | [Image] : 200 : | task=d9990ab0-85ec-4dae-a228-8d506fe20f5a | cost = 0.0045$ | NSFW = False
+2025-04-10 15:19:57 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:19:57 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:19:57 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "77fdedef-64ca-44da-a618-7bfa27c98931",
+            "taskUUID": "989d8eb5-608c-431d-8d8f-c888bbe50c3a",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 7034704197231880613,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/77fdedef-64ca-44da-a618-7bfa27c98931.webp"
+        }
+    ]
+}
+2025-04-10 15:19:57 | INFO | api_module.py:605 | [Image] : 200 : | task=989d8eb5-608c-431d-8d8f-c888bbe50c3a | cost = 0.0045$ | NSFW = False
+2025-04-10 15:20:08 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:08 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:08 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "d412897e-d410-4421-ac21-d6c25450a7a7",
+            "taskUUID": "b39a0813-07f4-47b7-b2f5-752d313663c5",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 193835255452799973,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/d412897e-d410-4421-ac21-d6c25450a7a7.webp"
+        }
+    ]
+}
+2025-04-10 15:20:08 | INFO | api_module.py:605 | [Image] : 200 : | task=b39a0813-07f4-47b7-b2f5-752d313663c5 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:20:19 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:19 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:19 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "313348e8-48cd-4a5b-9785-f81a70de4f0a",
+            "taskUUID": "c51c6711-b590-4068-8642-af4ffbfff165",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 817996351051268413,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/313348e8-48cd-4a5b-9785-f81a70de4f0a.webp"
+        }
+    ]
+}
+2025-04-10 15:20:19 | INFO | api_module.py:605 | [Image] : 200 : | task=c51c6711-b590-4068-8642-af4ffbfff165 | cost = 0.0051$ | NSFW = False
+2025-04-10 15:20:29 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:29 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:29 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "5de96d41-c165-4988-916d-c730f6a16fc2",
+            "taskUUID": "32f314d2-9eed-45c5-b972-3d2a5d58c991",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 7873841831456301493,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/5de96d41-c165-4988-916d-c730f6a16fc2.webp"
+        }
+    ]
+}
+2025-04-10 15:20:29 | INFO | api_module.py:605 | [Image] : 200 : | task=32f314d2-9eed-45c5-b972-3d2a5d58c991 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:20:40 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:40 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:40 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "589e1f73-cbce-41f8-b7fb-93e3af28a8f9",
+            "taskUUID": "25eea4a4-bb09-4b9c-8956-afa77033a5e1",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 4371519409883125592,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/589e1f73-cbce-41f8-b7fb-93e3af28a8f9.webp"
+        }
+    ]
+}
+2025-04-10 15:20:40 | INFO | api_module.py:605 | [Image] : 200 : | task=25eea4a4-bb09-4b9c-8956-afa77033a5e1 | cost = 0.0051$ | NSFW = False
+2025-04-10 15:20:50 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:50 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:50 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "9d960406-095a-4808-a230-6d8ca6a55883",
+            "taskUUID": "9adf14f1-614c-4ace-85bf-3fc5fac6926b",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 3072439085038823084,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/9d960406-095a-4808-a230-6d8ca6a55883.webp"
+        }
+    ]
+}
+2025-04-10 15:20:50 | INFO | api_module.py:605 | [Image] : 200 : | task=9adf14f1-614c-4ace-85bf-3fc5fac6926b | cost = 0.0045$ | NSFW = False
+2025-04-10 15:20:59 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:20:59 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:20:59 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "09164f33-943c-40e9-a8bc-e96e0e8ac871",
+            "taskUUID": "7f2339a2-7098-4568-95f3-18f9e95fb506",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 6750077101256560723,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/09164f33-943c-40e9-a8bc-e96e0e8ac871.webp"
+        }
+    ]
+}
+2025-04-10 15:20:59 | INFO | api_module.py:605 | [Image] : 200 : | task=7f2339a2-7098-4568-95f3-18f9e95fb506 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:21:10 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:21:10 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:21:10 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "b6842e2e-006d-438b-bfcb-5728706e5a3d",
+            "taskUUID": "cadc8065-7a8d-4e99-9449-077c2a5e268e",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 5658103509248901458,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/b6842e2e-006d-438b-bfcb-5728706e5a3d.webp"
+        }
+    ]
+}
+2025-04-10 15:21:10 | INFO | api_module.py:605 | [Image] : 200 : | task=cadc8065-7a8d-4e99-9449-077c2a5e268e | cost = 0.0045$ | NSFW = False
+2025-04-10 15:21:20 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:21:20 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:21:20 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "b0cfeaf4-4641-40b2-b12d-26ea42af77c9",
+            "taskUUID": "e831d08a-d36e-470a-a593-5e85ffddde3c",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 631016338371898210,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/b0cfeaf4-4641-40b2-b12d-26ea42af77c9.webp"
+        }
+    ]
+}
+2025-04-10 15:21:20 | INFO | api_module.py:605 | [Image] : 200 : | task=e831d08a-d36e-470a-a593-5e85ffddde3c | cost = 0.0051$ | NSFW = False
+2025-04-10 15:21:31 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:21:31 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:21:31 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "6b2f88d8-4f55-43b5-aa60-9acae481400a",
+            "taskUUID": "998e181c-b19a-46b4-869b-4997b205892c",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 4062845080147376981,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/6b2f88d8-4f55-43b5-aa60-9acae481400a.webp"
+        }
+    ]
+}
+2025-04-10 15:21:31 | INFO | api_module.py:605 | [Image] : 200 : | task=998e181c-b19a-46b4-869b-4997b205892c | cost = 0.0045$ | NSFW = False
+2025-04-10 15:21:43 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:21:43 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:21:43 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "65c91c64-6439-45b3-9dcd-d8bf5e6ab3cc",
+            "taskUUID": "37eae132-9060-4819-b7a7-214847970971",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 4996131701373842520,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/65c91c64-6439-45b3-9dcd-d8bf5e6ab3cc.webp"
+        }
+    ]
+}
+2025-04-10 15:21:43 | INFO | api_module.py:605 | [Image] : 200 : | task=37eae132-9060-4819-b7a7-214847970971 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:21:53 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:21:53 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:21:53 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "6b6d51e1-1ff0-493f-b148-81d3089ba835",
+            "taskUUID": "00bb3b4a-bdc1-4d3f-8a87-519c9ae1c063",
+            "NSFWContent": false,
+            "cost": 0.0051,
+            "seed": 7947051253006726719,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/6b6d51e1-1ff0-493f-b148-81d3089ba835.webp"
+        }
+    ]
+}
+2025-04-10 15:21:53 | INFO | api_module.py:605 | [Image] : 200 : | task=00bb3b4a-bdc1-4d3f-8a87-519c9ae1c063 | cost = 0.0051$ | NSFW = False
+2025-04-10 15:22:03 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:22:03 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:22:03 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "e8f7489f-ed21-404f-a979-f3461d722669",
+            "taskUUID": "11db8d6e-88b3-4c2a-9232-2b7b10266849",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 1220444605953411810,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/e8f7489f-ed21-404f-a979-f3461d722669.webp"
+        }
+    ]
+}
+2025-04-10 15:22:03 | INFO | api_module.py:605 | [Image] : 200 : | task=11db8d6e-88b3-4c2a-9232-2b7b10266849 | cost = 0.0045$ | NSFW = False
+2025-04-10 15:22:13 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:22:13 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:22:13 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "f5410b96-c1ee-4306-b2c3-71d948f7faf4",
+            "taskUUID": "ec644230-fafd-4e12-94cb-6e116a944e0a",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 8188905263199579437,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/f5410b96-c1ee-4306-b2c3-71d948f7faf4.webp"
+        }
+    ]
+}
+2025-04-10 15:22:13 | INFO | api_module.py:605 | [Image] : 200 : | task=ec644230-fafd-4e12-94cb-6e116a944e0a | cost = 0.0045$ | NSFW = False
+2025-04-10 15:22:23 | DEBUG | api_module.py:598 | try: 1
+2025-04-10 15:22:23 | DEBUG | api_module.py:600 | status_code : 200
+2025-04-10 15:22:23 | DEBUG | api_module.py:601 | {
+    "data": [
+        {
+            "taskType": "imageInference",
+            "imageUUID": "3a009597-52f1-4aaa-8a72-d163211aa772",
+            "taskUUID": "043eab68-2d0f-4af7-932d-725cba2a8d1d",
+            "NSFWContent": false,
+            "cost": 0.0045,
+            "seed": 911385210073664404,
+            "imageURL": "https://im.runware.ai/image/ws/2/ii/3a009597-52f1-4aaa-8a72-d163211aa772.webp"
+        }
+    ]
+}
+2025-04-10 15:22:23 | INFO | api_module.py:605 | [Image] : 200 : | task=043eab68-2d0f-4af7-932d-725cba2a8d1d | cost = 0.0045$ | NSFW = False
+2025-04-10 15:22:23 | INFO | api_module.py:657 | [Image] : Prompts Done for ALL Chunks
+2025-04-11 00:44:46 | INFO | reader_new.py:291 | Path is is there for given book
+2025-04-11 00:45:31 | INFO | reader_new.py:291 | Path is is there for given book
+2025-04-11 00:47:38 | INFO | reader_new.py:292 | Path is is there for given book
+2025-04-11 00:50:51 | INFO | reader_new.py:295 | Path is is there for given book
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:54 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:55 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:207 | Loading chunk from state
+2025-04-11 00:50:56 | INFO | reader_new.py:312 | Total Chunks 33

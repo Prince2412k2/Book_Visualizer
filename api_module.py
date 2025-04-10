@@ -1,18 +1,14 @@
-# TODO: implement Websocket Request in future iterations
+# TODO: Implement saving and caching also merge audio genration
+
 import threading
 
 from typing import Any, Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
-from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import json
 import uuid
-import base64
-from PIL import Image as pil_img
-from io import BytesIO
-from pathlib import Path
 
-from reader_new import Book, Chapter, Chunk
+from reader_new import Book, Chunk
 from logger_module import logger
 import requests
 import time
@@ -22,54 +18,14 @@ from prompts import (
     SUMMARY_VALIDATION_RESOLVE_ROLE,
     PROMPT_ROLE,
     PROMPT_VALIDATION_RESOLVE_ROLE,
-    IMAGE_NEGATIVE_PROMPT,
     STYLE_TAG,
 )
-from api_module import config
 from json.decoder import JSONDecodeError
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 summary_role = ""
-
-
-###Helper##
-def fetch_image_with_retries(
-    session, url: str, retries: int = 3, delay: int = 2
-) -> Optional[bytes]:
-    for attempt in range(1, retries + 1):
-        try:
-            response = session.get(url)
-            if response.status_code == 200:
-                return response.content
-            else:
-                raise Exception(f"Status code: {response.status_code}")
-        except Exception as e:
-            logger.warning(f"Attempt {attempt} failed to fetch image: {e}")
-            if attempt < retries:
-                time.sleep(delay)
-            else:
-                raise Exception(f"All {retries} attempts failed for URL: {url}")
-
-
-def save_img(book: Book) -> None:
-    book_id = Path(book.user_id)
-    session = requests.session()
-
-    for chunk in book.get_chunks():
-        path = book_id / str(chunk.chapter_id) / f"{chunk.chunk_id}.webp"
-        try:
-            img_bytes = fetch_image_with_retries(session, chunk.image_url)
-            if img_bytes:
-                image = pil_img.open(BytesIO(img_bytes))
-                Path(path).parent.mkdir(parents=True, exist_ok=True)
-                image.save(path, format="WEBP")
-                logger.info(f"Image saved at: {path}")
-            else:
-                logger.error("Response was empty")
-        except Exception as e:
-            logger.error(f"Failed to save image for chunk {chunk.chunk_id}: {e}")
 
 
 ## HeadersSchema
@@ -141,9 +97,6 @@ class PromptResponseSchema(BaseModel):
 class PromptOutputSchema(PromptResponseSchema):
     id: Optional[str] = None
 
-    def __eq__(self, value: str) -> bool:
-        return self.id == value
-
 
 class PromptContentSchema(BaseModel):
     input_text: str
@@ -191,31 +144,6 @@ class ImageItem(BaseModel):
 
 class ImageResponseSchema(BaseModel):
     data: List[ImageItem]
-
-
-##Requests
-
-
-class LLM_API(ABC):
-    @abstractmethod
-    def get_messages(
-        self, content: str, character: Dict[str, str], places: Dict[str, str]
-    ) -> List[MessageSchema]:
-        pass
-
-    @abstractmethod
-    def validation_messages(self, input_text: str) -> List[MessageSchema]:
-        pass
-
-    @abstractmethod
-    def get(self, messages: List[MessageSchema]) -> Tuple[int, str]:
-        pass
-
-    @abstractmethod
-    def validate_json(
-        self, raw_data: str, schema: Type[BaseModel]
-    ) -> Optional[Type[BaseModel]]:
-        pass
 
 
 # SUMMARY###############################################################################################################################################################################
@@ -352,8 +280,8 @@ class SummaryLoop:
 
     def __post_init__(self) -> None:
         self.init_chunk = Chunk(
-            chunk_id="",
-            chapter_id=0,
+            path="./uploaded_books/Temp",
+            chapter_id="0",
             chunk="",
             summary="This is The first chapeter There is No context",
             characters={},
@@ -365,7 +293,10 @@ class SummaryLoop:
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
         past_context = self.init_chunk
-        for idx, chunk in enumerate(self.book.get_chunks()):
+        assert past_context
+        for chunk in self.book.get_chunks():
+            if chunk.summary:
+                continue
             message = self.summary_handler.get_messages(
                 content=chunk.chunk,
                 previous_summary=past_context.summary,
@@ -379,7 +310,7 @@ class SummaryLoop:
                     response, SummaryResponseSchema
                 )
 
-                if validated_response:
+                if isinstance(validated_response, SummaryResponseSchema):
                     logger.trace(f"[Summary] : Chunk_{chunk.chunk_id=} Done")
                     chunk.set_sum(
                         summary=validated_response.summary,
@@ -586,7 +517,7 @@ class PromptLoop(BaseModel):
                         response, PromptResponseSchema
                     )
 
-                    if validated_response:
+                    if isinstance(validated_response, PromptResponseSchema):
                         logger.trace(f"[Prompt] : Chunk_{chunk.chunk_id=} Done")
                         chunk.set_prompt(
                             scene_title=validated_response.scene_title,
@@ -692,18 +623,21 @@ class ImageLoop(BaseModel):
 
                 if status_code == 200:
                     if response:
-                        chunk.image_url = response.data[0].imageURL
+                        chunk.set_img(
+                            url=response.data[0].imageURL,
+                            task_id=response.data[0].taskType,
+                        )
                         continue
 
                 logger.warning(f"[Image] : {status_code=} error getting{idx=}")
 
             is_prompt_done = self.book.is_img_done()
+        while not self.book.is_done():
+            time.sleep(1)
         logger.info("[Image] : Prompts Done for ALL Chunks")
 
 
-def test() -> None:
-    from reader_new import Book
-
+def process_book(book: Book):
     groq_api = os.environ.get("GROQ_API")
     img_api = os.environ.get("IMAGE_API")
     if not groq_api:
@@ -711,8 +645,10 @@ def test() -> None:
     if not img_api:
         raise Exception("IMAGE_API NOT SET IN .env")
 
-    book: Book = Book("./test_books/LP.epub")
-
+    book_state = book.book_state
+    assert book_state
+    if book_state.is_done:
+        return True
     sum = Summary(api_key=groq_api)
     prompt = Prompt(api_key=groq_api)
     image = Image(api_key=img_api)
@@ -733,8 +669,14 @@ def test() -> None:
     thread_prompt.join()
     thread_sum.join()
 
-    chunks = book.get_chunks()
 
+def test() -> None:
+    from reader_new import Book
+
+    book: Book = Book(
+        "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
+    )
+    process_book(book)
     for i in book.get_chunks():
         if not i.places or not i.characters:
             continue

@@ -1,0 +1,23 @@
+{
+    "chunk_id": "5",
+    "chapter_id": "11",
+    "summary": "Boxer, a loyal and hardworking horse, fell ill and was taken away by the pigs, who claimed he was being sent to a hospital. However, it was later revealed that Boxer was actually taken to a slaughterhouse, where he was killed for his meat. The pigs, led by Napoleon, covered up the truth and told the other animals that Boxer had died in the hospital. The animals were devastated by Boxer's death and felt betrayed by the pigs. The pigs held a memorial banquet in Boxer's honour, but it was clear that they were more interested in celebrating their own power and control over the farm than in paying tribute to Boxer's memory.",
+    "characters": {
+        "Boxer": "a loyal and hardworking horse who was taken away by the pigs and killed for his meat",
+        "Napoleon": "the leader of the pigs who covered up the truth about Boxer's death and used it to maintain his power and control over the farm",
+        "Clover": "a kind and compassionate horse who was Boxer's friend and was devastated by his death",
+        "Benjamin": "a wise and old donkey who was one of the first to suspect that Boxer was being taken to a slaughterhouse",
+        "Squealer": "a pig who was Napoleon's propagandist and helped to cover up the truth about Boxer's death"
+    },
+    "places": {
+        "Animal Farm": "the farm where the animals live and work",
+        "Willingdon": "a nearby town where the pigs sent Boxer to be killed",
+        "The Windmill": "a project that the animals are working on to improve their lives and increase their food supply",
+        "The Farmhouse": "the home of the pigs, where they live and make decisions about the farm"
+    },
+    "scene_title": "Boxer's Final Days on Animal Farm",
+    "prompt": "A poignant and haunting image of Boxer, a worn-out and exhausted horse, lying on his side in a field, his eyes glazed over, his sides matted with sweat, and a thin stream of blood trickling out of his mouth. In the background, the windmill stands tall, a symbol of the farm's progress and Boxer's dedication. The sun casts a warm, golden light on the scene, but the atmosphere is somber and melancholic. The other animals, including Clover and Benjamin, are gathered around Boxer, their faces filled with worry and concern. In the distance, the farmhouse and the orchard can be seen, with the pigs and dogs going about their daily activities, oblivious to the tragedy unfolding before them. The image should evoke a sense of sadness, loss, and the corrupting influence of power, as Boxer's sacrifice is exploited by the pigs to further their own interests.",
+    "image": "",
+    "audio": false,
+    "is_done": false
+}
