@@ -1,18 +1,18 @@
 {
-    "chunk_id": "1",
-    "chapter_id": "10",
-    "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown their human master, Mr. Jones. The pigs, led by Snowball and Napoleon, have taken charge and are directing the other animals in their work. The farm is thriving, and the animals are happy and content. The pigs have also established the Seven Commandments, which are inscribed on the wall of the big barn. The animals are working together to get the hay in, and the harvest is a huge success. The pigs are directing the others, and the work is going smoothly. Boxer, the horse, is a key player in the success of the farm, and the animals are grateful for his hard work and dedication.",
-    "characters": {
-        "name": "Old Major",
-        "description": "A wise and benevolent pig who has a dream about the future of the farm and inspires the animals to rebel against their human master."
-    },
-    "places": {
-        "name": "Manor Farm",
-        "description": "A farm where the animals live and work. It is now called Animal Farm and is owned and operated by the animals themselves."
-    },
-    "scene_title": "The Animals' Rebellion on Manor Farm",
-    "prompt": "A dramatic and vibrant scene depicting the animals' rebellion on Manor Farm, with a focus on the emotions and actions of the animals as they take control of the farm. The scene should capture the excitement and sense of freedom as the animals work together to harvest the hay and establish a new way of life. The lighting should be warm and golden, with the sun shining down on the animals as they labor in the fields. The atmosphere should be one of joy and camaraderie, with the animals working together in harmony. In the background, the farmhouse should be visible, with the pigs and other animals gathered around the Seven Commandments, which should be written in bold, white letters on the wall. The scene should also include the milk buckets, which should be empty, symbolizing the pigs' decision to keep the milk for themselves. The overall mood should be one of hope and optimism, as the animals look to the future and their new way of life.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "1",
+  "chapter_id": "10",
+  "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown their human master, Mr. Jones. The pigs, led by Snowball and Napoleon, have taken charge and are directing the other animals in their work. The farm is thriving, and the animals are happy and content. The pigs have also established the Seven Commandments, which are inscribed on the wall of the big barn. The animals are working together to get the hay in, and the harvest is a huge success. The pigs are directing the others, and the work is going smoothly. Boxer, the horse, is a key player in the success of the farm, and the animals are grateful for his hard work and dedication.",
+  "characters": {
+    "name": "Old Major",
+    "description": "A wise and benevolent pig who has a dream about the future of the farm and inspires the animals to rebel against their human master."
+  },
+  "places": {
+    "name": "Manor Farm",
+    "description": "A farm where the animals live and work. It is now called Animal Farm and is owned and operated by the animals themselves."
+  },
+  "scene_title": "The Animals' Rebellion on Manor Farm",
+  "prompt": "A dramatic and vibrant scene depicting the animals' rebellion on Manor Farm, with a focus on the emotions and actions of the animals as they take control of the farm. The scene should capture the excitement and sense of freedom as the animals work together to harvest the hay and establish a new way of life. The lighting should be warm and golden, with the sun shining down on the animals as they labor in the fields. The atmosphere should be one of joy and camaraderie, with the animals working together in harmony. In the background, the farmhouse should be visible, with the pigs and other animals gathered around the Seven Commandments, which should be written in bold, white letters on the wall. The scene should also include the milk buckets, which should be empty, symbolizing the pigs' decision to keep the milk for themselves. The overall mood should be one of hope and optimism, as the animals look to the future and their new way of life.",
+  "image": "https://im.runware.ai/image/ws/2/ii/77fdedef-64ca-44da-a618-7bfa27c98931.webp",
+  "audio": false,
+  "is_done": false
 }

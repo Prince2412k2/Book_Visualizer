@@ -1,24 +1,24 @@
 {
-    "chunk_id": "4",
-    "chapter_id": "11",
-    "summary": "The animals on Animal Farm are in a state of turmoil after the windmill is destroyed by Frederick and his men. Napoleon, the leader, is at a loss for what to do, but eventually rallies the animals and they charge forth in a body to fight the enemy. The animals are victorious, but at great cost, and they are left to pick up the pieces and rebuild. Meanwhile, Napoleon is seen to be getting more and more tyrannical, and the animals begin to suspect that he is drinking alcohol. Squealer, the propagandist, is seen to be involved in a mysterious incident where he is found with a broken ladder and paint, and it is revealed that the Fifth Commandment has been altered to allow for moderate drinking. The animals are left to wonder what is going on and what the future holds.",
-    "characters": {
-        "Napoleon": "The leader of Animal Farm, who is becoming increasingly tyrannical and is suspected of drinking alcohol.",
-        "Squealer": "The propagandist of Animal Farm, who is seen to be involved in a mysterious incident and is suspected of altering the Commandments.",
-        "Boxer": "A loyal and hardworking animal who is injured in the battle and is struggling to heal.",
-        "Clover": "A kind and gentle animal who is concerned about Boxer's well-being and is suspicious of Napoleon's actions.",
-        "Benjamin": "An old and wise animal who seems to understand what is going on, but says nothing.",
-        "Muriel": "A clever and observant animal who notices that the Fifth Commandment has been altered."
-    },
-    "places": {
-        "Animal Farm": "The farm where the animals live and work, which is being rebuilt after the windmill is destroyed.",
-        "The Big Barn": "A large barn where the animals hold meetings and where the Seven Commandments are written.",
-        "The Farmhouse": "The house where Napoleon and the other pigs live, where a case of whisky is discovered.",
-        "The Orchard": "A small area of land where a paddock is to be ploughed up and sown with barley."
-    },
-    "scene_title": "The Animals' Descent into Tyranny and the Destruction of the Windmill",
-    "prompt": "A haunting and atmospheric scene depicting the animals of Animal Farm, once united in their rebellion against the humans, now divided and oppressed by the pigs' tyrannical rule. The windmill, a symbol of their hard-won freedom, lies in ruins, destroyed by the very enemy they had once defeated. The animals, weary and wounded, gather around the site of the windmill, their faces etched with a mix of grief, anger, and despair. In the background, the farmhouse looms, its windows glowing with an otherworldly light, as if the pigs are reveling in their newfound power. The air is thick with the smell of smoke and blood, and the sound of distant gunfire echoes through the landscape. In the foreground, Boxer, the loyal and dedicated workhorse, stands tall, his eyes fixed on the ruins of the windmill, his heart heavy with the knowledge that their labor has been destroyed. The scene is bathed in a golden, sunset light, casting long shadows across the landscape, and emphasizing the sense of loss and betrayal that has consumed the animals. In the distance, the silhouette of a figure, possibly Napoleon, can be seen, watching the animals with an air of superiority, as if he is savoring their misery. The overall mood is one of desolation and hopelessness, as the animals struggle to come to terms with the destruction of their dreams and the betrayal of their leaders.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "4",
+  "chapter_id": "11",
+  "summary": "The animals on Animal Farm are in a state of turmoil after the windmill is destroyed by Frederick and his men. Napoleon, the leader, is at a loss for what to do, but eventually rallies the animals and they charge forth in a body to fight the enemy. The animals are victorious, but at great cost, and they are left to pick up the pieces and rebuild. Meanwhile, Napoleon is seen to be getting more and more tyrannical, and the animals begin to suspect that he is drinking alcohol. Squealer, the propagandist, is seen to be involved in a mysterious incident where he is found with a broken ladder and paint, and it is revealed that the Fifth Commandment has been altered to allow for moderate drinking. The animals are left to wonder what is going on and what the future holds.",
+  "characters": {
+    "Napoleon": "The leader of Animal Farm, who is becoming increasingly tyrannical and is suspected of drinking alcohol.",
+    "Squealer": "The propagandist of Animal Farm, who is seen to be involved in a mysterious incident and is suspected of altering the Commandments.",
+    "Boxer": "A loyal and hardworking animal who is injured in the battle and is struggling to heal.",
+    "Clover": "A kind and gentle animal who is concerned about Boxer's well-being and is suspicious of Napoleon's actions.",
+    "Benjamin": "An old and wise animal who seems to understand what is going on, but says nothing.",
+    "Muriel": "A clever and observant animal who notices that the Fifth Commandment has been altered."
+  },
+  "places": {
+    "Animal Farm": "The farm where the animals live and work, which is being rebuilt after the windmill is destroyed.",
+    "The Big Barn": "A large barn where the animals hold meetings and where the Seven Commandments are written.",
+    "The Farmhouse": "The house where Napoleon and the other pigs live, where a case of whisky is discovered.",
+    "The Orchard": "A small area of land where a paddock is to be ploughed up and sown with barley."
+  },
+  "scene_title": "The Animals' Descent into Tyranny and the Destruction of the Windmill",
+  "prompt": "A haunting and atmospheric scene depicting the animals of Animal Farm, once united in their rebellion against the humans, now divided and oppressed by the pigs' tyrannical rule. The windmill, a symbol of their hard-won freedom, lies in ruins, destroyed by the very enemy they had once defeated. The animals, weary and wounded, gather around the site of the windmill, their faces etched with a mix of grief, anger, and despair. In the background, the farmhouse looms, its windows glowing with an otherworldly light, as if the pigs are reveling in their newfound power. The air is thick with the smell of smoke and blood, and the sound of distant gunfire echoes through the landscape. In the foreground, Boxer, the loyal and dedicated workhorse, stands tall, his eyes fixed on the ruins of the windmill, his heart heavy with the knowledge that their labor has been destroyed. The scene is bathed in a golden, sunset light, casting long shadows across the landscape, and emphasizing the sense of loss and betrayal that has consumed the animals. In the distance, the silhouette of a figure, possibly Napoleon, can be seen, watching the animals with an air of superiority, as if he is savoring their misery. The overall mood is one of desolation and hopelessness, as the animals struggle to come to terms with the destruction of their dreams and the betrayal of their leaders.",
+  "image": "https://im.runware.ai/image/ws/2/ii/b6842e2e-006d-438b-bfcb-5728706e5a3d.webp",
+  "audio": false,
+  "is_done": false
 }

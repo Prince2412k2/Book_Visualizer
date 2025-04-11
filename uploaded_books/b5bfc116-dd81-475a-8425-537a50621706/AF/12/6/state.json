@@ -1,18 +1,18 @@
 {
-    "chunk_id": "6",
-    "chapter_id": "12",
-    "summary": "Mr. Pilkington, a representative from Foxwood, visited Animal Farm and was impressed by the discipline and orderliness of the farm. He praised the pigs for their hard work and low rations, comparing them to the lower classes of humans. Napoleon, the leader of the pigs, responded by thanking Mr. Pilkington and announcing that the farm would be renamed The Manor Farm. However, a quarrel broke out between Napoleon and Mr. Pilkington over a game of cards, revealing a darker side to the pigs' behavior. The animals outside began to notice a change in the pigs' faces, making it difficult to distinguish between them and the humans.",
-    "characters": {
-        "Mr. Pilkington": "A middle-aged man with a round face and multiple chins, who is the representative from Foxwood.",
-        "Napoleon": "A pig with a strong leadership presence, who is the leader of the pigs on Animal Farm."
-    },
-    "places": {
-        "Animal Farm": "A farm owned and operated by pigs, which has been renamed The Manor Farm.",
-        "Foxwood": "A neighboring farm represented by Mr. Pilkington."
-    },
-    "scene_title": "A Toast to Deception and Despotism",
-    "prompt": "A dimly lit, smoke-filled room with a long wooden table at its center. The table is set with fine china, crystal glasses, and a bottle of beer. The walls are adorned with old portraits and the floor is covered with a plush carpet. The atmosphere is tense, with a sense of unease hanging in the air. Mr. Pilkington, a stout man with a jovial expression, stands at the head of the table, a mug in his hand. He is surrounded by a group of pigs, their faces a mix of five, four, and three chins, their eyes gleaming with a mixture of greed and cunning. The animals outside, a motley crew of creatures, gaze in at the scene through the window, their faces filled with a sense of foreboding. In the background, the sound of laughter and music can be heard, but it is a forced and artificial sound, masking the true nature of the gathering. The lighting is warm and golden, but it is also oppressive, casting long shadows across the room. The overall mood is one of deception and despotism, as the pigs and their human friends engage in a game of cat and mouse, each trying to outmaneuver the other. The scene is a masterclass in subtlety, with each character playing their part to perfection. The only sound is the clinking of glasses and the murmur of conversation, but beneath the surface, a storm is brewing, and the animals outside can sense it.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "6",
+  "chapter_id": "12",
+  "summary": "Mr. Pilkington, a representative from Foxwood, visited Animal Farm and was impressed by the discipline and orderliness of the farm. He praised the pigs for their hard work and low rations, comparing them to the lower classes of humans. Napoleon, the leader of the pigs, responded by thanking Mr. Pilkington and announcing that the farm would be renamed The Manor Farm. However, a quarrel broke out between Napoleon and Mr. Pilkington over a game of cards, revealing a darker side to the pigs' behavior. The animals outside began to notice a change in the pigs' faces, making it difficult to distinguish between them and the humans.",
+  "characters": {
+    "Mr. Pilkington": "A middle-aged man with a round face and multiple chins, who is the representative from Foxwood.",
+    "Napoleon": "A pig with a strong leadership presence, who is the leader of the pigs on Animal Farm."
+  },
+  "places": {
+    "Animal Farm": "A farm owned and operated by pigs, which has been renamed The Manor Farm.",
+    "Foxwood": "A neighboring farm represented by Mr. Pilkington."
+  },
+  "scene_title": "A Toast to Deception and Despotism",
+  "prompt": "A dimly lit, smoke-filled room with a long wooden table at its center. The table is set with fine china, crystal glasses, and a bottle of beer. The walls are adorned with old portraits and the floor is covered with a plush carpet. The atmosphere is tense, with a sense of unease hanging in the air. Mr. Pilkington, a stout man with a jovial expression, stands at the head of the table, a mug in his hand. He is surrounded by a group of pigs, their faces a mix of five, four, and three chins, their eyes gleaming with a mixture of greed and cunning. The animals outside, a motley crew of creatures, gaze in at the scene through the window, their faces filled with a sense of foreboding. In the background, the sound of laughter and music can be heard, but it is a forced and artificial sound, masking the true nature of the gathering. The lighting is warm and golden, but it is also oppressive, casting long shadows across the room. The overall mood is one of deception and despotism, as the pigs and their human friends engage in a game of cat and mouse, each trying to outmaneuver the other. The scene is a masterclass in subtlety, with each character playing their part to perfection. The only sound is the clinking of glasses and the murmur of conversation, but beneath the surface, a storm is brewing, and the animals outside can sense it.",
+  "image": "https://im.runware.ai/image/ws/2/ii/3a009597-52f1-4aaa-8a72-d163211aa772.webp",
+  "audio": false,
+  "is_done": false
 }

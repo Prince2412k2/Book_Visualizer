@@ -3368,3 +3368,142 @@
 2025-04-11 10:33:21 | INFO | reader_new.py:206 | Loading chunk from state
 2025-04-11 10:33:21 | INFO | reader_new.py:206 | Loading chunk from state
 2025-04-11 10:33:21 | INFO | reader_new.py:311 | Total Chunks 33
+2025-04-11 12:24:01 | INFO | reader_new.py:317 | Path is is there for given book
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:02 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:229 | Loading chunk from state
+2025-04-11 12:24:03 | INFO | reader_new.py:334 | Total Chunks 33
+2025-04-11 12:28:19 | INFO | reader_new.py:328 | Path is is there for given book
+2025-04-11 12:28:19 | ERROR | utils.py:48 | Error while downloading tokenizer, error=ConnectionError(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/whoami-v2 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x79c8cfdd5850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: f66e07fb-6dea-4102-a6fd-39a755e78988)')
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:28:19 | INFO | reader_new.py:345 | Total Chunks 0
+2025-04-11 12:29:32 | INFO | reader_new.py:328 | Path is is there for given book
+2025-04-11 12:29:32 | ERROR | utils.py:48 | Error while downloading tokenizer, error=ConnectionError(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/whoami-v2 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x73f740889650>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 24b7c2c2-55c4-442c-b0b1-0117b1048ae2)')
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | WARNING | utils.py:57 | Error while counting token, error=AttributeError("'Tokenizer' object has no attribute 'tokenizer'")
+2025-04-11 12:29:32 | INFO | reader_new.py:345 | Total Chunks 0
+2025-04-11 12:31:28 | INFO | reader_new.py:328 | Path is is there for given book
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:29 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 12:31:30 | INFO | reader_new.py:345 | Total Chunks 33
+2025-04-11 13:51:17 | INFO | reader_new.py:328 | Path is is there for given book
+2025-04-11 13:51:19 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 13:51:19 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 13:51:21 | INFO | reader_new.py:345 | Total Chunks 33
+2025-04-11 14:32:29 | INFO | reader_new.py:328 | Path is is there for given book
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:33 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:34 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:240 | Loading chunk from state
+2025-04-11 14:32:35 | INFO | reader_new.py:345 | Total Chunks 33

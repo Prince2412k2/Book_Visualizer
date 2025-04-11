@@ -1,18 +1,18 @@
 {
-    "chunk_id": "1",
-    "chapter_id": "9",
-    "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have established a new society based on the principles of Animalism, which emphasizes equality and the abolition of human tyranny. The pigs, led by Snowball and Napoleon, have taken on leadership roles and are directing the other animals in their work. The farm is thriving, and the animals are happy and content. However, there are some concerns about the pigs' increasing power and the disappearance of the milk. The animals are working hard to get the hay in, and the harvest is a huge success. The pigs are clever and resourceful, and they are able to overcome the difficulties of using human-designed tools. Boxer, the horse, is a key figure in the farm's success, and he is admired by all for his hard work and dedication. The animals are living in a state of bliss, and they are enjoying the fruits of their labor. However, there are some underlying tensions and power struggles that may threaten the stability of the farm.",
-    "characters": {
-        "name": "Old Major",
-        "description": "A wise and benevolent pig who is the leader of the animals on Manor Farm. He is old and has had a long life, and he has acquired a great deal of wisdom and knowledge. He is the one who first introduces the idea of Animalism and the principles of rebellion against human tyranny."
-    },
-    "places": {
-        "name": "Manor Farm",
-        "description": "A farm that is owned by Mr. Jones and is home to a group of animals who are led by the pigs. The farm is thriving and is a symbol of the animals' newfound freedom and equality."
-    },
-    "scene_title": "The Animals' Uprising on Manor Farm",
-    "prompt": "A serene, moonlit night on a rural farm, with a majestic barn in the center. The barn's door is slightly ajar, casting a warm, golden light onto the surrounding grass. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of crickets. In the distance, a group of animals, including pigs, horses, cows, and sheep, are gathered around a makeshift platform, listening intently to a wise old boar, Old Major, as he delivers a passionate speech about the importance of unity, equality, and the overthrow of their human oppressors. The animals are all dressed in their natural coats, with some wearing subtle, earthy tones, while others have vibrant, colorful markings. The atmosphere is one of anticipation, hope, and determination. In the background, a faint, flickering light can be seen, casting an eerie glow onto the surrounding landscape. As the animals listen to Old Major's words, they begin to sing a stirring, anthemic song, 'Beasts of England', their voices rising and falling in perfect harmony. The scene is a powerful, emotional, and visually stunning representation of the animals' desire for freedom and equality.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "1",
+  "chapter_id": "9",
+  "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have established a new society based on the principles of Animalism, which emphasizes equality and the abolition of human tyranny. The pigs, led by Snowball and Napoleon, have taken on leadership roles and are directing the other animals in their work. The farm is thriving, and the animals are happy and content. However, there are some concerns about the pigs' increasing power and the disappearance of the milk. The animals are working hard to get the hay in, and the harvest is a huge success. The pigs are clever and resourceful, and they are able to overcome the difficulties of using human-designed tools. Boxer, the horse, is a key figure in the farm's success, and he is admired by all for his hard work and dedication. The animals are living in a state of bliss, and they are enjoying the fruits of their labor. However, there are some underlying tensions and power struggles that may threaten the stability of the farm.",
+  "characters": {
+    "name": "Old Major",
+    "description": "A wise and benevolent pig who is the leader of the animals on Manor Farm. He is old and has had a long life, and he has acquired a great deal of wisdom and knowledge. He is the one who first introduces the idea of Animalism and the principles of rebellion against human tyranny."
+  },
+  "places": {
+    "name": "Manor Farm",
+    "description": "A farm that is owned by Mr. Jones and is home to a group of animals who are led by the pigs. The farm is thriving and is a symbol of the animals' newfound freedom and equality."
+  },
+  "scene_title": "The Animals' Uprising on Manor Farm",
+  "prompt": "A serene, moonlit night on a rural farm, with a majestic barn in the center. The barn's door is slightly ajar, casting a warm, golden light onto the surrounding grass. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of crickets. In the distance, a group of animals, including pigs, horses, cows, and sheep, are gathered around a makeshift platform, listening intently to a wise old boar, Old Major, as he delivers a passionate speech about the importance of unity, equality, and the overthrow of their human oppressors. The animals are all dressed in their natural coats, with some wearing subtle, earthy tones, while others have vibrant, colorful markings. The atmosphere is one of anticipation, hope, and determination. In the background, a faint, flickering light can be seen, casting an eerie glow onto the surrounding landscape. As the animals listen to Old Major's words, they begin to sing a stirring, anthemic song, 'Beasts of England', their voices rising and falling in perfect harmony. The scene is a powerful, emotional, and visually stunning representation of the animals' desire for freedom and equality.",
+  "image": "https://im.runware.ai/image/ws/2/ii/36f992ff-4d8c-424c-b6ed-bd618bc896ea.webp",
+  "audio": false,
+  "is_done": false
 }

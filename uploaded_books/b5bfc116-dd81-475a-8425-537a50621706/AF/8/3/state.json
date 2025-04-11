@@ -1,29 +1,29 @@
 {
-    "chunk_id": "3",
-    "chapter_id": "8",
-    "summary": "The animals on Animal Farm have been working hard to build a windmill, but their progress has been hindered by various setbacks. Despite these challenges, they remain committed to their goal and are determined to rebuild the windmill after it was destroyed by Snowball. Napoleon, the leader of the animals, has announced that they will begin rebuilding the windmill immediately and will work through the winter, rain or shine. The animals are shocked and outraged by Snowball's actions, and a reward has been offered for his capture. Meanwhile, the pigs have moved into the farmhouse and are enjoying the comforts of the human's home. The animals are beginning to feel uneasy about the pigs' new lifestyle and are starting to question the leadership of Napoleon.",
-    "characters": {
-        "Napoleon": "The leader of the animals, a pig who is intelligent and cunning. He is determined to rebuild the windmill and will stop at nothing to achieve his goal.",
-        "Snowball": "A pig who was once a close friend of Napoleon's, but was expelled from the farm. He is now a traitor who has destroyed the windmill.",
-        "Boxer": "A hardworking horse who is dedicated to the windmill project. He is loyal to Napoleon and is willing to do whatever it takes to help him achieve his goal.",
-        "Clover": "A horse who is concerned about the pigs' new lifestyle and is starting to question the leadership of Napoleon.",
-        "Squealer": "A pig who is Napoleon's right-hand man. He is skilled at manipulating the animals and is able to convince them to do whatever Napoleon wants.",
-        "Muriel": "A horse who is able to read and is helping Clover to understand the Seven Commandments.",
-        "Benjamin": "A donkey who is skeptical of the windmill project and is not enthusiastic about the animals' efforts.",
-        "Mr. Whymper": "A human who is acting as an intermediary between Animal Farm and the outside world. He is sly and is taking advantage of the animals' naivety.",
-        "Jones": "The former owner of the farm, who has given up hope of getting his farm back and has moved to another part of the county."
-    },
-    "places": {
-        "Animal Farm": "The farm where the animals live and work. It is a place of hard labor and dedication, but also of camaraderie and friendship.",
-        "The Windmill": "A structure that the animals are building to help them with their farming. It is a symbol of their hard work and determination.",
-        "The Farmhouse": "The home of the pigs, which they have taken over from the humans. It is a place of luxury and comfort, but also of controversy and unease.",
-        "Foxwood Farm": "A neighboring farm where Snowball is believed to have come from.",
-        "Pinchfield": "A neighboring farm where Napoleon is considering entering into a business agreement.",
-        "Willingdon": "A town where the animals are able to sell their produce and obtain the materials they need."
-    },
-    "scene_title": "The Animals' Struggle to Rebuild the Windmill",
-    "prompt": "A desolate, autumnal landscape with a ruined windmill in the foreground, its stone walls scattered and broken. In the background, a farmhouse stands with smoke billowing from its chimney. The sky is a deep, foreboding grey, with dark clouds gathering. The air is crisp and cold, with a hint of rain. In the distance, a group of animals, led by Napoleon, can be seen toiling in the mud, carrying heavy loads of stone and struggling to rebuild the windmill. The atmosphere is one of determination and resilience, as the animals work tirelessly to overcome the challenges and setbacks that have befallen them. The overall mood is one of gritty, unyielding optimism, as the animals strive to rebuild and restore their beloved windmill to its former glory.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "3",
+  "chapter_id": "8",
+  "summary": "The animals on Animal Farm have been working hard to build a windmill, but their progress has been hindered by various setbacks. Despite these challenges, they remain committed to their goal and are determined to rebuild the windmill after it was destroyed by Snowball. Napoleon, the leader of the animals, has announced that they will begin rebuilding the windmill immediately and will work through the winter, rain or shine. The animals are shocked and outraged by Snowball's actions, and a reward has been offered for his capture. Meanwhile, the pigs have moved into the farmhouse and are enjoying the comforts of the human's home. The animals are beginning to feel uneasy about the pigs' new lifestyle and are starting to question the leadership of Napoleon.",
+  "characters": {
+    "Napoleon": "The leader of the animals, a pig who is intelligent and cunning. He is determined to rebuild the windmill and will stop at nothing to achieve his goal.",
+    "Snowball": "A pig who was once a close friend of Napoleon's, but was expelled from the farm. He is now a traitor who has destroyed the windmill.",
+    "Boxer": "A hardworking horse who is dedicated to the windmill project. He is loyal to Napoleon and is willing to do whatever it takes to help him achieve his goal.",
+    "Clover": "A horse who is concerned about the pigs' new lifestyle and is starting to question the leadership of Napoleon.",
+    "Squealer": "A pig who is Napoleon's right-hand man. He is skilled at manipulating the animals and is able to convince them to do whatever Napoleon wants.",
+    "Muriel": "A horse who is able to read and is helping Clover to understand the Seven Commandments.",
+    "Benjamin": "A donkey who is skeptical of the windmill project and is not enthusiastic about the animals' efforts.",
+    "Mr. Whymper": "A human who is acting as an intermediary between Animal Farm and the outside world. He is sly and is taking advantage of the animals' naivety.",
+    "Jones": "The former owner of the farm, who has given up hope of getting his farm back and has moved to another part of the county."
+  },
+  "places": {
+    "Animal Farm": "The farm where the animals live and work. It is a place of hard labor and dedication, but also of camaraderie and friendship.",
+    "The Windmill": "A structure that the animals are building to help them with their farming. It is a symbol of their hard work and determination.",
+    "The Farmhouse": "The home of the pigs, which they have taken over from the humans. It is a place of luxury and comfort, but also of controversy and unease.",
+    "Foxwood Farm": "A neighboring farm where Snowball is believed to have come from.",
+    "Pinchfield": "A neighboring farm where Napoleon is considering entering into a business agreement.",
+    "Willingdon": "A town where the animals are able to sell their produce and obtain the materials they need."
+  },
+  "scene_title": "The Animals' Struggle to Rebuild the Windmill",
+  "prompt": "A desolate, autumnal landscape with a ruined windmill in the foreground, its stone walls scattered and broken. In the background, a farmhouse stands with smoke billowing from its chimney. The sky is a deep, foreboding grey, with dark clouds gathering. The air is crisp and cold, with a hint of rain. In the distance, a group of animals, led by Napoleon, can be seen toiling in the mud, carrying heavy loads of stone and struggling to rebuild the windmill. The atmosphere is one of determination and resilience, as the animals work tirelessly to overcome the challenges and setbacks that have befallen them. The overall mood is one of gritty, unyielding optimism, as the animals strive to rebuild and restore their beloved windmill to its former glory.",
+  "image": "https://im.runware.ai/image/ws/2/ii/90826b50-90bf-40a1-83d7-8097520fae2d.webp",
+  "audio": false,
+  "is_done": false
 }

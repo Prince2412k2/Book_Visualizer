@@ -4,9 +4,9 @@ from typing import List, Optional, Dict, Union
 from PIL import Image as pil_img
 from io import BytesIO
 import uuid
-import aiohttp
-import aiofiles
 import asyncio
+import requests
+import time
 
 from logger_module import logger
 from api_module.schemas.base import SummaryInputSchema
@@ -52,53 +52,52 @@ from pydantic import BaseModel, ValidationError
 # logger.error(f"Failed to save image at {path} : {e}")
 
 
-async def fetch_image_with_retries(
-    session: aiohttp.ClientSession, url: str, retries: int = 3, delay: int = 2
+def fetch_image_with_retries(
+    url: str, retries: int = 3, delay: int = 2
 ) -> Optional[bytes]:
     for attempt in range(1, retries + 1):
         try:
-            async with session.get(url) as response:
-                if response.status == 200:
-                    return await response.read()
-                else:
-                    raise Exception(f"Status code: {response.status}")
+            response = requests.get(url, timeout=10)
+            if response.status_code == 200:
+                return response.content
+            else:
+                raise Exception(f"Status code: {response.status_code}")
         except Exception as e:
             logger.warning(f"Attempt {attempt} failed to fetch image: {e}")
             if attempt < retries:
-                await asyncio.sleep(delay)
+                time.sleep(delay)
             else:
                 raise Exception(f"All {retries} attempts failed for URL: {url}")
 
 
-async def save_image(path: str, img_bytes: bytes) -> None:
+def save_image(path: str, img_bytes: bytes) -> None:
     try:
         buffer = BytesIO()
         image = pil_img.open(BytesIO(img_bytes))
         image.save(buffer, format="WEBP")
         webp_bytes = buffer.getvalue()
 
-        async with aiofiles.open(path, "wb") as f:
-            await f.write(webp_bytes)
+        with open(path, "wb") as f:
+            f.write(webp_bytes)
 
         logger.info(f"Image saved at: {path}")
     except Exception as e:
-        logger.error(f"Error in async image saving: {e}")
+        logger.error(f"Error saving image: {e}")
 
 
-async def fetch_and_save_image(url: str, path: str) -> None:
-    async with aiohttp.ClientSession() as session:
-        try:
-            img_bytes = await fetch_image_with_retries(session, url)
-            if img_bytes:
-                await save_image(path, img_bytes)
-        except Exception as e:
-            logger.error(f"Failed to fetch and save image from {url}: {e}")
-
-
-async def save_audio(content: bytes, path: str) -> None:
+def fetch_and_save_image(url: str, path: str) -> None:
     try:
-        async with aiofiles.open(path, "wb") as f:
-            await f.write(content)
+        img_bytes = fetch_image_with_retries(url)
+        if img_bytes:
+            save_image(path, img_bytes)
+    except Exception as e:
+        logger.error(f"Failed to fetch and save image from {url}: {e}")
+
+
+def save_audio(content: bytes, path: str) -> None:
+    try:
+        with open(path, "wb") as f:
+            f.write(content)
         logger.info(f"Audio saved at: {path}")
     except Exception as e:
         logger.error(f"Failed to save audio at {path}: {e}")
@@ -137,6 +136,7 @@ class Chunk:
     places: Dict[str, str] = field(default_factory=dict)
     image_url: str = ""
     image_id: str = ""
+    audio: bool = False
     chunk_state: Optional[ChunkState] = None
     is_done: bool = False
 
@@ -161,6 +161,15 @@ class Chunk:
                 image=self.image_url,
             )
             self.dump_it()
+        else:
+            assert self.chunk_state
+            self.summary = self.chunk_state.summary
+            self.prompt = self.chunk_state.prompt
+            self.image_url = self.chunk_state.image
+            self.characters = self.chunk_state.characters
+            self.places = self.chunk_state.places
+            self.scene_title = self.chunk_state.scene_title
+            self.audio = self.chunk_state.audio
 
     def get_chunk(self) -> str:
         return self.chunk
@@ -189,13 +198,15 @@ class Chunk:
         self.image_url = url
         self.image_id = task_id
         # save_img(url=url, path=f)
-        asyncio.create_task(fetch_and_save_image(url=url, path=f"{self.path}/img.webp"))
+        fetch_and_save_image(url=url, path=f"{self.path}/img.webp")
         self.dump_it()
 
     def set_audio(self, content: bytes):
         temp_path = f"{self.path}/.mp3"
+        assert self.chunk_state
+        self.audio = True
         self.chunk_state.audio = True
-        asyncio.create_task(save_audio(content=content, path=temp_path))
+        save_audio(content=content, path=temp_path)
 
     def get_sum(self):
         return SummaryInputSchema(
@@ -412,15 +423,10 @@ class Book:
 
 
 def main() -> None:
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
     book: Book = Book(
         "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
     )
-    loop.close()
     for i in book.get_chunks():
-        i = i.chunk_state
         assert i
         # if not i.places or not i.characters:
         #   continue
@@ -445,16 +451,8 @@ def main() -> None:
         print("\n\n")
 
         print("IMAGE")
-        print(f"{i.scene_title} : {i.image} ")
+        print(f"{i.scene_title} : {i.image_url} ")
         print("\n\n")
-
-
-def test():
-    try:
-        loop = asyncio.get_running_loop()
-        print("Event loop is running:", loop)
-    except RuntimeError:
-        print("No event loop is running.")
 
 
 if __name__ == "__main__":

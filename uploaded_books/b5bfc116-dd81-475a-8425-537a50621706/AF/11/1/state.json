@@ -1,18 +1,18 @@
 {
-    "chunk_id": "1",
-    "chapter_id": "11",
-    "summary": "The animals on Manor Farm, led by Snowball and Napoleon, rebel against their owner Mr. Jones. They successfully drive him off the farm and rename it Animal Farm. The pigs, led by Snowball and Napoleon, take charge and direct the other animals in their work. They establish the Seven Commandments, which include the principles of Animalism. The animals work together to harvest the hay in the field, with Boxer and the horses doing most of the work. The harvest is a success, and the animals are happy and content. They have more food and leisure time than they ever had before.",
-    "characters": {
-        "name": "Snowball",
-        "description": "A young boar who is one of the leaders of the rebellion against Mr. Jones. He is clever and resourceful, and helps to establish the Seven Commandments."
-    },
-    "places": {
-        "name": "Manor Farm",
-        "description": "The farm where the animals live and work. It is renamed Animal Farm after the rebellion."
-    },
-    "scene_title": "The Animals' Rebellion on Manor Farm",
-    "prompt": "A serene and idyllic English countryside setting at dawn, with the Manor Farm in the background. The farm is now called Animal Farm, with the words 'Animal Farm' painted in bold white letters on the five-barred gate. The animals are gathered in the farmyard, their faces filled with excitement and joy. In the foreground, a majestic horse, Boxer, is standing proudly, his muscles rippling beneath his coat. Nearby, a group of pigs, led by Snowball and Napoleon, are directing the other animals as they begin their day's work. The sun is rising over the horizon, casting a warm golden light over the scene. In the distance, the trees are swaying gently in the breeze, and the air is filled with the sweet songs of birds. The atmosphere is one of hope, freedom, and unity, as the animals celebrate their newfound independence and the start of a new era on Animal Farm.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "1",
+  "chapter_id": "11",
+  "summary": "The animals on Manor Farm, led by Snowball and Napoleon, rebel against their owner Mr. Jones. They successfully drive him off the farm and rename it Animal Farm. The pigs, led by Snowball and Napoleon, take charge and direct the other animals in their work. They establish the Seven Commandments, which include the principles of Animalism. The animals work together to harvest the hay in the field, with Boxer and the horses doing most of the work. The harvest is a success, and the animals are happy and content. They have more food and leisure time than they ever had before.",
+  "characters": {
+    "name": "Snowball",
+    "description": "A young boar who is one of the leaders of the rebellion against Mr. Jones. He is clever and resourceful, and helps to establish the Seven Commandments."
+  },
+  "places": {
+    "name": "Manor Farm",
+    "description": "The farm where the animals live and work. It is renamed Animal Farm after the rebellion."
+  },
+  "scene_title": "The Animals' Rebellion on Manor Farm",
+  "prompt": "A serene and idyllic English countryside setting at dawn, with the Manor Farm in the background. The farm is now called Animal Farm, with the words 'Animal Farm' painted in bold white letters on the five-barred gate. The animals are gathered in the farmyard, their faces filled with excitement and joy. In the foreground, a majestic horse, Boxer, is standing proudly, his muscles rippling beneath his coat. Nearby, a group of pigs, led by Snowball and Napoleon, are directing the other animals as they begin their day's work. The sun is rising over the horizon, casting a warm golden light over the scene. In the distance, the trees are swaying gently in the breeze, and the air is filled with the sweet songs of birds. The atmosphere is one of hope, freedom, and unity, as the animals celebrate their newfound independence and the start of a new era on Animal Farm.",
+  "image": "https://im.runware.ai/image/ws/2/ii/589e1f73-cbce-41f8-b7fb-93e3af28a8f9.webp",
+  "audio": false,
+  "is_done": false
 }

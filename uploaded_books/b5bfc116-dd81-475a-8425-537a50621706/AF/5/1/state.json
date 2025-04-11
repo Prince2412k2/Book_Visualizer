@@ -1,18 +1,18 @@
 {
-    "chunk_id": "1",
-    "chapter_id": "5",
-    "summary": "The animals on Manor Farm, led by Snowball and Napoleon, rebel against their owner Mr. Jones and drive him out. They rename the farm Animal Farm and establish a new government. The pigs, led by Snowball and Napoleon, take charge and direct the work of the farm. The harvest is a success, and the animals work together to gather the hay. The pigs use their knowledge and leadership to overcome the difficulties of the farm. Boxer, a hardworking horse, is admired by all. The animals are happy and content, enjoying their newfound freedom.",
-    "characters": {
-        "name": "Boxer",
-        "description": "A hardworking horse with tremendous muscles and a kind heart."
-    },
-    "places": {
-        "name": "Manor Farm",
-        "description": "A farm owned by Mr. Jones, where the animals live and work."
-    },
-    "scene_title": "The Animals' Uprising on Manor Farm",
-    "prompt": "A dramatic and vibrant illustration of a sunlit farmyard on a summer morning, with a group of animals gathered around a large barn. The animals are of various species, including pigs, horses, cows, sheep, and chickens, all with unique expressions and postures. In the center of the group, a majestic pig stands on a raised platform, addressing the others with a passionate speech. The background of the barn is adorned with a lantern, and the walls are made of rough-hewn wood. The atmosphere is one of excitement and anticipation, as the animals listen intently to the pig's words. In the foreground, a few animals are shown with their mouths open, as if they are singing along to a rousing chorus. The overall mood is one of hope and rebellion, as the animals prepare to take control of their own destiny. The color palette is warm and earthy, with shades of golden brown, green, and blue, evoking a sense of freedom and possibility. The style is reminiscent of a classic children's book illustration, with bold lines and vibrant colors. The composition is dynamic and engaging, with the animals' bodies and faces forming a sense of movement and energy.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "1",
+  "chapter_id": "5",
+  "summary": "The animals on Manor Farm, led by Snowball and Napoleon, rebel against their owner Mr. Jones and drive him out. They rename the farm Animal Farm and establish a new government. The pigs, led by Snowball and Napoleon, take charge and direct the work of the farm. The harvest is a success, and the animals work together to gather the hay. The pigs use their knowledge and leadership to overcome the difficulties of the farm. Boxer, a hardworking horse, is admired by all. The animals are happy and content, enjoying their newfound freedom.",
+  "characters": {
+    "name": "Boxer",
+    "description": "A hardworking horse with tremendous muscles and a kind heart."
+  },
+  "places": {
+    "name": "Manor Farm",
+    "description": "A farm owned by Mr. Jones, where the animals live and work."
+  },
+  "scene_title": "The Animals' Uprising on Manor Farm",
+  "prompt": "A dramatic and vibrant illustration of a sunlit farmyard on a summer morning, with a group of animals gathered around a large barn. The animals are of various species, including pigs, horses, cows, sheep, and chickens, all with unique expressions and postures. In the center of the group, a majestic pig stands on a raised platform, addressing the others with a passionate speech. The background of the barn is adorned with a lantern, and the walls are made of rough-hewn wood. The atmosphere is one of excitement and anticipation, as the animals listen intently to the pig's words. In the foreground, a few animals are shown with their mouths open, as if they are singing along to a rousing chorus. The overall mood is one of hope and rebellion, as the animals prepare to take control of their own destiny. The color palette is warm and earthy, with shades of golden brown, green, and blue, evoking a sense of freedom and possibility. The style is reminiscent of a classic children's book illustration, with bold lines and vibrant colors. The composition is dynamic and engaging, with the animals' bodies and faces forming a sense of movement and energy.",
+  "image": "https://im.runware.ai/image/ws/2/ii/7e0ca93b-1b9e-4761-8cd2-cbfb77f24062.webp",
+  "audio": false,
+  "is_done": false
 }

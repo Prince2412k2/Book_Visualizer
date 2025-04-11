@@ -1,27 +1,27 @@
 {
-    "chunk_id": "2",
-    "chapter_id": "7",
-    "summary": "The animals on Animal Farm are preparing for the coming season, but they are divided over the issue of the windmill. Snowball and Napoleon have different plans for the farm, and the animals are struggling to make a decision. Meanwhile, Mollie has disappeared, and there are rumors that she has been seen with Mr. Pilkington's men. The animals are also preparing for the possibility of another attack from the humans, and they are discussing the best way to defend themselves. The pigs are in charge of making decisions for the farm, but they are not always able to agree on what to do. The windmill is a contentious issue, with some animals thinking it will save them work and others thinking it will be a waste of time. The animals are also struggling with the issue of defense, with some thinking they should get firearms and others thinking they should send out more pigeons to stir up rebellion. The animals are in a state of turmoil, and it is unclear what the future holds for them.",
-    "characters": {
-        "Snowball": "a pig who is one of the leaders of the farm and has a vision for the future of Animal Farm",
-        "Napoleon": "a pig who is also one of the leaders of the farm and has a more practical approach to the farm's problems",
-        "Mollie": "a horse who has disappeared and is rumored to have been seen with Mr. Pilkington's men",
-        "Boxer": "a horse who is a loyal and hardworking member of the farm",
-        "Clover": "a horse who is a friend of Mollie's and is concerned about her disappearance",
-        "Benjamin": "a donkey who is a wise and experienced member of the farm",
-        "Mr. Jones": "the former owner of the farm who was driven out by the animals",
-        "Mr. Pilkington": "the owner of the neighboring farm, Foxwood",
-        "Frederick": "the owner of the neighboring farm, Pinchfield"
-    },
-    "places": {
-        "Animal Farm": "the farm where the animals live and work",
-        "Foxwood": "the neighboring farm owned by Mr. Pilkington",
-        "Pinchfield": "the neighboring farm owned by Frederick",
-        "The Red Lion": "a pub in the nearby town of Willingdon"
-    },
-    "scene_title": "The Battle for the Windmill and the Rise of Napoleon",
-    "prompt": "The sun was setting over Animal Farm, casting a warm orange glow over the fields and farm buildings. The animals were gathered in the big barn, their faces lit up by the flickering candles and the sound of Snowball's passionate speech still echoing in their minds. The windmill, a symbol of progress and innovation, stood tall in the distance, its sails creaking gently in the gentle breeze. But amidst the excitement and anticipation, a sense of unease had begun to creep in. Napoleon, the quiet and reserved pig, had been watching Snowball with a growing sense of unease, his eyes narrowing as he listened to the other pig's words. And then, just as Snowball had finished speaking, the dogs, huge and fierce, had burst into the barn, their tails wagging wildly as they chased after Snowball. The animals had been shocked and terrified, and in the chaos that followed, Napoleon had seized the opportunity to take control. He had announced that the Sunday morning Meetings would come to an end, and that all decisions would be settled by a special committee of pigs, presided over by himself. The animals had been dismayed, but they had been unable to find the right arguments to resist. As the days passed, the farm had become a place of fear and oppression, with Napoleon's dogs patrolling the fields and the pigs, once a symbol of hope and progress, now ruling with an iron hoof. The windmill, once a beacon of innovation and progress, had been abandoned, its plans and drawings scattered and forgotten. The animals had been left to toil in the fields, their spirits broken and their hearts heavy with despair. But amidst the darkness, a glimmer of hope had begun to emerge. A small group of animals, led by Boxer, the loyal and dedicated horse, had begun to secretly plan a rebellion against Napoleon's regime. They had been meeting in secret, their whispers and murmurs carried away by the wind, but their determination and courage had grown with each passing day. And as the sun rose over Animal Farm, a new dawn had begun to break, a dawn of hope and freedom, and the animals had begun to stir, their hearts filled with a sense of purpose and determination.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "2",
+  "chapter_id": "7",
+  "summary": "The animals on Animal Farm are preparing for the coming season, but they are divided over the issue of the windmill. Snowball and Napoleon have different plans for the farm, and the animals are struggling to make a decision. Meanwhile, Mollie has disappeared, and there are rumors that she has been seen with Mr. Pilkington's men. The animals are also preparing for the possibility of another attack from the humans, and they are discussing the best way to defend themselves. The pigs are in charge of making decisions for the farm, but they are not always able to agree on what to do. The windmill is a contentious issue, with some animals thinking it will save them work and others thinking it will be a waste of time. The animals are also struggling with the issue of defense, with some thinking they should get firearms and others thinking they should send out more pigeons to stir up rebellion. The animals are in a state of turmoil, and it is unclear what the future holds for them.",
+  "characters": {
+    "Snowball": "a pig who is one of the leaders of the farm and has a vision for the future of Animal Farm",
+    "Napoleon": "a pig who is also one of the leaders of the farm and has a more practical approach to the farm's problems",
+    "Mollie": "a horse who has disappeared and is rumored to have been seen with Mr. Pilkington's men",
+    "Boxer": "a horse who is a loyal and hardworking member of the farm",
+    "Clover": "a horse who is a friend of Mollie's and is concerned about her disappearance",
+    "Benjamin": "a donkey who is a wise and experienced member of the farm",
+    "Mr. Jones": "the former owner of the farm who was driven out by the animals",
+    "Mr. Pilkington": "the owner of the neighboring farm, Foxwood",
+    "Frederick": "the owner of the neighboring farm, Pinchfield"
+  },
+  "places": {
+    "Animal Farm": "the farm where the animals live and work",
+    "Foxwood": "the neighboring farm owned by Mr. Pilkington",
+    "Pinchfield": "the neighboring farm owned by Frederick",
+    "The Red Lion": "a pub in the nearby town of Willingdon"
+  },
+  "scene_title": "The Battle for the Windmill and the Rise of Napoleon",
+  "prompt": "The sun was setting over Animal Farm, casting a warm orange glow over the fields and farm buildings. The animals were gathered in the big barn, their faces lit up by the flickering candles and the sound of Snowball's passionate speech still echoing in their minds. The windmill, a symbol of progress and innovation, stood tall in the distance, its sails creaking gently in the gentle breeze. But amidst the excitement and anticipation, a sense of unease had begun to creep in. Napoleon, the quiet and reserved pig, had been watching Snowball with a growing sense of unease, his eyes narrowing as he listened to the other pig's words. And then, just as Snowball had finished speaking, the dogs, huge and fierce, had burst into the barn, their tails wagging wildly as they chased after Snowball. The animals had been shocked and terrified, and in the chaos that followed, Napoleon had seized the opportunity to take control. He had announced that the Sunday morning Meetings would come to an end, and that all decisions would be settled by a special committee of pigs, presided over by himself. The animals had been dismayed, but they had been unable to find the right arguments to resist. As the days passed, the farm had become a place of fear and oppression, with Napoleon's dogs patrolling the fields and the pigs, once a symbol of hope and progress, now ruling with an iron hoof. The windmill, once a beacon of innovation and progress, had been abandoned, its plans and drawings scattered and forgotten. The animals had been left to toil in the fields, their spirits broken and their hearts heavy with despair. But amidst the darkness, a glimmer of hope had begun to emerge. A small group of animals, led by Boxer, the loyal and dedicated horse, had begun to secretly plan a rebellion against Napoleon's regime. They had been meeting in secret, their whispers and murmurs carried away by the wind, but their determination and courage had grown with each passing day. And as the sun rose over Animal Farm, a new dawn had begun to break, a dawn of hope and freedom, and the animals had begun to stir, their hearts filled with a sense of purpose and determination.",
+  "image": "https://im.runware.ai/image/ws/2/ii/5ca3fca9-ee6b-4b5c-846a-14109eb2224f.webp",
+  "audio": false,
+  "is_done": false
 }

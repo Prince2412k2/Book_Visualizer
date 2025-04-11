@@ -1,28 +1,28 @@
 {
-    "chunk_id": "1",
-    "chapter_id": "6",
-    "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have renamed the farm Animal Farm and have established a new system of government based on the principles of Animalism. The pigs, led by Snowball and Napoleon, have taken on the roles of leaders and have begun to implement the Seven Commandments, which include the abolition of human rule and the establishment of equality among all animals. The animals have worked together to harvest the hay, with the pigs directing and supervising the others. The harvest was a huge success, and the animals are now enjoying the fruits of their labor. However, there are already signs of trouble, as the pigs begin to take on more and more power and the other animals start to feel left out.",
-    "characters": {
-        "Mr. Jones": "The former owner of Manor Farm, who was overthrown by the animals.",
-        "Snowball": "A pig who is one of the leaders of the animals and a key figure in the establishment of Animalism.",
-        "Napoleon": "A pig who is also a leader of the animals and is known for his strength and intelligence.",
-        "Boxer": "A horse who is a hard worker and is admired by all the animals.",
-        "Clover": "A horse who is Boxer's companion and is also a hard worker.",
-        "Mollie": "A white mare who is vain and selfish, and is often at odds with the other animals.",
-        "Squealer": "A pig who is a skilled orator and is often called upon to explain the principles of Animalism.",
-        "Moses": "A tame raven who is a spy and a tale-bearer, and is often at odds with the other animals.",
-        "Old Major": "A prize Middle White boar who is the founder of Animalism and is revered by the animals."
-    },
-    "places": {
-        "Manor Farm": "The farm where the animals live and work, which has been renamed Animal Farm.",
-        "Animal Farm": "The farm where the animals live and work, which was formerly known as Manor Farm.",
-        "The Big Barn": "A large barn where the animals hold meetings and gatherings.",
-        "The Hayfield": "A field where the animals harvest hay, which was a major success.",
-        "The Farmhouse": "The house where Mr. Jones and his family lived, which is now a museum."
-    },
-    "scene_title": "The Animals' Rebellion on Manor Farm",
-    "prompt": "A dramatic and detailed scene of a group of animals, led by pigs, cows, horses, and other farm animals, rising up against their human oppressors on a rural farm. The animals, inspired by the words of a wise old boar named Major, have been secretly planning a rebellion for months. They are determined to take control of the farm and create a new society where all animals are equal. The scene opens on a sunny summer day, with the animals gathered in the big barn, listening to Major's speech. The animals are shown to be a diverse group, with different breeds and personalities, but they are united in their desire for freedom and equality. As Major speaks, the animals are shown to be deeply moved, and they begin to sing a rousing song, 'Beasts of England'. The scene then cuts to the animals' successful rebellion against the humans, with the animals chasing the humans off the farm and taking control. The animals are shown to be jubilant, with some of them dancing and singing, while others are shown to be more subdued, reflecting on the significance of their victory. The scene ends with the animals gathered around the farmhouse, looking at the Seven Commandments, which have been painted on the wall. The Commandments are a set of principles that the animals have created to guide their new society, and they are shown to be a key part of the animals' vision for a better future.",
-    "image": "",
-    "audio": false,
-    "is_done": false
+  "chunk_id": "1",
+  "chapter_id": "6",
+  "summary": "The animals on Manor Farm, led by the pigs, have successfully overthrown Mr. Jones and taken control of the farm. They have renamed the farm Animal Farm and have established a new system of government based on the principles of Animalism. The pigs, led by Snowball and Napoleon, have taken on the roles of leaders and have begun to implement the Seven Commandments, which include the abolition of human rule and the establishment of equality among all animals. The animals have worked together to harvest the hay, with the pigs directing and supervising the others. The harvest was a huge success, and the animals are now enjoying the fruits of their labor. However, there are already signs of trouble, as the pigs begin to take on more and more power and the other animals start to feel left out.",
+  "characters": {
+    "Mr. Jones": "The former owner of Manor Farm, who was overthrown by the animals.",
+    "Snowball": "A pig who is one of the leaders of the animals and a key figure in the establishment of Animalism.",
+    "Napoleon": "A pig who is also a leader of the animals and is known for his strength and intelligence.",
+    "Boxer": "A horse who is a hard worker and is admired by all the animals.",
+    "Clover": "A horse who is Boxer's companion and is also a hard worker.",
+    "Mollie": "A white mare who is vain and selfish, and is often at odds with the other animals.",
+    "Squealer": "A pig who is a skilled orator and is often called upon to explain the principles of Animalism.",
+    "Moses": "A tame raven who is a spy and a tale-bearer, and is often at odds with the other animals.",
+    "Old Major": "A prize Middle White boar who is the founder of Animalism and is revered by the animals."
+  },
+  "places": {
+    "Manor Farm": "The farm where the animals live and work, which has been renamed Animal Farm.",
+    "Animal Farm": "The farm where the animals live and work, which was formerly known as Manor Farm.",
+    "The Big Barn": "A large barn where the animals hold meetings and gatherings.",
+    "The Hayfield": "A field where the animals harvest hay, which was a major success.",
+    "The Farmhouse": "The house where Mr. Jones and his family lived, which is now a museum."
+  },
+  "scene_title": "The Animals' Rebellion on Manor Farm",
+  "prompt": "A dramatic and detailed scene of a group of animals, led by pigs, cows, horses, and other farm animals, rising up against their human oppressors on a rural farm. The animals, inspired by the words of a wise old boar named Major, have been secretly planning a rebellion for months. They are determined to take control of the farm and create a new society where all animals are equal. The scene opens on a sunny summer day, with the animals gathered in the big barn, listening to Major's speech. The animals are shown to be a diverse group, with different breeds and personalities, but they are united in their desire for freedom and equality. As Major speaks, the animals are shown to be deeply moved, and they begin to sing a rousing song, 'Beasts of England'. The scene then cuts to the animals' successful rebellion against the humans, with the animals chasing the humans off the farm and taking control. The animals are shown to be jubilant, with some of them dancing and singing, while others are shown to be more subdued, reflecting on the significance of their victory. The scene ends with the animals gathered around the farmhouse, looking at the Seven Commandments, which have been painted on the wall. The Commandments are a set of principles that the animals have created to guide their new society, and they are shown to be a key part of the animals' vision for a better future.",
+  "image": "https://im.runware.ai/image/ws/2/ii/c2438bdd-9d1c-45b4-ad49-f78122b11477.webp",
+  "audio": false,
+  "is_done": false
 }
