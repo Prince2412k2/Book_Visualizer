@@ -1,7 +1,7 @@
 # TODO: Implement saving and caching also merge audio genration
 
 import threading
-
+import asyncio
 from typing import Any, Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
 from dataclasses import dataclass
@@ -289,6 +289,8 @@ class SummaryLoop:
         )
 
     def run(self) -> None:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
@@ -341,6 +343,7 @@ class SummaryLoop:
 
             past_context = chunk
             logger.warning(f"[Summary] : {status_code=} error getting{id=}")
+        loop.close()
 
     def handle_validation_error(self, input_text):
         message = self.summary_handler.validation_messages(input_text)
@@ -495,6 +498,8 @@ class PromptLoop(BaseModel):
     prompt_handler: Prompt
 
     def run(self) -> None:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
@@ -528,6 +533,7 @@ class PromptLoop(BaseModel):
                 logger.warning(f"[Prompt] : {status_code=} error getting{idx=}")
             is_done = self.book.is_prompt_done()
         logger.info("[Prompt] : Prompts Done for ALL Chunks")
+        loop.close()
 
     def handle_validation_error(self, input_text):
         message = self.prompt_handler.validation_messages(input_text)
@@ -606,6 +612,8 @@ class ImageLoop(BaseModel):
     image_handler: Image
 
     def run(self) -> None:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
         """
         Assuming book comes in the form of ((id,title_chapter,chapter_content),..)
         """
@@ -635,6 +643,7 @@ class ImageLoop(BaseModel):
         while not self.book.is_done():
             time.sleep(1)
         logger.info("[Image] : Prompts Done for ALL Chunks")
+        loop.close()
 
 
 def process_book(book: Book):

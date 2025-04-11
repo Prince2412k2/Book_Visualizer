@@ -5,6 +5,7 @@ from PIL import Image as pil_img
 from io import BytesIO
 import uuid
 import aiohttp
+import aiofiles
 import asyncio
 
 from logger_module import logger
@@ -49,7 +50,8 @@ from pydantic import BaseModel, ValidationError
 #             logger.error("Response was empty")
 #     except Exception as e:
 # logger.error(f"Failed to save image at {path} : {e}")
-#
+
+
 async def fetch_image_with_retries(
     session: aiohttp.ClientSession, url: str, retries: int = 3, delay: int = 2
 ) -> Optional[bytes]:
@@ -68,22 +70,38 @@ async def fetch_image_with_retries(
                 raise Exception(f"All {retries} attempts failed for URL: {url}")
 
 
-async def save_img(path: str, url: str) -> None:
+async def save_image(path: str, img_bytes: bytes) -> None:
+    try:
+        buffer = BytesIO()
+        image = pil_img.open(BytesIO(img_bytes))
+        image.save(buffer, format="WEBP")
+        webp_bytes = buffer.getvalue()
+
+        async with aiofiles.open(path, "wb") as f:
+            await f.write(webp_bytes)
+
+        logger.info(f"Image saved at: {path}")
+    except Exception as e:
+        logger.error(f"Error in async image saving: {e}")
+
+
+async def fetch_and_save_image(url: str, path: str) -> None:
     async with aiohttp.ClientSession() as session:
         try:
-            img_bytes = await fetch_image_with_retries(session=session, url=url)
+            img_bytes = await fetch_image_with_retries(session, url)
             if img_bytes:
-                # Offload blocking PIL image processing to thread
-                def save_image():
-                    image = pil_img.open(BytesIO(img_bytes))
-                    image.save(path, format="WEBP")
-                    logger.info(f"Image saved at: {path}")
-
-                await asyncio.to_thread(save_image)
-            else:
-                logger.error("Response was empty")
+                await save_image(path, img_bytes)
         except Exception as e:
-            logger.error(f"Failed to save image at {path} : {e}")
+            logger.error(f"Failed to fetch and save image from {url}: {e}")
+
+
+async def save_audio(content: bytes, path: str) -> None:
+    try:
+        async with aiofiles.open(path, "wb") as f:
+            await f.write(content)
+        logger.info(f"Audio saved at: {path}")
+    except Exception as e:
+        logger.error(f"Failed to save audio at {path}: {e}")
 
 
 class ChunkState(BaseModel):
@@ -127,8 +145,8 @@ class Chunk:
         if not os.path.exists(self.path):
             os.mkdir(self.path)
 
-        logger.trace(f"Chunk : {self.chunk_id} set")
         self.init()
+        logger.trace(f"Chunk : {self.chunk_id} set")
 
     def init(self):
         if not self.load_it():
@@ -171,8 +189,13 @@ class Chunk:
         self.image_url = url
         self.image_id = task_id
         # save_img(url=url, path=f)
-        asyncio.create_task(save_img(url=url, path=f"{self.path}/img.webp"))
+        asyncio.create_task(fetch_and_save_image(url=url, path=f"{self.path}/img.webp"))
         self.dump_it()
+
+    def set_audio(self, content: bytes):
+        temp_path = f"{self.path}/.mp3"
+        self.chunk_state.audio = True
+        asyncio.create_task(save_audio(content=content, path=temp_path))
 
     def get_sum(self):
         return SummaryInputSchema(
@@ -200,7 +223,7 @@ class Chunk:
         if os.path.exists(state_path):
             with open(state_path, "r") as file:
                 try:
-                    self.book_state = ChunkState.model_validate_json(file.read())
+                    self.chunk_state = ChunkState.model_validate_json(file.read())
                 except ValidationError:
                     return False
                 logger.info("Loading chunk from state")
@@ -396,7 +419,34 @@ def main() -> None:
         "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
     )
     loop.close()
-    print(book)
+    for i in book.get_chunks():
+        i = i.chunk_state
+        assert i
+        # if not i.places or not i.characters:
+        #   continue
+        print("-" * 50)
+        print(f"Chapter:{i.chunk_id}")
+
+        print("Summary")
+        print(f"\t - {i.summary}")
+        print()
+
+        print("characters")
+        for k, v in i.characters.items():
+            print(f"\t - {k} : {v}")
+        print()
+
+        print("places")
+        for k, v in i.places.items():
+            print(f"\t - {k} : {v}")
+
+        print("prompt")
+        print(f"{i.scene_title} : {i.prompt} ")
+        print("\n\n")
+
+        print("IMAGE")
+        print(f"{i.scene_title} : {i.image} ")
+        print("\n\n")
 
 
 def test():
