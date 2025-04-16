@@ -4,7 +4,6 @@ from typing import List, Optional, Dict, Union
 from PIL import Image as pil_img
 from io import BytesIO
 import uuid
-import asyncio
 import requests
 import time
 
@@ -13,43 +12,6 @@ from api_module.schemas.base import SummaryInputSchema
 from base_reader import HTMLtoLines, get_ebook_cls, Epub, Azw3, Mobi
 from utils import Chunker, get_chunker
 from pydantic import BaseModel, ValidationError
-
-
-# def fetch_image_with_retries(
-#     session, url: str, retries: int = 3, delay: int = 2
-# ) -> Optional[bytes]:
-#     for attempt in range(1, retries + 1):
-#         try:
-#             response = session.get(url)
-#             if response.status_code == 200:
-#                 return response.content
-#             else:
-#                 raise Exception(f"Status code: {response.status_code}")
-#         except Exception as e:
-#             logger.warning(f"Attempt {attempt} failed to fetch image: {e}")
-#             if attempt < retries:
-#                 time.sleep(delay)
-#             else:
-#                 raise Exception(f"All {retries} attempts failed for URL: {url}")
-
-
-#
-# def save_img(path: str, url: str) -> None:
-#     session = requests.session()
-#
-#     try:
-#         img_bytes = fetch_image_with_retries(
-#             session=session,
-#             url=url,
-#         )
-#         if img_bytes:
-#             image = pil_img.open(BytesIO(img_bytes))
-#             image.save(path, format="WEBP")
-#             logger.info(f"Image saved at: {path}")
-#         else:
-#             logger.error("Response was empty")
-#     except Exception as e:
-# logger.error(f"Failed to save image at {path} : {e}")
 
 
 def fetch_image_with_retries(
@@ -198,11 +160,16 @@ class Chunk:
         self.image_url = url
         self.image_id = task_id
         # save_img(url=url, path=f)
-        fetch_and_save_image(url=url, path=f"{self.path}/img.webp")
+        try:
+            fetch_and_save_image(url=url, path=f"{self.path}/img.webp")
+            assert self.chunk_state
+            self.chunk_state.image = url
+        except Exception as e:
+            print("error saving image : ", e)
         self.dump_it()
 
     def set_audio(self, content: bytes):
-        temp_path = f"{self.path}/.mp3"
+        temp_path = f"{self.path}/audio.mp3"
         assert self.chunk_state
         self.audio = True
         self.chunk_state.audio = True
@@ -427,11 +394,15 @@ def main() -> None:
         "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
     )
     for i in book.get_chunks():
-        assert i
+        print(i.chapter_id, " ", i.chunk_id)
+        if i.image_url:
+            continue
+
+        # assert i
         # if not i.places or not i.characters:
         #   continue
         print("-" * 50)
-        print(f"Chapter:{i.chunk_id}")
+        print(f"Chapter:{i.chapter_id}-{i.chunk_id}")
 
         print("Summary")
         print(f"\t - {i.summary}")
@@ -453,6 +424,7 @@ def main() -> None:
         print("IMAGE")
         print(f"{i.scene_title} : {i.image_url} ")
         print("\n\n")
+        break
 
 
 if __name__ == "__main__":

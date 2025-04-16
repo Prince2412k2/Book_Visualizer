@@ -8,6 +8,7 @@ import json
 import uuid
 
 from reader_new import Book, Chunk
+from audio_module import Audio, AudioLoop
 from logger_module import logger
 import requests
 import time
@@ -614,6 +615,7 @@ class ImageLoop(BaseModel):
             for idx, chunk in enumerate(self.book.get_chunks()):
                 if chunk.image_url or not chunk.prompt:
                     continue
+                continue
                 payload = ImageRequestSchema(positivePrompt=STYLE_TAG + chunk.prompt)
 
                 status_code, response = self.image_handler.get(
@@ -639,6 +641,7 @@ class ImageLoop(BaseModel):
 def process_book(book: Book):
     groq_api = os.environ.get("GROQ_API")
     img_api = os.environ.get("IMAGE_API")
+    service_account_json = "./exalted-skein-446217-e2-e83f57244ce8.json"
     if not groq_api:
         raise Exception("GROQ_API NOT SET IN .env")
     if not img_api:
@@ -651,22 +654,27 @@ def process_book(book: Book):
     sum = Summary(api_key=groq_api)
     prompt = Prompt(api_key=groq_api)
     image = Image(api_key=img_api)
+    auido = Audio(service_acc_path=service_account_json)
 
     looper_sum = SummaryLoop(book=book, summary_handler=sum)
     looper_prompt = PromptLoop(book=book, prompt_handler=prompt)
     looper_img = ImageLoop(book=book, image_handler=image)
+    audio_loop = AudioLoop(book=book, audio_handler=auido)
 
     thread_img = threading.Thread(target=looper_img.run)
     thread_prompt = threading.Thread(target=looper_prompt.run)
     thread_sum = threading.Thread(target=looper_sum.run)
+    thread_audio = threading.Thread(target=audio_loop.run)
 
     thread_img.start()
     thread_prompt.start()
     thread_sum.start()
+    thread_audio.start()
 
     thread_img.join()
     thread_prompt.join()
     thread_sum.join()
+    thread_audio.join()
 
 
 def test() -> None:

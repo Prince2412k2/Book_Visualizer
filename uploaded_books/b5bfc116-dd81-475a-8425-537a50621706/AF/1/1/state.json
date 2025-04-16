@@ -1,12 +1,16 @@
 {
-  "chunk_id": "1",
-  "chapter_id": "1",
-  "summary": "",
-  "characters": {},
-  "places": {},
-  "scene_title": "",
-  "prompt": "",
-  "image": "",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "1",
+    "chapter_id": "1",
+    "summary": "This chapter introduces the novel 'Animal Farm' by George Orwell, first published in 1944. It explains the public domain status of the work in Australia but warns readers to check applicable copyright laws in their country before downloading. The chapter also provides metadata about the eBook, including its publisher, the University of Adelaide Library, and the date of last update.",
+    "characters": {
+        "George Orwell": "Author of the novel 'Animal Farm', described as a British novelist and journalist."
+    },
+    "places": {
+        "University of Adelaide": "A university located in South Australia, described as having a library that publishes eBooks."
+    },
+    "scene_title": "Rustic Farm Setting at Dawn",
+    "prompt": "A serene, golden-hued farm landscape at dawn, with rolling hills and lush green pastures stretching towards the horizon. A rustic, weathered farmhouse stands in the distance, its wooden facade worn from years of exposure to the elements. The sky above is a kaleidoscope of warm colors, transitioning from deep blues and purples to vibrant oranges and pinks. A gentle mist rises from the earth, casting a mystical aura over the scene. In the foreground, a wooden fence, overgrown with vines and wildflowers, adds a touch of whimsy to the composition. The atmosphere is peaceful, with a sense of hope and renewal in the air.",
+    "image": "https://im.runware.ai/image/ws/2/ii/4adab874-de49-4e0a-b19f-1020260c93c2.webp",
+    "audio": false,
+    "is_done": false
 }

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "1",
+  "chapter_id": "2",
+  "summary": "This chapter introduces the novel 'Animal Farm' by George Orwell, first published in 1944. The text is in the public domain in Australia, but copyright laws vary in other countries. The chapter mentions the publication details, including the publisher eBooks@Adelaide and the University of Adelaide Library. It also provides a table of contents for the novel, listing the chapters from 1 to 10. To be continued.",
+  "characters": {
+    "George Orwell": "Author of the novel 'Animal Farm', born in 1903, and known for his dystopian novels."
+  },
+  "places": {
+    "University of Adelaide Library": "A library located in the University of Adelaide, South Australia, 5005, known for its vast collection of books and digital resources.",
+    "South Australia": "A state in Australia, known for its beautiful beaches, wine regions, and cultural attractions."
+  },
+  "scene_title": "A rustic farm setting with a sense of rebellion and social commentary",
+  "prompt": "A serene, moonlit farm scene with a weathered wooden barn in the background, surrounded by rolling hills and lush green pastures. In the foreground, a group of farm animals, including pigs, horses, and cows, are gathered around a makeshift table, engaged in a heated discussion, with a large, old oak tree looming in the background. The atmosphere is tense, with a sense of rebellion and social commentary hanging in the air. The color palette is muted, with shades of green, brown, and gray dominating the scene. The lighting is soft and diffused, with the moon casting a silver glow over the entire scene. In the distance, the silhouette of a university library can be seen, a reminder of the intellectual and literary pursuits that have inspired this gathering of animals. The overall mood is one of contemplation and introspection, as the animals grapple with the complexities of power, corruption, and the human condition.",
+  "image": "https://im.runware.ai/image/ws/2/ii/80a08787-64bf-4803-8b6c-604478d24a1c.webp",
+  "audio": false,
+  "is_done": false
+}

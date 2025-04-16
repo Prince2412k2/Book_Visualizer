@@ -1,7 +1,7 @@
 from google.cloud import texttospeech
 import os
 from dotenv import load_dotenv
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 from logger_module import logger
@@ -58,12 +58,16 @@ class AudioLoop(BaseModel):
 
 
 def test():
-    from reader import ebook
+    from reader_new import Book
 
-    book = ebook("./exp_book/LP.epub")
+    book = Book("./exp_book/LP.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706")
     service_account_json = "./exalted-skein-446217-e2-e83f57244ce8.json"
     auido_handler = Audio(service_acc_path=service_account_json)
-    audio_loop = AudioLoop(book=book, auido_handler=auido_handler)
+    audio_loop = AudioLoop(
+        book=book,
+        audio_handler=auido_handler,
+    )
+    audio_loop.run()
 
 
 if __name__ == "__main__":
