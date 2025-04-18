@@ -174,6 +174,7 @@ class Chunk:
         self.audio = True
         self.chunk_state.audio = True
         save_audio(content=content, path=temp_path)
+        self.dump_it()
 
     def get_sum(self):
         return SummaryInputSchema(
@@ -357,6 +358,9 @@ class Book:
 
     def is_prompt_done(self) -> bool:
         return all(i.prompt != "" for i in self.get_chunks())
+
+    def is_audio_done(self) -> bool:
+        return all(i.audio for i in self.get_chunks())
 
     def is_img_done(self) -> bool:
         return all(i.image_url != "" for i in self.get_chunks())

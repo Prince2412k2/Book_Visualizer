@@ -1,24 +1,24 @@
 {
-  "chunk_id": "2",
-  "chapter_id": "11",
-  "summary": "The animals on Animal Farm are working hard to build a windmill, but they are divided on the issue. Snowball and Napoleon are at odds over the project, with Snowball advocating for its construction and Napoleon opposing it. The animals are also discussing the defense of the farm, with Snowball suggesting that they send out more pigeons to stir up rebellion among the animals on other farms. Meanwhile, Mollie has disappeared, and there are rumors that she has been seen with a man from Foxwood. The pigs are planning for the coming season, and the animals are preparing for the possibility of another attack from the humans.",
-  "characters": {
-    "Snowball": "a pig who is advocating for the construction of the windmill and is a key figure in the rebellion",
-    "Napoleon": "a pig who is opposing the construction of the windmill and is a rival of Snowball",
-    "Mollie": "a horse who has disappeared and is rumored to have been seen with a man from Foxwood",
-    "Boxer": "a horse who is a loyal supporter of the rebellion and is concerned about the windmill project",
-    "Benjamin": "a donkey who is skeptical of the windmill project and is concerned about the animals' well-being",
-    "Clover": "a horse who is a loyal supporter of the rebellion and is concerned about Mollie's disappearance"
-  },
-  "places": {
-    "Animal Farm": "the farm where the animals are living and working",
-    "Foxwood": "a neighboring farm where Mollie is rumored to have been seen",
-    "Willingdon": "a nearby town where the animals have been in contact with humans",
-    "Red Lion": "a pub in Willingdon where Mr. Jones has been drinking and complaining about the rebellion"
-  },
-  "scene_title": "A divided farm, where the pigs are at odds over the windmill and the future of Animal Farm.",
-  "prompt": "A detailed, atmospheric scene of Animal Farm, with the pigs, Snowball and Napoleon, standing in the middle of a large barn, surrounded by the other animals. The air is tense with disagreement and the sound of bleating from the sheep can be heard in the background. The walls of the barn are adorned with the Seven Commandments and the words 'Four legs good, two legs bad' are emblazoned on the end wall. Snowball is standing on a raised platform, addressing the crowd with a passionate speech about the benefits of the windmill, while Napoleon stands quietly to one side, his eyes fixed intently on Snowball. The dogs, huge and fierce-looking, are standing by Napoleon's side, their tails wagging in a menacing way. The animals are divided, some supporting Snowball's vision for the future, while others are swayed by Napoleon's more cautious approach. The scene is one of high tension and uncertainty, as the fate of Animal Farm hangs in the balance.",
-  "image": "https://im.runware.ai/image/ws/2/ii/9d960406-095a-4808-a230-6d8ca6a55883.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "2",
+    "chapter_id": "11",
+    "summary": "The animals on Animal Farm are working hard to build a windmill, but they are divided on the issue. Snowball and Napoleon are at odds over the project, with Snowball advocating for its construction and Napoleon opposing it. The animals are also discussing the defense of the farm, with Snowball suggesting that they send out more pigeons to stir up rebellion among the animals on other farms. Meanwhile, Mollie has disappeared, and there are rumors that she has been seen with a man from Foxwood. The pigs are planning for the coming season, and the animals are preparing for the possibility of another attack from the humans.",
+    "characters": {
+        "Snowball": "a pig who is advocating for the construction of the windmill and is a key figure in the rebellion",
+        "Napoleon": "a pig who is opposing the construction of the windmill and is a rival of Snowball",
+        "Mollie": "a horse who has disappeared and is rumored to have been seen with a man from Foxwood",
+        "Boxer": "a horse who is a loyal supporter of the rebellion and is concerned about the windmill project",
+        "Benjamin": "a donkey who is skeptical of the windmill project and is concerned about the animals' well-being",
+        "Clover": "a horse who is a loyal supporter of the rebellion and is concerned about Mollie's disappearance"
+    },
+    "places": {
+        "Animal Farm": "the farm where the animals are living and working",
+        "Foxwood": "a neighboring farm where Mollie is rumored to have been seen",
+        "Willingdon": "a nearby town where the animals have been in contact with humans",
+        "Red Lion": "a pub in Willingdon where Mr. Jones has been drinking and complaining about the rebellion"
+    },
+    "scene_title": "A divided farm, where the pigs are at odds over the windmill and the future of Animal Farm.",
+    "prompt": "A detailed, atmospheric scene of Animal Farm, with the pigs, Snowball and Napoleon, standing in the middle of a large barn, surrounded by the other animals. The air is tense with disagreement and the sound of bleating from the sheep can be heard in the background. The walls of the barn are adorned with the Seven Commandments and the words 'Four legs good, two legs bad' are emblazoned on the end wall. Snowball is standing on a raised platform, addressing the crowd with a passionate speech about the benefits of the windmill, while Napoleon stands quietly to one side, his eyes fixed intently on Snowball. The dogs, huge and fierce-looking, are standing by Napoleon's side, their tails wagging in a menacing way. The animals are divided, some supporting Snowball's vision for the future, while others are swayed by Napoleon's more cautious approach. The scene is one of high tension and uncertainty, as the fate of Animal Farm hangs in the balance.",
+    "image": "https://im.runware.ai/image/ws/2/ii/9d960406-095a-4808-a230-6d8ca6a55883.webp",
+    "audio": true,
+    "is_done": false
 }

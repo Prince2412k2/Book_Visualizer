@@ -11,6 +11,6 @@
     "scene_title": "Rustic Farm Setting at Dawn",
     "prompt": "A serene, golden-hued farm landscape at dawn, with rolling hills and lush green pastures stretching towards the horizon. A rustic, weathered farmhouse stands in the distance, its wooden facade worn from years of exposure to the elements. The sky above is a kaleidoscope of warm colors, transitioning from deep blues and purples to vibrant oranges and pinks. A gentle mist rises from the earth, casting a mystical aura over the scene. In the foreground, a wooden fence, overgrown with vines and wildflowers, adds a touch of whimsy to the composition. The atmosphere is peaceful, with a sense of hope and renewal in the air.",
     "image": "https://im.runware.ai/image/ws/2/ii/4adab874-de49-4e0a-b19f-1020260c93c2.webp",
-    "audio": false,
+    "audio": true,
     "is_done": false
 }

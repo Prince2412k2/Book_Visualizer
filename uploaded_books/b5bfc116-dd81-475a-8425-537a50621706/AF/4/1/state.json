@@ -1,18 +1,18 @@
 {
-  "chunk_id": "1",
-  "chapter_id": "4",
-  "summary": "The animals on Manor Farm, led by Old Major, a wise and benevolent pig, have a dream of a future where they are free from the tyranny of humans. After Old Major's death, the pigs, led by Snowball and Napoleon, begin to teach the other animals about Animalism, a system of thought that emphasizes the importance of unity and the need to overthrow the humans. The animals eventually rebel against Mr. Jones, the owner of the farm, and take control of the farm. They rename the farm to Animal Farm and establish the Seven Commandments, which are inscribed on the wall of the big barn. The animals begin to work together to harvest the hay, but the pigs, led by Napoleon, start to abuse their power and exploit the other animals.",
-  "characters": {
-    "name": "Old Major",
-    "description": "A wise and benevolent pig who had a dream of a future where animals are free from the tyranny of humans."
-  },
-  "places": {
-    "name": "Manor Farm",
-    "description": "A farm where the animals live and work. It is renamed to Animal Farm after the rebellion."
-  },
-  "scene_title": "The Animals' Rebellion on Manor Farm",
-  "prompt": "A dimly lit barn on a misty summer evening, the air thick with anticipation and the scent of damp earth. The animals of Manor Farm, a motley crew of pigs, cows, horses, dogs, and birds, gather around a makeshift platform, their eyes fixed on Old Major, a wise and aged boar with a commanding presence. As he begins to speak, his voice rings out across the barn, his words dripping with passion and conviction. The animals listen intently, their faces aglow with excitement and hope. The atmosphere is electric, the mood one of rebellion and defiance. In the background, the sound of crickets and the distant rumble of thunder add to the sense of foreboding and change. The animals are on the cusp of a revolution, one that will shake the very foundations of their existence. As Old Major's speech comes to a close, the animals erupt into a frenzy of cheers and applause, their voices echoing through the barn like a chorus of freedom. The scene is set for a dramatic and transformative night, one that will change the course of history for the animals of Manor Farm forever.",
-  "image": "https://im.runware.ai/image/ws/2/ii/3ac35b26-36db-4ea0-be44-c15f1a787ba9.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "1",
+    "chapter_id": "4",
+    "summary": "The animals on Manor Farm, led by Old Major, a wise and benevolent pig, have a dream of a future where they are free from the tyranny of humans. After Old Major's death, the pigs, led by Snowball and Napoleon, begin to teach the other animals about Animalism, a system of thought that emphasizes the importance of unity and the need to overthrow the humans. The animals eventually rebel against Mr. Jones, the owner of the farm, and take control of the farm. They rename the farm to Animal Farm and establish the Seven Commandments, which are inscribed on the wall of the big barn. The animals begin to work together to harvest the hay, but the pigs, led by Napoleon, start to abuse their power and exploit the other animals.",
+    "characters": {
+        "name": "Old Major",
+        "description": "A wise and benevolent pig who had a dream of a future where animals are free from the tyranny of humans."
+    },
+    "places": {
+        "name": "Manor Farm",
+        "description": "A farm where the animals live and work. It is renamed to Animal Farm after the rebellion."
+    },
+    "scene_title": "The Animals' Rebellion on Manor Farm",
+    "prompt": "A dimly lit barn on a misty summer evening, the air thick with anticipation and the scent of damp earth. The animals of Manor Farm, a motley crew of pigs, cows, horses, dogs, and birds, gather around a makeshift platform, their eyes fixed on Old Major, a wise and aged boar with a commanding presence. As he begins to speak, his voice rings out across the barn, his words dripping with passion and conviction. The animals listen intently, their faces aglow with excitement and hope. The atmosphere is electric, the mood one of rebellion and defiance. In the background, the sound of crickets and the distant rumble of thunder add to the sense of foreboding and change. The animals are on the cusp of a revolution, one that will shake the very foundations of their existence. As Old Major's speech comes to a close, the animals erupt into a frenzy of cheers and applause, their voices echoing through the barn like a chorus of freedom. The scene is set for a dramatic and transformative night, one that will change the course of history for the animals of Manor Farm forever.",
+    "image": "https://im.runware.ai/image/ws/2/ii/3ac35b26-36db-4ea0-be44-c15f1a787ba9.webp",
+    "audio": true,
+    "is_done": false
 }

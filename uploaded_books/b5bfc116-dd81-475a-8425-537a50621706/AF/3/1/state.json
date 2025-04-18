@@ -1,21 +1,18 @@
 {
-  "chunk_id": "1",
-  "chapter_id": "3",
-  "summary": "This is The first chapeter There is No context",
-  "characters": {
-    "name": "Old Major",
-    "description": "A wise and benevolent pig who had a dream of a future where animals are free from the tyranny of humans."
-  },
-  "places": {
-    "name": "Manor Farm",
-    "description": "A farm where the animals live and work. It is renamed to Animal Farm after the rebellion."
-  },
-  "places": {},
-  "scene_title": "A Stirring Speech in the Barn",
-  "prompt": "A dimly lit, rustic barn filled with a diverse group of farm animals, all gathered around a majestic-looking pig, Old Major, who stands on a raised platform, addressing the crowd with a wise and benevolent expression. The air is thick with anticipation and excitement as the animals listen intently to Old Major's passionate speech, their faces illuminated by the soft glow of a lantern hanging from a beam. The atmosphere is electric, with the animals' eyes shining with a sense of purpose and determination. In the background, a faint light from the moon casts a silver glow on the barn's wooden walls, while the sound of crickets and rustling straw fills the air. The animals' bodies are positioned in a way that conveys their sense of unity and solidarity, with the pigs, dogs, hens, sheep, cows, horses, and even the cat and the ducklings all gathered together, listening to Old Major's words. The overall mood is one of hope and rebellion, as the animals are inspired by Old Major's vision of a future where they are free from the tyranny of human beings and can live in harmony with each other.",
-  "image": " https://im.runware.ai/image/ws/2/ii/3ac35b26-36db-4ea0-be44-c15f1a787ba9.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "1",
+    "chapter_id": "3",
+    "summary": "This is The first chapeter There is No context",
+    "characters": {
+        "name": "Old Major",
+        "description": "A wise and benevolent pig who had a dream of a future where animals are free from the tyranny of humans."
+    },
+    "places": {
+        "name": "Manor Farm",
+        "description": "A farm where the animals live and work. It is renamed to Animal Farm after the rebellion."
+    },
+    "scene_title": "A Stirring Speech in the Barn",
+    "prompt": "A dimly lit, rustic barn filled with a diverse group of farm animals, all gathered around a majestic-looking pig, Old Major, who stands on a raised platform, addressing the crowd with a wise and benevolent expression. The air is thick with anticipation and excitement as the animals listen intently to Old Major's passionate speech, their faces illuminated by the soft glow of a lantern hanging from a beam. The atmosphere is electric, with the animals' eyes shining with a sense of purpose and determination. In the background, a faint light from the moon casts a silver glow on the barn's wooden walls, while the sound of crickets and rustling straw fills the air. The animals' bodies are positioned in a way that conveys their sense of unity and solidarity, with the pigs, dogs, hens, sheep, cows, horses, and even the cat and the ducklings all gathered together, listening to Old Major's words. The overall mood is one of hope and rebellion, as the animals are inspired by Old Major's vision of a future where they are free from the tyranny of human beings and can live in harmony with each other.",
+    "image": " https://im.runware.ai/image/ws/2/ii/3ac35b26-36db-4ea0-be44-c15f1a787ba9.webp",
+    "audio": true,
+    "is_done": false
 }
-
-

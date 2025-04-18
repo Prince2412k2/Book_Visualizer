@@ -615,7 +615,6 @@ class ImageLoop(BaseModel):
             for idx, chunk in enumerate(self.book.get_chunks()):
                 if chunk.image_url or not chunk.prompt:
                     continue
-                continue
                 payload = ImageRequestSchema(positivePrompt=STYLE_TAG + chunk.prompt)
 
                 status_code, response = self.image_handler.get(
@@ -633,7 +632,11 @@ class ImageLoop(BaseModel):
                 logger.warning(f"[Image] : {status_code=} error getting{idx=}")
 
             is_prompt_done = self.book.is_img_done()
+
         while not self.book.is_done():
+            for i in self.book.get_chunks():
+                if i.prompt and i.summary and i.image_url and i.audio:
+                    i.is_done = True
             time.sleep(1)
         logger.info("[Image] : Prompts Done for ALL Chunks")
 
@@ -641,7 +644,7 @@ class ImageLoop(BaseModel):
 def process_book(book: Book):
     groq_api = os.environ.get("GROQ_API")
     img_api = os.environ.get("IMAGE_API")
-    service_account_json = "./exalted-skein-446217-e2-e83f57244ce8.json"
+    service_account_json = "./fine-loader-455404-j7-fb57bc0fa16b.json"
     if not groq_api:
         raise Exception("GROQ_API NOT SET IN .env")
     if not img_api:
@@ -671,10 +674,13 @@ def process_book(book: Book):
     thread_sum.start()
     thread_audio.start()
 
+    """ remove if dont want to wait for processes to finish """
     thread_img.join()
     thread_prompt.join()
     thread_sum.join()
     thread_audio.join()
+
+    return book.book_state
 
 
 def test() -> None:

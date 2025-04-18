@@ -1,26 +1,26 @@
 {
-  "chunk_id": "2",
-  "chapter_id": "10",
-  "summary": "The animals on Animal Farm are preparing for the coming season, but disagreements between Snowball and Napoleon are causing tension. Snowball wants to build a windmill to provide electricity and save labor, while Napoleon argues that they should focus on increasing food production. The animals are divided on the issue, with some supporting Snowball's plan and others backing Napoleon's. Meanwhile, Mollie has gone missing and is believed to have been seen with Mr. Pilkington's men. The pigs are also planning to send out more pigeons to stir up rebellion among the animals on neighboring farms. The situation is becoming increasingly volatile, and it is unclear how the conflict will be resolved.",
-  "characters": {
-    "Snowball": "A pig who is a leader among the animals and is advocating for the building of a windmill to provide electricity and save labor.",
-    "Napoleon": "A pig who is also a leader among the animals and is opposing the windmill plan, arguing that they should focus on increasing food production.",
-    "Mollie": "A horse who has gone missing and is believed to have been seen with Mr. Pilkington's men.",
-    "Boxer": "A horse who is a loyal supporter of the animals and is troubled by the conflict between Snowball and Napoleon.",
-    "Clover": "A horse who is a close friend of Mollie's and is concerned about her disappearance.",
-    "Benjamin": "A donkey who is a wise and experienced animal and is skeptical of the windmill plan.",
-    "Squealer": "A pig who is a skilled orator and is often called upon to explain the pigs' decisions to the other animals."
-  },
-  "places": {
-    "Animal Farm": "The farm where the animals live and work together.",
-    "Foxwood": "A neighboring farm that is owned by Mr. Pilkington.",
-    "Pinchfield": "A neighboring farm that is owned by Mr. Frederick.",
-    "Red Lion": "A pub where Mr. Jones often goes to complain about his situation.",
-    "Willingdon": "A nearby town where Mr. Jones has gone to try to gather support for his cause."
-  },
-  "scene_title": "The Battle for Animal Farm",
-  "prompt": "A dramatic and detailed depiction of a farm in the English countryside, with a sprawling farmhouse and outbuildings, surrounded by lush green fields and forests. In the foreground, a group of animals, including pigs, horses, cows, and sheep, are gathered around a makeshift flagpole, with a green tablecloth bearing a white hoof and horn emblem. The flag is waving gently in the breeze, and the animals are engaged in a heated debate, with some holding signs and banners. In the distance, a group of dogs, including the fierce and intimidating puppies, are watching the scene with interest. The atmosphere is tense and electric, with a sense of anticipation and uncertainty hanging in the air. The lighting is warm and golden, with the sun shining down on the scene, casting long shadows across the ground. In the background, a group of humans, including Mr. Jones and his men, are approaching the farm, armed with sticks and guns, and looking determined to recapture the farm. The animals are ready to defend their home, and the scene is set for a dramatic and intense battle. The style is reminiscent of a classic English landscape painting, with bold brushstrokes and vivid colors. The composition is dynamic and engaging, with a sense of movement and energy. The overall mood is one of excitement and tension, as the animals prepare to face off against their human oppressors.",
-  "image": "https://im.runware.ai/image/ws/2/ii/d412897e-d410-4421-ac21-d6c25450a7a7.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "2",
+    "chapter_id": "10",
+    "summary": "The animals on Animal Farm are preparing for the coming season, but disagreements between Snowball and Napoleon are causing tension. Snowball wants to build a windmill to provide electricity and save labor, while Napoleon argues that they should focus on increasing food production. The animals are divided on the issue, with some supporting Snowball's plan and others backing Napoleon's. Meanwhile, Mollie has gone missing and is believed to have been seen with Mr. Pilkington's men. The pigs are also planning to send out more pigeons to stir up rebellion among the animals on neighboring farms. The situation is becoming increasingly volatile, and it is unclear how the conflict will be resolved.",
+    "characters": {
+        "Snowball": "A pig who is a leader among the animals and is advocating for the building of a windmill to provide electricity and save labor.",
+        "Napoleon": "A pig who is also a leader among the animals and is opposing the windmill plan, arguing that they should focus on increasing food production.",
+        "Mollie": "A horse who has gone missing and is believed to have been seen with Mr. Pilkington's men.",
+        "Boxer": "A horse who is a loyal supporter of the animals and is troubled by the conflict between Snowball and Napoleon.",
+        "Clover": "A horse who is a close friend of Mollie's and is concerned about her disappearance.",
+        "Benjamin": "A donkey who is a wise and experienced animal and is skeptical of the windmill plan.",
+        "Squealer": "A pig who is a skilled orator and is often called upon to explain the pigs' decisions to the other animals."
+    },
+    "places": {
+        "Animal Farm": "The farm where the animals live and work together.",
+        "Foxwood": "A neighboring farm that is owned by Mr. Pilkington.",
+        "Pinchfield": "A neighboring farm that is owned by Mr. Frederick.",
+        "Red Lion": "A pub where Mr. Jones often goes to complain about his situation.",
+        "Willingdon": "A nearby town where Mr. Jones has gone to try to gather support for his cause."
+    },
+    "scene_title": "The Battle for Animal Farm",
+    "prompt": "A dramatic and detailed depiction of a farm in the English countryside, with a sprawling farmhouse and outbuildings, surrounded by lush green fields and forests. In the foreground, a group of animals, including pigs, horses, cows, and sheep, are gathered around a makeshift flagpole, with a green tablecloth bearing a white hoof and horn emblem. The flag is waving gently in the breeze, and the animals are engaged in a heated debate, with some holding signs and banners. In the distance, a group of dogs, including the fierce and intimidating puppies, are watching the scene with interest. The atmosphere is tense and electric, with a sense of anticipation and uncertainty hanging in the air. The lighting is warm and golden, with the sun shining down on the scene, casting long shadows across the ground. In the background, a group of humans, including Mr. Jones and his men, are approaching the farm, armed with sticks and guns, and looking determined to recapture the farm. The animals are ready to defend their home, and the scene is set for a dramatic and intense battle. The style is reminiscent of a classic English landscape painting, with bold brushstrokes and vivid colors. The composition is dynamic and engaging, with a sense of movement and energy. The overall mood is one of excitement and tension, as the animals prepare to face off against their human oppressors.",
+    "image": "https://im.runware.ai/image/ws/2/ii/d412897e-d410-4421-ac21-d6c25450a7a7.webp",
+    "audio": true,
+    "is_done": false
 }

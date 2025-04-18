@@ -1,25 +1,25 @@
 {
-  "chunk_id": "4",
-  "chapter_id": "9",
-  "summary": "The chapter begins with Squealer warning the animals to be vigilant against Snowball's secret agents. Four days later, Napoleon orders the animals to assemble, and he accuses four pigs of being in contact with Snowball. The pigs confess to their crimes, and they are slaughtered. The chapter continues with a series of confessions and executions, with the animals being accused of various crimes and punished accordingly. The chapter ends with the remaining animals being left shaken and miserable, and Boxer suggesting that they work harder to improve their situation. The chapter also describes the animals' desire for a better society, but their fear of speaking out against Napoleon's regime. The chapter ends with Squealer announcing that 'Beasts of England' has been abolished, as the Rebellion is now complete and the song is no longer needed.",
-  "characters": {
-    "Napoleon": "Napoleon is a pig who has taken over the leadership of Animal Farm. He is described as wearing medals and being surrounded by fierce dogs.",
-    "Squealer": "Squealer is a pig who serves as Napoleon's spokesperson. He is described as being able to twist the truth and make the animals believe whatever he wants.",
-    "Boxer": "Boxer is a horse who is one of the strongest animals on the farm. He is described as being loyal and hardworking, but also naive and gullible.",
-    "Snowball": "Snowball is a pig who was one of the leaders of the Rebellion. He is described as being intelligent and charismatic, but also power-hungry and manipulative.",
-    "Clover": "Clover is a horse who is one of the most intelligent and compassionate animals on the farm. She is described as being loyal and hardworking, but also sad and disillusioned with the state of the farm.",
-    "Muriel": "Muriel is a goat who is one of the most intelligent and independent animals on the farm. She is described as being skeptical and critical of Napoleon's regime.",
-    "Minimus": "Minimus is a poet who has written a new song for the animals to sing. He is described as being enthusiastic and patriotic, but also somewhat naive and gullible."
-  },
-  "places": {
-    "Animal Farm": "Animal Farm is a farm that was once owned by Mr. Jones. It is now owned by the animals, who have taken over the leadership and management of the farm. The farm is described as being a place of hard work and struggle, but also of beauty and wonder.",
-    "The Windmill": "The Windmill is a half-finished building on the farm that was intended to be a symbol of the animals' rebellion against Mr. Jones. It is now a symbol of the animals' struggle for power and control.",
-    "The Quarry": "The Quarry is a place on the farm where the animals go to collect stone and other materials for building and repair. It is described as being a place of hard work and danger.",
-    "The Drinking Pool": "The Drinking Pool is a place on the farm where the animals go to drink and socialize. It is described as being a place of beauty and wonder, but also of danger and conflict."
-  },
-  "scene_title": "Terror and Slaughter on Animal Farm",
-  "prompt": "A haunting, golden-lit spring evening on Animal Farm, with the long pasture, hayfield, spinney, drinking pool, ploughed fields, and red farm buildings visible from a knoll where a group of animals, including Clover, Muriel, Benjamin, cows, sheep, and geese, huddle together in fear and shock, surrounded by the aftermath of a brutal execution of their comrades, with the windmill looming in the background. The atmosphere is tense, with fierce growling dogs roaming the area, and the animals' faces etched with worry and despair. In the distance, Boxer can be seen working hard, collecting stone and dragging it to the windmill, as if trying to distract himself from the horrors that have unfolded. The sky is clear, with the sun's level rays casting a golden glow over the scene, highlighting the stark contrast between the beauty of nature and the brutality of the animals' actions.",
-  "image": "https://im.runware.ai/image/ws/2/ii/571aa2c2-1473-4e6f-942d-d70cebbdb1a4.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "4",
+    "chapter_id": "9",
+    "summary": "The chapter begins with Squealer warning the animals to be vigilant against Snowball's secret agents. Four days later, Napoleon orders the animals to assemble, and he accuses four pigs of being in contact with Snowball. The pigs confess to their crimes, and they are slaughtered. The chapter continues with a series of confessions and executions, with the animals being accused of various crimes and punished accordingly. The chapter ends with the remaining animals being left shaken and miserable, and Boxer suggesting that they work harder to improve their situation. The chapter also describes the animals' desire for a better society, but their fear of speaking out against Napoleon's regime. The chapter ends with Squealer announcing that 'Beasts of England' has been abolished, as the Rebellion is now complete and the song is no longer needed.",
+    "characters": {
+        "Napoleon": "Napoleon is a pig who has taken over the leadership of Animal Farm. He is described as wearing medals and being surrounded by fierce dogs.",
+        "Squealer": "Squealer is a pig who serves as Napoleon's spokesperson. He is described as being able to twist the truth and make the animals believe whatever he wants.",
+        "Boxer": "Boxer is a horse who is one of the strongest animals on the farm. He is described as being loyal and hardworking, but also naive and gullible.",
+        "Snowball": "Snowball is a pig who was one of the leaders of the Rebellion. He is described as being intelligent and charismatic, but also power-hungry and manipulative.",
+        "Clover": "Clover is a horse who is one of the most intelligent and compassionate animals on the farm. She is described as being loyal and hardworking, but also sad and disillusioned with the state of the farm.",
+        "Muriel": "Muriel is a goat who is one of the most intelligent and independent animals on the farm. She is described as being skeptical and critical of Napoleon's regime.",
+        "Minimus": "Minimus is a poet who has written a new song for the animals to sing. He is described as being enthusiastic and patriotic, but also somewhat naive and gullible."
+    },
+    "places": {
+        "Animal Farm": "Animal Farm is a farm that was once owned by Mr. Jones. It is now owned by the animals, who have taken over the leadership and management of the farm. The farm is described as being a place of hard work and struggle, but also of beauty and wonder.",
+        "The Windmill": "The Windmill is a half-finished building on the farm that was intended to be a symbol of the animals' rebellion against Mr. Jones. It is now a symbol of the animals' struggle for power and control.",
+        "The Quarry": "The Quarry is a place on the farm where the animals go to collect stone and other materials for building and repair. It is described as being a place of hard work and danger.",
+        "The Drinking Pool": "The Drinking Pool is a place on the farm where the animals go to drink and socialize. It is described as being a place of beauty and wonder, but also of danger and conflict."
+    },
+    "scene_title": "Terror and Slaughter on Animal Farm",
+    "prompt": "A haunting, golden-lit spring evening on Animal Farm, with the long pasture, hayfield, spinney, drinking pool, ploughed fields, and red farm buildings visible from a knoll where a group of animals, including Clover, Muriel, Benjamin, cows, sheep, and geese, huddle together in fear and shock, surrounded by the aftermath of a brutal execution of their comrades, with the windmill looming in the background. The atmosphere is tense, with fierce growling dogs roaming the area, and the animals' faces etched with worry and despair. In the distance, Boxer can be seen working hard, collecting stone and dragging it to the windmill, as if trying to distract himself from the horrors that have unfolded. The sky is clear, with the sun's level rays casting a golden glow over the scene, highlighting the stark contrast between the beauty of nature and the brutality of the animals' actions.",
+    "image": "https://im.runware.ai/image/ws/2/ii/571aa2c2-1473-4e6f-942d-d70cebbdb1a4.webp",
+    "audio": true,
+    "is_done": false
 }

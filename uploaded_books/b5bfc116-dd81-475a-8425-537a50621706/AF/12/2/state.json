@@ -1,25 +1,25 @@
 {
-  "chunk_id": "2",
-  "chapter_id": "12",
-  "summary": "The animals on Animal Farm are preparing for the coming season, with the pigs deciding on farm policy. Snowball and Napoleon are in disagreement over various issues, including the windmill and the defence of the farm. Snowball's plans for the windmill are fully worked out, but Napoleon is against it. The animals are divided on the issue, with some supporting Snowball and others supporting Napoleon. Meanwhile, Mollie has disappeared, and it is revealed that she has been seen on the other side of Willingdon, being stroked by a publican and fed sugar. The animals are shocked and saddened by this news. The chapter ends with the animals still divided on the issue of the windmill, and Napoleon's announcement that the Sunday-morning Meetings will come to an end.",
-  "characters": {
-    "Snowball": "A pig who is one of the leaders of the animals on Animal Farm. He is intelligent and has a vision for the future of the farm.",
-    "Napoleon": "A pig who is also one of the leaders of the animals on Animal Farm. He is cunning and power-hungry, and is opposed to Snowball's plans for the windmill.",
-    "Mollie": "A horse who is one of the animals on Animal Farm. She is vain and self-absorbed, and has been seen flirting with a publican on the other side of Willingdon.",
-    "Boxer": "A horse who is one of the animals on Animal Farm. He is strong and loyal, but is also naive and easily influenced.",
-    "Clover": "A horse who is one of the animals on Animal Farm. She is kind and gentle, and is concerned about Mollie's disappearance.",
-    "Benjamin": "A donkey who is one of the animals on Animal Farm. He is wise and cynical, and is opposed to the idea of the windmill.",
-    "Squealer": "A pig who is one of the leaders of the animals on Animal Farm. He is clever and persuasive, but is also deceitful and manipulative."
-  },
-  "places": {
-    "Animal Farm": "The farm where the animals live and work. It is a small, rural farm with a mix of fields, pastures, and woodland.",
-    "Willingdon": "A nearby town where the animals go to trade and socialize. It is a bustling, commercial center with shops, pubs, and other amenities.",
-    "Foxwood": "A neighboring farm that is owned by Mr. Pilkington. It is a large, neglected farm with overgrown pastures and worn-out hedges.",
-    "Pinchfield": "A neighboring farm that is owned by Mr. Frederick. It is a smaller, better-kept farm with a reputation for being tough and shrewd."
-  },
-  "scene_title": "The Battle for Animal Farm",
-  "prompt": "A dramatic and intense scene depicting the animals of Animal Farm defending their home against the invading humans, led by Mr. Jones. The farm is a lush green landscape with rolling hills and a large barn in the center. The animals are a diverse group of creatures, each with their unique characteristics and abilities. Snowball, a charismatic and intelligent pig, leads the charge against the humans, using his cunning and bravery to outmaneuver them. Boxer, a powerful and loyal horse, plays a crucial role in the battle, using his strength and agility to take down the humans. The scene is set against a backdrop of a beautiful sunset, with the sky painted in shades of orange and pink. The atmosphere is tense and suspenseful, with the animals working together to defend their home against the invaders. In the foreground, the flag of Animal Farm waves proudly, symbolizing the animals' determination and unity. The camera pans out to reveal the vast expanse of the farm, with the animals scattered across the landscape, each one fighting for their freedom and their home.",
-  "image": "https://im.runware.ai/image/ws/2/ii/65c91c64-6439-45b3-9dcd-d8bf5e6ab3cc.webp",
-  "audio": false,
-  "is_done": false
+    "chunk_id": "2",
+    "chapter_id": "12",
+    "summary": "The animals on Animal Farm are preparing for the coming season, with the pigs deciding on farm policy. Snowball and Napoleon are in disagreement over various issues, including the windmill and the defence of the farm. Snowball's plans for the windmill are fully worked out, but Napoleon is against it. The animals are divided on the issue, with some supporting Snowball and others supporting Napoleon. Meanwhile, Mollie has disappeared, and it is revealed that she has been seen on the other side of Willingdon, being stroked by a publican and fed sugar. The animals are shocked and saddened by this news. The chapter ends with the animals still divided on the issue of the windmill, and Napoleon's announcement that the Sunday-morning Meetings will come to an end.",
+    "characters": {
+        "Snowball": "A pig who is one of the leaders of the animals on Animal Farm. He is intelligent and has a vision for the future of the farm.",
+        "Napoleon": "A pig who is also one of the leaders of the animals on Animal Farm. He is cunning and power-hungry, and is opposed to Snowball's plans for the windmill.",
+        "Mollie": "A horse who is one of the animals on Animal Farm. She is vain and self-absorbed, and has been seen flirting with a publican on the other side of Willingdon.",
+        "Boxer": "A horse who is one of the animals on Animal Farm. He is strong and loyal, but is also naive and easily influenced.",
+        "Clover": "A horse who is one of the animals on Animal Farm. She is kind and gentle, and is concerned about Mollie's disappearance.",
+        "Benjamin": "A donkey who is one of the animals on Animal Farm. He is wise and cynical, and is opposed to the idea of the windmill.",
+        "Squealer": "A pig who is one of the leaders of the animals on Animal Farm. He is clever and persuasive, but is also deceitful and manipulative."
+    },
+    "places": {
+        "Animal Farm": "The farm where the animals live and work. It is a small, rural farm with a mix of fields, pastures, and woodland.",
+        "Willingdon": "A nearby town where the animals go to trade and socialize. It is a bustling, commercial center with shops, pubs, and other amenities.",
+        "Foxwood": "A neighboring farm that is owned by Mr. Pilkington. It is a large, neglected farm with overgrown pastures and worn-out hedges.",
+        "Pinchfield": "A neighboring farm that is owned by Mr. Frederick. It is a smaller, better-kept farm with a reputation for being tough and shrewd."
+    },
+    "scene_title": "The Battle for Animal Farm",
+    "prompt": "A dramatic and intense scene depicting the animals of Animal Farm defending their home against the invading humans, led by Mr. Jones. The farm is a lush green landscape with rolling hills and a large barn in the center. The animals are a diverse group of creatures, each with their unique characteristics and abilities. Snowball, a charismatic and intelligent pig, leads the charge against the humans, using his cunning and bravery to outmaneuver them. Boxer, a powerful and loyal horse, plays a crucial role in the battle, using his strength and agility to take down the humans. The scene is set against a backdrop of a beautiful sunset, with the sky painted in shades of orange and pink. The atmosphere is tense and suspenseful, with the animals working together to defend their home against the invaders. In the foreground, the flag of Animal Farm waves proudly, symbolizing the animals' determination and unity. The camera pans out to reveal the vast expanse of the farm, with the animals scattered across the landscape, each one fighting for their freedom and their home.",
+    "image": "https://im.runware.ai/image/ws/2/ii/65c91c64-6439-45b3-9dcd-d8bf5e6ab3cc.webp",
+    "audio": true,
+    "is_done": false
 }
