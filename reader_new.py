@@ -8,7 +8,7 @@ import requests
 import time
 
 from logger_module import logger
-from api_module.schemas.base import SummaryInputSchema
+from .api_module import SummaryContentSchema
 from base_reader import HTMLtoLines, get_ebook_cls, Epub, Azw3, Mobi
 from utils import Chunker, get_chunker
 from pydantic import BaseModel, ValidationError
@@ -177,7 +177,7 @@ class Chunk:
         self.dump_it()
 
     def get_sum(self):
-        return SummaryInputSchema(
+        return SummaryContentSchema(
             past_context=self.summary,
             character_list=self.characters,
             places_list=self.places,
@@ -287,9 +287,12 @@ class Book:
     def __post_init__(self):
         if not self.name:
             self.name = os.path.splitext(self.path)[0]
-            self.name = self.name.split("/")[-1]
+            self.name = self.name.split(os.sep)[-1]
 
-        self.path_content = f"./uploaded_books/{self.user_id}/{self.name}"
+        self.path_content = (
+            self.path_content + f"./uploaded_books/{self.user_id}/{self.name}"
+        )
+
         if not os.path.exists(self.path_content):
             os.makedirs(self.path_content)
         else:

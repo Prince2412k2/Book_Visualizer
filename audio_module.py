@@ -33,7 +33,6 @@ class Audio:
 
     def synthesize_speech(self, text: str, id: str) -> Optional[bytes]:
         input_text = texttospeech.SynthesisInput(text=text)
-
         try:
             response = self.client.synthesize_speech(
                 input=input_text, voice=self.voice, audio_config=self.audio_config
@@ -51,16 +50,21 @@ class AudioLoop(BaseModel):
     audio_handler: Audio
 
     def run(self) -> None:
+        count = 0
         is_audio_done = False
         while not is_audio_done:
             for chunk in self.book.get_chunks():
-                if chunk.audio:
+                if chunk.audio or not chunk.summary:
                     continue
                 audio_bytes = self.audio_handler.synthesize_speech(
                     chunk.summary, id=f"{chunk.chapter_id}/{chunk.chunk_id}"
                 )
                 if audio_bytes:
                     chunk.set_audio(audio_bytes)
+            if self.book.is_sum_done():
+                count += 1
+                if count == 3:
+                    break
             is_audio_done = self.book.is_audio_done()
 
 
