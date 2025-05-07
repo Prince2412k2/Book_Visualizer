@@ -1,7 +1,13 @@
-__pycache__/
+**/__pycache__/
+.venv
 .env
 epy.py
 exp_book/
+uploaded_books/
+test_books/
+runware_out/
 output/
 Audios/
+audio_out/
 fine-loader-455404-j7-fb57bc0fa16b.json
+

@@ -12405,3 +12405,76 @@
 2025-04-18 14:55:54 | INFO | reader_new.py:208 | Loading chunk from state
 2025-04-18 14:55:54 | INFO | api_module.py:530 | [Prompt] : Prompts Done for ALL Chunks
 2025-04-18 14:55:54 | INFO | api_module.py:641 | [Image] : Prompts Done for ALL Chunks
+2025-05-07 14:35:14 | INFO | reader_new.py:344 | Path is is there for given book
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:22 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:23 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:24 | INFO | reader_new.py:361 | Total Chunks 33
+2025-05-07 14:35:43 | INFO | reader_new.py:344 | Path is is there for given book
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:45 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:46 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | reader_new.py:361 | Total Chunks 33
+2025-05-07 14:35:47 | INFO | reader_new.py:253 | Loading chunk from state
+2025-05-07 14:35:47 | INFO | api_module.py:530 | [Prompt] : Prompts Done for ALL Chunks
+2025-05-07 14:35:47 | INFO | api_module.py:641 | [Image] : Prompts Done for ALL Chunks

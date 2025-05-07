@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import json
 import uuid
 
-from reader_new import Book, Chunk
+from reader_new import Book, Chunk, BookState
 from audio_module import Audio, AudioLoop
 from logger_module import logger
 import requests
@@ -641,7 +641,7 @@ class ImageLoop(BaseModel):
         logger.info("[Image] : Prompts Done for ALL Chunks")
 
 
-def process_book(book: Book):
+def process_book(book: Book) -> Optional[BookState]:
     groq_api = os.environ.get("GROQ_API")
     img_api = os.environ.get("IMAGE_API")
     service_account_json = "./fine-loader-455404-j7-fb57bc0fa16b.json"
@@ -653,7 +653,7 @@ def process_book(book: Book):
     book_state = book.book_state
     assert book_state
     if book_state.is_done:
-        return True
+        return book.book_state
     sum = Summary(api_key=groq_api)
     prompt = Prompt(api_key=groq_api)
     image = Image(api_key=img_api)

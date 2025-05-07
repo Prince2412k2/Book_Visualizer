@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
+import json
 import os
+from os.path import exists
 from typing import List, Optional, Dict, Union
 from PIL import Image as pil_img
 from io import BytesIO
@@ -8,7 +10,8 @@ import requests
 import time
 
 from logger_module import logger
-from .api_module import SummaryContentSchema
+
+# from .api_module import SummaryContentSchema
 from base_reader import HTMLtoLines, get_ebook_cls, Epub, Azw3, Mobi
 from utils import Chunker, get_chunker
 from pydantic import BaseModel, ValidationError
@@ -65,6 +68,44 @@ def save_audio(content: bytes, path: str) -> None:
         logger.error(f"Failed to save audio at {path}: {e}")
 
 
+class BookArchivedState(BaseModel):
+    name: str
+    chunks: List[Optional[dict]]
+
+    def __repr__(self):
+        return f"Archive({self.chunks})"
+
+
+def archive_reader(path) -> dict:
+    with open(path, "r") as file:
+        data = file.read()
+    json_data = json.loads(data)
+    return ChunkState.model_validate(json_data).model_dump(
+        exclude={"prompt", "characters", "places"}
+    )
+
+
+def load_archived(user, name):
+    book_path = f"./uploaded_books/{user}/{name}"
+    state_path = book_path + "/book_state.json"
+    if not os.path.exists(state_path):
+        return False
+    with open(state_path, "r") as file:
+        data = file.read()
+    json_data = json.loads(data)
+    book_state = BookState.model_validate(json_data)
+    chunks = book_state.chunks
+    return BookArchivedState(
+        name=name,
+        chunks=[
+            archive_reader(
+                f"{book_path}{os.sep}{chunk.split('/')[0]}{os.sep}{chunk.split('/')[1]}/state.json"
+            )
+            for chunk in chunks
+        ],
+    )
+
+
 class ChunkState(BaseModel):
     chunk_id: str
     chapter_id: str
@@ -77,8 +118,12 @@ class ChunkState(BaseModel):
     audio: bool = False
     is_done: bool = False
 
+    def __repr__(self) -> str:
+        return f"ChunkState(sum=\n{self.summary}\n,image=\n{self.image}\n"
+
 
 class BookState(BaseModel):
+    name: str
     book_id: str
     chunks: List[str]
     is_done: bool = False
@@ -318,8 +363,10 @@ class Book:
         self.load_it()
 
     def init_state(self):
-        dump_chunks = [f"{i.chunk_id}/{i.chapter_id}" for i in self.get_chunks()]
-        self.book_state = BookState(book_id=self.book_id, chunks=dump_chunks)
+        dump_chunks = [f"{i.chapter_id}/{i.chunk_id}" for i in self.get_chunks()]
+        self.book_state = BookState(
+            name=self.name, book_id=self.book_id, chunks=dump_chunks
+        )
         self.dump_it()
 
     def set_chapters(self, id, chapter_name: str) -> Chapter:
@@ -396,6 +443,11 @@ class Book:
         return f"Name:{self.name} , Chapters:{len(self.chapters)}, Chunks : {len(self.get_chunks())}"
 
 
+def test():
+    state = load_archived(user="b5bfc116-dd81-475a-8425-537a50621706", name="AF")
+    print(state)
+
+
 def main() -> None:
     book: Book = Book(
         "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
@@ -435,4 +487,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    test()
