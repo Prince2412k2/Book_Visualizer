@@ -58,7 +58,6 @@ class SummaryPayloadSchema(BaseModel):
     frequency_penalty: float = 1.0
     presence_penalty: float = 1.5
 
-
 class SummaryResponseSchema(BaseModel):
     summary: str
     characters: Dict[str, str]
