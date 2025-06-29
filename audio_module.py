@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from google.cloud import texttospeech
 import os
+import requests
+from pathlib import Path
+from requests import HTTPError, request
 from dotenv import load_dotenv
 from typing import Any, Optional
 
@@ -59,6 +62,45 @@ class AudioLoop(BaseModel):
                 audio_bytes = self.audio_handler.synthesize_speech(
                     chunk.summary, id=f"{chunk.chapter_id}/{chunk.chunk_id}"
                 )
+                if audio_bytes:
+                    chunk.set_audio(audio_bytes)
+            if self.book.is_sum_done():
+                count += 1
+                if count == 3:
+                    break
+            is_audio_done = self.book.is_audio_done()
+
+
+@dataclass
+class AudioTest:
+    test_url: Path = Path("http://localhost:8000/")
+
+    def test(
+        self,
+    ) -> Optional[bytes]:
+        if not self.test_url:
+            ValueError("set up test url in .env file")
+        response = requests.get(
+            str(self.test_url / "audio"),
+        )
+        if response.ok:
+            return response.content
+        else:
+            HTTPError("Error with test server, Failed to recieve audio")
+
+
+class AudioTestLoop(BaseModel):
+    book: Book
+    audio_handler: AudioTest
+
+    def run(self) -> None:
+        count = 0
+        is_audio_done = False
+        while not is_audio_done:
+            for chunk in self.book.get_chunks():
+                if chunk.audio or not chunk.summary:
+                    continue
+                audio_bytes = self.audio_handler.test()
                 if audio_bytes:
                     chunk.set_audio(audio_bytes)
             if self.book.is_sum_done():

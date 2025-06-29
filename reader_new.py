@@ -450,41 +450,44 @@ def test():
 
 def main() -> None:
     book: Book = Book(
-        "./test_books/AF.epub", user_id="b5bfc116-dd81-475a-8425-537a50621706"
-    )
-    for i in book.get_chunks():
-        print(i.chapter_id, " ", i.chunk_id)
-        if i.image_url:
-            continue
-
-        # assert i
-        # if not i.places or not i.characters:
-        #   continue
-        print("-" * 50)
-        print(f"Chapter:{i.chapter_id}-{i.chunk_id}")
-
-        print("Summary")
-        print(f"\t - {i.summary}")
-        print()
-
-        print("characters")
-        for k, v in i.characters.items():
-            print(f"\t - {k} : {v}")
-        print()
-
-        print("places")
-        for k, v in i.places.items():
-            print(f"\t - {k} : {v}")
-
-        print("prompt")
-        print(f"{i.scene_title} : {i.prompt} ")
-        print("\n\n")
-
-        print("IMAGE")
-        print(f"{i.scene_title} : {i.image_url} ")
-        print("\n\n")
-        break
+        "./test_books/LP.epub"
+    )  # , user_id="b5bfc116-dd81-475a-8425-537a50621706"
+    print(len(book.chapters))
+    # for i in book.get_chunks():
+    #     print(i.chapter_id, " ", i.chunk_id)
+    #     if i.image_url:
+    #         continue
+    #
+    #     # assert i
+    #     # if not i.places or not i.characters:
+    #     #   continue
+    #     print("-" * 50)
+    #     print(f"Chapter:{i.chapter_id}-{i.chunk_id}")
+    #
+    #     print("Summary")
+    #     print(f"\t - {i.summary}")
+    #     print()
+    #
+    #     print("characters")
+    #     for k, v in i.characters.items():
+    #         print(f"\t - {k} : {v}")
+    #     print()
+    #
+    #     print("places")
+    #     for k, v in i.places.items():
+    #         print(f"\t - {k} : {v}")
+    #
+    #     print("prompt")
+    #     print(f"{i.scene_title} : {i.prompt} ")
+    #     print("\n\n")
+    #
+    #     print("IMAGE")
+    #     print(f"{i.scene_title} : {i.image_url} ")
+    #     print("\n\n")
+    #     break
+    #
+    #
 
 
 if __name__ == "__main__":
-    test()
+    main()

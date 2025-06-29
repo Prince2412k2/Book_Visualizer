@@ -1,5 +1,6 @@
 # TODO: Implement saving and caching also merge audio genration
 
+from pathlib import Path
 import threading
 from typing import Any, Dict, List, Optional, Type, Tuple, Union
 from pydantic import BaseModel, Field, ValidationError
@@ -8,7 +9,7 @@ import json
 import uuid
 
 from reader_new import Book, Chunk, BookState
-from audio_module import Audio, AudioLoop
+from audio_module import Audio, AudioLoop, AudioTest, AudioTestLoop
 from logger_module import logger
 import requests
 import time
@@ -57,6 +58,7 @@ class SummaryPayloadSchema(BaseModel):
     top_p: float = 0.8
     frequency_penalty: float = 1.0
     presence_penalty: float = 1.5
+
 
 class SummaryResponseSchema(BaseModel):
     summary: str
@@ -662,6 +664,41 @@ def process_book(book: Book) -> Optional[BookState]:
     looper_prompt = PromptLoop(book=book, prompt_handler=prompt)
     looper_img = ImageLoop(book=book, image_handler=image)
     audio_loop = AudioLoop(book=book, audio_handler=auido)
+
+    thread_img = threading.Thread(target=looper_img.run)
+    thread_prompt = threading.Thread(target=looper_prompt.run)
+    thread_sum = threading.Thread(target=looper_sum.run)
+    thread_audio = threading.Thread(target=audio_loop.run)
+
+    thread_img.start()
+    thread_prompt.start()
+    thread_sum.start()
+    thread_audio.start()
+
+    """ remove if dont want to wait for processes to finish """
+    thread_img.join()
+    thread_prompt.join()
+    thread_sum.join()
+    thread_audio.join()
+
+    return book.book_state
+
+
+def test_process_book(book: Book) -> Optional[BookState]:
+    url = "http://127.0.0.1:8000/"
+    book_state = book.book_state
+    assert book_state
+    if book_state.is_done:
+        return book.book_state
+    sum = Summary(api_key="", url=f"{url}/sum")
+    prompt = Prompt(api_key="", url=f"{url}/prompt")
+    image = Image(api_key="", url=f"{url}/image")
+    audio = AudioTest(test_url=Path(url))
+
+    looper_sum = SummaryLoop(book=book, summary_handler=sum)
+    looper_prompt = PromptLoop(book=book, prompt_handler=prompt)
+    looper_img = ImageLoop(book=book, image_handler=image)
+    audio_loop = AudioTestLoop(book=book, audio_handler=audio)
 
     thread_img = threading.Thread(target=looper_img.run)
     thread_prompt = threading.Thread(target=looper_prompt.run)

@@ -1,6 +1,11 @@
 # TO-do
 
+## Logic
+
+![Flow](static/Abstract-Logic.png)
+
 - main route /process
+
   - recives a book returns a book state obj
 
 - Receiver route /fetch
@@ -9,4 +14,4 @@
   - route will accept /`chapter_id`/`chunk_id`
   - its request and get the state of object
   - in the object there is a field called `is_done`,
-      if this is **True** stop polling this particular chunk
+    if this is **True** stop polling this particular chunk
